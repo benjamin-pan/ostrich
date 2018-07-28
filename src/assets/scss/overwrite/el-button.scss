@@ -1,0 +1,187 @@
+@import '../base/config';
+
+@mixin sBtn {
+  width: 92px;
+  height: 32px;
+  display: inline-block;
+  line-height: 100%;
+  white-space: nowrap;
+  background-color: $default;
+  color: $text;
+  border: 1px solid $border;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.s-btn {
+  @include sBtn
+}
+
+.s-btn:focus, .s-btn:hover {
+  background-color: $default;
+  border-color: $border;
+  color: $text;
+}
+
+.s-btn--primary {
+  background-color: $primary;
+  color: $text-white;
+  border-color: $primary;
+}
+
+.s-btn--orange {
+  background-color: $orange;
+  color: $text-white;
+  border-color: $orange;
+}
+
+.s-btn--danger {
+  background-color: $danger;
+  color: $text-white;
+  border-color: $danger;
+}
+
+.s-btn--success {
+  background-color: $success;
+  color: $text-white;
+  border-color: $success;
+}
+
+.s-btn--default {
+  background-color: $default;
+  color: $text;
+  border-color: $border;
+}
+
+.s-btn--text {
+  background-color: transparent;
+  color: $primary;
+  border: none;
+}
+
+/*hover状态*/
+.s-btn:hover {
+  //opacity: 0.5;
+}
+
+.s-btn:active, .s-btn:focus {
+  opacity: 1;
+}
+
+.s-btn--orange:active, .s-btn--orange:focus {
+  background-color: #e3603d;
+  border-color: #e3603d;
+  color: #ffffff;
+}
+
+.s-btn--primary:active, .s-btn--primary:focus {
+  background-color: #3886e2;
+  border-color: #3886e2;
+  color: #ffffff;
+}
+
+.s-btn.s-btn--success:active, .s-btn.s-btn--success:focus {
+  background-color: #22aa5b;
+  border-color: #22aa5b;
+  color: #ffffff;
+}
+
+.s-btn.s-btn--success:hover {
+  background-color: #34AC4F;
+  color: $default;
+  border-color: #34AC4F;
+}
+
+.s-btn.s-btn--primary:hover {
+  background-color: #3284E5;
+  color: $default;
+  border-color: #3284E5;
+}
+
+.s-btn.s-btn--danger:hover {
+  background-color: #E54141;
+  color: $default;
+  border-color: #E54141;
+}
+
+.s-btn.s-btn--default:hover {
+  background-color: $default;
+  color: $text;
+  border-color: $default;
+}
+
+.s-btn.s-btn--text:hover {
+  background-color: #e5e5e5;
+  color: $default;
+  border-color: #e5e5e5;
+}
+
+.s-btn.s-btn--orange:hover {
+  background-color: #E55F35;
+  color: $default;
+  border-color: #E55F35;
+}
+
+.s-btn--danger:active, .s-btn--danger:focus {
+  background-color: #e34346;
+  border-color: #e34346;
+  color: #ffffff;
+}
+
+.s-btn--default:active, .s-btn--default:focus {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #333333;
+}
+
+.s-btn--text:active, .s-btn--text:focus {
+  color: #418ce3;
+}
+
+/*BUTTON大小*/
+.s-btn.s-btn-xl {
+  font-size: 16px;
+  width: 152px;
+  height: 46px;
+  line-height: 46px;
+}
+
+.s-btn.s-btn-large {
+  font-size: 16px;
+  width: 108px;
+  height: 40px;
+}
+
+.s-btn.s-btn-small {
+  font-size: 12px;
+  width: 66px;
+  height: 28px;
+}
+
+/*border*/
+.border-orange {
+  border-color: $orange;
+  color: $orange;
+}
+
+.border-orange:hover {
+  background-color: $orange;
+  border-color: $orange;
+  color: $text-white;
+}
+
+.el-input-group__append button.el-button {
+  padding: 8px 10px;
+}
+
+.s-btn-box {
+  .c-button .el-button {
+    @include sBtn
+  }
+}

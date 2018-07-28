@@ -1,0 +1,48 @@
+.text-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.d-table-box.el-table {
+  border:0;
+}
+.over-middle.el-table::before {
+  height: 0;
+}
+.d-table {
+  border: 1px solid #dfe6ec;
+  border-bottom: 0;
+  thead tr td{background-color: #eef1f6; }
+  td {
+    padding-left: 18px;
+    padding-right: 18px;
+    line-height: 24px;
+  }
+}
+.over-middle {
+  max-height: 400px;
+  overflow: auto;
+}
+// large-dialog
+.large-dialog .el-dialog {
+  width: 72%;
+  min-height: 400px;
+  max-width: 830px;
+}
+// small-dialog
+.small-dialog .el-dialog {
+  width: 50%;
+  max-width: 800px;
+}
+.el-active-select .el-select .el-input .el-input__inner {
+  font-style: italic;
+  color:#20a0ff;
+}
+.el-active-select .el-select .el-input .el-input__icon {
+  color:#20a0ff;
+}
+@media (min-width: 1367px) {
+  .over-middle {
+    max-height: 600px;
+  }
+}

@@ -1,0 +1,11 @@
+.warning-area {
+  margin: 20px 0;
+  font-size: 20px;
+  .el-alert {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .el-alert__content .el-alert__title {
+      font-size: 20px;
+    }
+  }
+}

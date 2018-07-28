@@ -1,0 +1,5 @@
+@import "./base/config";
+// 标准视图容器
+.stand-view-container {
+  min-width: $screen-min-width;
+}

@@ -10,3 +10,22 @@
   ],
   "plugins": ["transform-vue-jsx", "transform-runtime"]
 }
+//{
+//  "presets": [
+//    ["es2015", { "modules": false }],
+//    "stage-0",
+//    "flow"
+//  ],
+//  "plugins": [
+//    "transform-decorators-legacy",
+//    "transform-runtime",
+//    "syntax-dynamic-import",
+//    ["component", [
+//      {
+//        "libraryName": "element-ui",
+//        "styleLibraryName": "theme-default"
+//      }
+//    ]]
+//  ],
+//  "comments": false
+//}

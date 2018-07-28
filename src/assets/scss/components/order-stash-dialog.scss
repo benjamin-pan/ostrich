@@ -1,0 +1,18 @@
+.order-stash-dialog {
+  position: absolute;
+  width: 660px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: initial;
+  transform: none;
+  .el-dialog__body {
+    height: calc(100% - 60px);
+    padding: 0;
+  }
+  .el-dialog__header {
+    background-color: black;
+    padding: 20px;
+    color: white;
+  }
+}

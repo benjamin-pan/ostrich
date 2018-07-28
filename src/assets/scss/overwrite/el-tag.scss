@@ -1,0 +1,39 @@
+.el-tag.s-tag {
+  display: inline-block;
+  padding: 0 10px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  &.s-tag-orange {
+    background-color: rgba(255, 106, 60, 0.1);
+    border-color: rgba(255, 106, 60, 0.1);
+    color: #ff6a3c;
+  }
+  &.s-tag-primary {
+    background-color: #ecf3fc;
+    border-color: rgba(32, 160, 255, 0.2);
+    color: #3894ff;
+  }
+  &.s-tag-success {
+    background-color: rgba(19, 206, 102, 0.1);
+    border-color: rgba(19, 206, 102, 0.2);
+    color: #17bf62;
+  }
+
+  &.s-tag-danger {
+    background-color: rgba(255, 73, 73, 0.1);
+    border-color: rgba(255, 73, 73, 0.2);
+    color: #ff4949;
+  }
+
+  &.s-tag-warning {
+    background-color: rgba(247, 186, 42, 0.1);
+    border-color: rgba(247, 186, 42, 0.2);
+    color: #e3ab29;
+  }
+}

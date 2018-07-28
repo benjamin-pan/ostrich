@@ -1,0 +1,8 @@
+@mixin table--md() {
+  .v-funds-record .header-container {
+    min-width: 475px;
+  }
+  .v-funds-record .content-container {
+    min-width: 950px;
+  }
+}

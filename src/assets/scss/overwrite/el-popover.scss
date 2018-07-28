@@ -1,0 +1,12 @@
+@import "../base/config";
+// 滑过大图模式
+.popover-img {
+  width: 300px;
+  height: 300px !important;
+  .popover-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

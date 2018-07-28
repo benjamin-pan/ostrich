@@ -1,0 +1,74 @@
+.pay-setting {
+  .el-checkbox-button:last-child .el-checkbox-button__inner {
+    border-radius: 4px;
+  }
+  .el-checkbox-button:first-child .el-checkbox-button__inner {
+    border-color: transparent;
+    border-radius: 4px;
+
+  }
+  .el-checkbox-button__inner {
+    width: inherit;
+    border-color: transparent;
+    border-left: 1px dashed transparent;
+    padding:0;
+    font-size: 14px;
+    background-size: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .el-checkbox-button {
+    margin-right: 15px;
+    color: $text-dark;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .el-checkbox-button__inner:hover {
+    color: $text-dark;
+  }
+  .el-checkbox-button.is-checked .el-checkbox-button__inner {
+    background-color: transparent;
+    background-size: cover;
+    color: $text-dark;
+    border-color: transparent;
+    box-shadow:none;
+  }
+  .el-checkbox-button.is-disabled .el-checkbox-button__inner {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+  }
+  .pay-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .pay-method {
+    color: $text-dark;
+    border: 1px dashed $border;
+    display: inline-block;
+  }
+  .pay-icon-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    border: 1px dashed $border;
+    background: #ffffff;
+  }
+  .el-icon-circle-check {
+    display: none;
+    color: $main-color
+  }
+  .el-checkbox-button.is-checked .el-checkbox-button__inner .pay-icon-item {
+    border:1px solid #ffc1ae;
+    background-color: #fff7f4;
+    .el-icon-circle-check {
+      display: block;
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      font-size: 18px;
+    }
+  }
+}

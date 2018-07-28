@@ -1,0 +1,9 @@
+@import '../base/config';
+
+.el-textarea__inner, .el-textarea__inner:hover, .el-textarea__inner:focus {
+  border-color: $border;
+}
+
+.el-textarea__inner:focus {
+  border-color: $border-gray;
+}

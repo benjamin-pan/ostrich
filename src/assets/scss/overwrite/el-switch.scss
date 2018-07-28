@@ -1,0 +1,11 @@
+@import "../base/config";
+
+.el-switch__core {
+  background: $border;
+  border: 1px solid $border;
+}
+
+.el-switch.is-checked .el-switch__core {
+  border-color: $main-color;
+  background-color: $main-color;
+}

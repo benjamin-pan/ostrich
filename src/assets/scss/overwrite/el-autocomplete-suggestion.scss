@@ -1,0 +1,10 @@
+@import "../base/config";
+
+.el-autocomplete-suggestion li:hover {
+  background-color: $bg-gray-e;
+}
+
+.el-autocomplete-suggestion li:active, .el-autocomplete-suggestion li.highlighted {
+  background-color: $border;
+  color: $text;
+}

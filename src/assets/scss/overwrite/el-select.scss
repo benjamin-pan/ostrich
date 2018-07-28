@@ -1,0 +1,30 @@
+.el-select-dropdown__item.selected.hover, .el-select-dropdown__item:hover, .el-select-dropdown__item.hover {
+  background-color: $border-gray;
+}
+
+.el-select-dropdown__item.selected {
+  background-color: $border;
+  color: $text;
+}
+
+.el-select-dropdown {
+  border-color: $border;
+}
+
+.el-select .el-input__inner:focus {
+  border-color: $border;
+}
+
+.s-select--140 {
+  .el-input {
+    width: 140px;
+  }
+}
+
+.el-select-dropdown .el-select-dropdown__list .el-select-dropdown__item.hover {
+  background-color: $bg-gray-f;
+}
+
+.el-select .el-input .el-input__icon, .el-select .el-input .el-input__icon.is-show-close {
+  color: $text-gray;
+}

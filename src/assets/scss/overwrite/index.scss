@@ -1,0 +1,22 @@
+$danger: #FF4949;
+.no-border-input .el-input__inner {
+  border: none;
+  padding-left: 0;
+}
+
+.pull-right .el-form-item {
+  margin-right: 0 !important;
+}
+
+.el-date-editor--daterange.el-input {
+  width: 240px;
+}
+.text-danger {
+  color: $danger;
+}
+.text-danger:hover, .text-danger:focus, .text-danger:active {
+  color: $danger;
+}
+.wrap-960 .c-outline-content {
+  min-width: 960px;
+}

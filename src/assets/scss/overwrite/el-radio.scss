@@ -1,0 +1,15 @@
+@import "../base/config";
+
+.el-radio__orange {
+  .el-radio__input.is-checked {
+    .el-radio__inner {
+      border-color: $orange;
+      background: $orange;
+    }
+  }
+}
+
+.s-tiny-radio .el-radio__inner {
+  width: 14px;
+  height: 14px;
+}

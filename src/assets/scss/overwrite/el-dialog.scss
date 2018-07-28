@@ -1,0 +1,69 @@
+@import "../base/config";
+
+.s-dialog {
+  .el-dialog {
+    border-radius: 9px;
+    .el-dialog__header {
+      padding-bottom: 17px;
+      border-bottom: 1px solid $border;
+    }
+  }
+  .el-input__inner {
+    height: 32px;
+  }
+  .el-icon-close {
+    font-size: 14px;
+    color: $text;
+  }
+  .el-dialog__body {
+    padding: 0;
+    border-bottom: 1px solid $border;
+    color: $text;
+  }
+  .el-dialog__footer {
+    line-height: 32px;
+    padding: 15px 20px 15px;
+  }
+  &.s-dialog-sale .el-dialog.el-dialog--small {
+    width: 800px;
+  }
+  &.s-dialog-sale .el-dialog.dialog-warp-small {
+    width: 570px;
+  }
+  &.s-dialog-sale .el-dialog.el-dialog--tiny {
+    min-width: 460px;
+  }
+  &.s-dialog-sale .el-dialog.dialog-warp-tiny {
+    width: 460px;
+  }
+  .el-dialog__footer {
+    .el-checkbox__inner {
+      width: 14px;
+      height: 14px;
+    }
+    .el-checkbox__inner::after {
+      top: 0px;
+      left: 3px;
+      height: 7px;
+    }
+    .el-checkbox__label {
+      color: $text-dark-gray;
+      font-size: 12px;
+    }
+  }
+}
+
+.s-dialog.s-dialog-sale {
+  .el-dialog.s-tiny-dialog {
+    min-width: 360px;
+    .el-dialog__body {
+      min-height: 160px;
+    }
+  }
+}
+
+.s-dialog-no-footer {
+  .el-dialog__body {
+    border-bottom: none;
+  }
+}

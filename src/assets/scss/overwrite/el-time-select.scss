@@ -1,0 +1,13 @@
+@import "../base/config";
+
+.small-input.el-date-editor.el-input {
+  width: 110px;
+}
+
+.time-select-item.selected:not(.disabled) {
+  background-color: $themeColor;
+}
+
+.time-select-item.selected:not(.disabled):hover {
+  background-color: $themeColor;
+}

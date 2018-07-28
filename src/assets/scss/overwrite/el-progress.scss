@@ -1,0 +1,7 @@
+@import "../base/config";
+
+.progress-main-color {
+  .el-progress-bar__inner {
+    background-color: $orange;
+  }
+}

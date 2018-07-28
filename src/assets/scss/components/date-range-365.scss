@@ -1,0 +1,14 @@
+.date-range-365 {
+  .el-icon-d-arrow-left {
+    display: none;
+  }
+  .el-icon-arrow-left:before {
+    content: '上个月';
+  }
+  .el-icon-d-arrow-right {
+    display: none;
+  }
+  .el-icon-arrow-right:before {
+    content: '下个月';
+  }
+}

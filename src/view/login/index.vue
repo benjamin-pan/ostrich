@@ -8,7 +8,6 @@
 </style>
 <script>
 export default {
-//  name: 'Login',
   data () {
     return {}
   },
@@ -16,6 +15,10 @@ export default {
   created () {
   },
   mounted () {
+    console.log([1, 2, 3, 4].includes(2))
+    setTimeout(() => {
+      console.log(1)
+    })
   },
   beforeDestroy () {
   },

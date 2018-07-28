@@ -1,0 +1,57 @@
+@import "../base/config";
+
+.el-input__inner, .el-input__inner:hover {
+  border-color: $border;
+}
+
+.el-input__inner:active, .el-input__inner:focus {
+  border-color: $border-gray;
+}
+
+.el-input__icon {
+  color: $text-gray;
+}
+
+.modal-textarea .el-textarea__inner {
+  color: $text-dark-gray;
+  padding: 8px 10px;
+}
+
+.modal-textarea .el-textarea__inner:hover {
+  border-color: $border;
+}
+
+.modal-textarea.el-textarea.is-disabled .el-textarea__inner {
+  background-color: #f5f5f5;
+  color: $text-dark-gray;
+}
+
+.el-input-group__append, .el-input-group__prepend {
+  border-color: $border;
+  color: $text;
+  background-color: $transparent;
+}
+
+.temper-input {
+  .c-input-group .input-group-head {
+    min-height: 32px;
+  }
+  .el-input__inner {
+    height: 32px;
+  }
+  .c-select .el-select .el-input .el-input__inner {
+    height: 32px;
+  }
+  .c-input-group .input-group-head label {
+    line-height: 32px;
+  }
+  .el-input.is-disabled .el-input__inner {
+    background-color: $bg-gray-e;
+    border-color: $border;
+  }
+}
+
+.el-radio__input.is-disabled .el-radio__inner, .el-radio__input.is-disabled.is-checked .el-radio__inner {
+  background-color: $bg-gray-e;
+  border-color: $border;
+}
