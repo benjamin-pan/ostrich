@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <ostrich-header></ostrich-header>
     <router-view/>
   </div>
 </template>
