@@ -9,9 +9,10 @@
           <el-menu-item index="1">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">头条</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
+            <el-menu-item index="2-1">观点洞察</el-menu-item>
+            <el-menu-item index="2-2">链圈局势</el-menu-item>
+            <el-menu-item index="2-3">行业资讯</el-menu-item>
+            <el-menu-item index="2-4">百科</el-menu-item>
           </el-submenu>
           <el-menu-item index="3">快讯</el-menu-item>
           <el-menu-item index="4">行情</el-menu-item>
