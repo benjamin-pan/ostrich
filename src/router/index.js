@@ -10,6 +10,7 @@ import Andustry from '@/view/headline/headlineAndustry'
 import Encyclopedia from '@/view/headline/headlineEncyclopedia'
 import Flash from '@/view/flash/flash'
 import Flashdetails from '@/view/flash/flashDetails'
+import index from '@/components/index'
 
 Vue.use(Router)
 
@@ -20,6 +21,11 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: () => import('@/view/login')
+    },
+    {
+      path: '/',
+      name: 'index',
+      component: index
     },
     {
       path: '/register',
