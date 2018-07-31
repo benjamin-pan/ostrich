@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="headlineDetails">
     <section class="news">
       <div class="container">
         <div class="content-left left">
@@ -15,11 +15,11 @@
                   <span class="details-adm" style="margin-left: 17px;">区块链的朋友们</span>
                   <span class="details-data" style="margin-left: 20px;">03-22 10.5</span>
                   <li class="details-lf">
-                    <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../assets/images/eye.png">
+                    <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
                     <a href="javascript:;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
                   </li>
                   <li class="details-lf">
-                    <img src="../../assets/images/details-share.png" alt="share" />
+                    <img src="../../../assets/images/details-share.png" alt="share" />
                     <span>分享</span>
                   </li>
                 </div>
@@ -109,7 +109,7 @@
                     <ul class="details-ul" style="margin-left: -30px;">
                       <li>
                         <a href="https://www.tuoniaox.com/43504.html" target="_blank" title="BTC今晨大涨10%背后有玄机？芝交所交割到期、ETF即将进场">
-                          <img style="width: 208px;" src="../../assets/images/2018071817315170.jpg" alt="BTC今晨大涨10%背后有玄机？芝交所交割到期、ETF即将进场">
+                          <img style="width: 208px;" src="../../../assets/images/2018071817315170.jpg" alt="BTC今晨大涨10%背后有玄机？芝交所交割到期、ETF即将进场">
                         </a>
                         <span>
                           <a>俄国家杜马官员俄国家杜马官员俄国家杜马官员俄国家杜马官员</a>
@@ -117,7 +117,7 @@
                       </li>
                       <li>
                         <a href="https://www.tuoniaox.com/43504.html" target="_blank" title="BTC今晨大涨10%背后有玄机？芝交所交割到期、ETF即将进场">
-                          <img style="width: 208px;" src="../../assets/images/2018071817315170.jpg" alt="BTC今晨大涨10%背后有玄机？芝交所交割到期、ETF即将进场">
+                          <img style="width: 208px;" src="../../../assets/images/2018071817315170.jpg" alt="BTC今晨大涨10%背后有玄机？芝交所交割到期、ETF即将进场">
                         </a>
                         <span>
                           <a>俄国家杜马官员俄国家杜马官员</a>
@@ -125,7 +125,7 @@
                       </li>
                       <li>
                         <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                          <img style="width: 208px;" src="../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
+                          <img style="width: 208px;" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                         </a>
                         <span>
                           <a>俄国家杜马官员俄国家杜马官员</a>
@@ -133,7 +133,7 @@
                       </li>
                       <li>
                         <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                          <img style="width: 208px;" src="../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
+                          <img style="width: 208px;" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                         </a>
                         <span>
                           <a>俄国家杜马杜马官员</a>
@@ -179,7 +179,7 @@
               <div class="hotnews marginb-30">
                 <div class="tit">
                   <span style="border-radius: 25%; background: #FF4040; height: 20px; width: 20px; margin-left: 15px;">
-                    <img style="margin-top: -3px; margin-left: 2px;" src="../../assets/images/hot.png">
+                    <img style="margin-top: -3px; margin-left: 2px;" src="../../../assets/images/hot.png">
                   </span>
                   <span>热门新闻</span>
                 </div>
@@ -187,7 +187,7 @@
                   <div class="con bgc  clearfix">
                     <ul class="clearfix tuoniao-hot-news">
                       <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                        <img class="left" src="../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
+                        <img class="left" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                       </a>
                       <ol class="right">
                         <span class="tuoniao-hot-content">
@@ -195,14 +195,14 @@
                         </span>
                         <li class="font12 gray8">12分钟前</li>
                         <li class="right">
-                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../assets/images/eye.png">
+                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
                           <a href="javascript:;" style="margin-left: 12px;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
                         </li>
                       </ol>
                     </ul>
                     <ul class="clearfix tuoniao-hot-news">
                       <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                        <img class="left" src="../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
+                        <img class="left" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                       </a>
                       <ol class="right">
                         <span class="tuoniao-hot-content">
@@ -210,14 +210,14 @@
                         </span>
                         <li class="font12 gray8">12分钟前</li>
                         <li class="right">
-                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../assets/images/eye.png">
+                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
                           <a href="javascript:;" style="margin-left: 12px;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
                         </li>
                       </ol>
                     </ul>
                     <ul class="clearfix tuoniao-hot-news">
                       <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                        <img class="left" src="../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
+                        <img class="left" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                       </a>
                       <ol class="right">
                         <span class="tuoniao-hot-content">
@@ -225,7 +225,7 @@
                         </span>
                         <li class="font12 gray8">12分钟前</li>
                         <li class="right">
-                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../assets/images/eye.png">
+                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
                           <a href="javascript:;" style="margin-left: 12px;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
                         </li>
                       </ol>
@@ -266,5 +266,5 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  @import './index.scss';
+  @import '../../../assets/scss/index.scss';
 </style>

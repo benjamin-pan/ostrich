@@ -9,12 +9,12 @@
           <el-menu-item index="1">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">头条</template>
-            <el-menu-item index="2-1" @click="$router.push({path: '/headlineViewpoint'})">观点洞察</el-menu-item>
-            <el-menu-item index="2-2" @click="$router.push({path: '/headlineSituation'})">链圈局势</el-menu-item>
-            <el-menu-item index="2-3" @click="$router.push({path: '/headlineAndustry'})">行业资讯</el-menu-item>
-            <el-menu-item index="2-4" @click="$router.push({path: '/headlineEncyclopedia'})">百科</el-menu-item>
+            <el-menu-item index="2-1" @click="$router.push({path: '/headline/headlineViewpoint'})">观点洞察</el-menu-item>
+            <el-menu-item index="2-2" @click="$router.push({path: '/headline/headlineSituation'})">链圈局势</el-menu-item>
+            <el-menu-item index="2-3" @click="$router.push({path: '/headline/headlineAndustry'})">行业资讯</el-menu-item>
+            <el-menu-item index="2-4" @click="$router.push({path: '/headline/headlineEncyclopedia'})">百科</el-menu-item>
           </el-submenu>
-          <el-menu-item index="3">快讯</el-menu-item>
+          <el-menu-item index="3" @click="$router.push({path: '/flash/flash'})">快讯</el-menu-item>
           <el-menu-item index="4">行情</el-menu-item>
           <el-menu-item index="5">行情</el-menu-item>
         </el-menu>

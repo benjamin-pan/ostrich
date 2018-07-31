@@ -4,11 +4,13 @@ import Login from '@/view/login'
 import Register from '@/view/register'
 import FindPWD from '@/view/findPWD'
 import Detail from '@/view/detail'
-import Viewpoint from '@/view/headlineViewpoint'
-import Situation from '@/view/headlineSituation'
-import Details from '@/view/headlineDetails'
-import Andustry from '@/view/headlineAndustry'
-import Encyclopedia from '@/view/headlineEncyclopedia'
+import Viewpoint from '@/view/headline/headlineViewpoint'
+import Situation from '@/view/headline/headlineSituation'
+import Details from '@/view/headline/headlineDetails'
+import Andustry from '@/view/headline/headlineAndustry'
+import Encyclopedia from '@/view/headline/headlineEncyclopedia'
+import Flash from '@/view/flash/flash'
+import Flashdetails from '@/view/flash/flashDetails'
 
 Vue.use(Router)
 
@@ -37,33 +39,45 @@ export default new Router({
     }
     ,
     {
-      path: '/headlineViewpoint',
+      path: '/headline/headlineViewpoint',
       name: 'Viewpoint',
       component: Viewpoint
     }
     ,
     {
-      path: '/headlineSituation',
+      path: '/headline/headlineSituation',
       name: 'Situation',
       component: Situation
     }
     ,
     {
-      path: '/headlineDetails',
+      path: '/headline/headlineDetails',
       name: 'Details',
       component: Details
     }
     ,
     {
-      path: '/headlineAndustry',
+      path: '/headline/headlineAndustry',
       name: 'Andustry',
       component: Andustry
     }
     ,
     {
-      path: '/headlineEncyclopedia',
+      path: '/headline/headlineEncyclopedia',
       name: 'Encyclopedia',
       component: Encyclopedia
+    }
+    ,
+    {
+      path: '/flash/flash',
+      name: 'Flash',
+      component: Flash
+    }
+    ,
+    {
+      path: '/flash/flashDetails',
+      name: 'Flashdetails',
+      component: Flashdetails
     }
   ]
 })
