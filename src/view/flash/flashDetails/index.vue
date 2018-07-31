@@ -114,7 +114,23 @@
                     </p>
                     <p style="color: #000">
                       【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-
+                    </p>
+                    <span class="left">10分钟前</span>
+                    <span class="left tuoniao-share">
+                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
+                    </span>
+                    <span class="left tuoniao-share">
+                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/up.png">369
+                    </span>
+                    <span class="left tuoniao-share">
+                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/share.png">分享
+                    </span>
+                  </li>
+                  <li>
+                    <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果MonexGroup收购的加密货币交易所Coincheck能够保证安全
+                    </p>
+                    <p style="color: #000">
+                      【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
                     </p>
                     <span class="left">10分钟前</span>
                     <span class="left tuoniao-share">
@@ -132,7 +148,6 @@
                     </p>
                     <p style="color: #000">
                       【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-
                     </p>
                     <span class="left">10分钟前</span>
                     <span class="left tuoniao-share">
@@ -148,28 +163,7 @@
                   <li>
                     <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全
                     </p>
-                    <p style="color: #000">
-                      【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-
-                    </p>
-                    <span class="left">10分钟前</span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/up.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/share.png">分享
-                    </span>
-                  </li>
-                  <li>
-                    <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全
-                    </p>
-                    <p style="color: #000">
-                      【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-
-                    </p>
+                    <p style="color: #000">日本静冈银行或将与Coincheck合作】鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果MonexGroup收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）</p>
                     <span class="left">10分钟前</span>
                     <span class="left tuoniao-share">
                       <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
@@ -185,7 +179,6 @@
               </div>
             </div>
             <div class="ranking marginb-30 margint-20">
-
               <div class="hotnews marginb-30">
                 <div class="tit">
                   <span style="border-radius: 25%; background: #FF4040; height: 20px; width: 20px; margin-left: 15px;">
@@ -251,6 +244,5 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  @import '../../../assets/scss/index.scss';
-
+  @import './index.scss';
 </style>

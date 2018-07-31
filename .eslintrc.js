@@ -28,8 +28,8 @@ module.exports = {
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,
+    'no-irregular-whitespace': 0,
     "comma-dangle": 0,
-    'semi': 0,
     "quotes": 0,
     'indent': 0,
     // allow debugger during development

@@ -14,7 +14,7 @@ import Flashdetails from '@/view/flash/flashDetails'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -51,44 +51,37 @@ export default new Router({
           component: () => import('@/view/my/jifen')
         }
       ]
-    }
-    ,
+    },
     {
       path: '/headline/headlineViewpoint',
       name: 'Viewpoint',
       component: Viewpoint
-    }
-    ,
+    },
     {
       path: '/headline/headlineSituation',
       name: 'Situation',
       component: Situation
-    }
-    ,
+    },
     {
       path: '/headline/headlineDetails',
       name: 'Details',
       component: Details
-    }
-    ,
+    },
     {
       path: '/headline/headlineAndustry',
       name: 'Andustry',
       component: Andustry
-    }
-    ,
+    },
     {
       path: '/headline/headlineEncyclopedia',
       name: 'Encyclopedia',
       component: Encyclopedia
-    }
-    ,
+    },
     {
       path: '/flash/flash',
       name: 'Flash',
       component: Flash
-    }
-    ,
+    },
     {
       path: '/flash/flashDetails',
       name: 'Flashdetails',

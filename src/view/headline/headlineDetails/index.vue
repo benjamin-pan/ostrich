@@ -266,5 +266,5 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  @import '../../../assets/scss/index.scss';
+  @import './index.scss';
 </style>
