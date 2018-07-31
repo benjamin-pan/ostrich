@@ -4,14 +4,11 @@
   </div>
 </template>
 <style lang="scss" scoped src="./index.less">
-
 </style>
 <script>
   export default {
     data () {
-      return {
-       
-      }
+      return {}
     },
     components: {},
     created () {
@@ -26,4 +23,3 @@
     watch: {}
   }
 </script>
-

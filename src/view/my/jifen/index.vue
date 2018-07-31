@@ -9,9 +9,7 @@
 <script>
   export default {
     data () {
-      return {
-       
-      }
+      return {}
     },
     components: {},
     created () {
@@ -26,4 +24,3 @@
     watch: {}
   }
 </script>
-
