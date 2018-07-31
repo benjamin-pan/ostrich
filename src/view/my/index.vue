@@ -1,12 +1,17 @@
 <template>
   <div class="my-container">
-    <div class="cleftBox">
-      <router-link to="/my/pcenter">各人中心</router-link>
-      <router-link to="/my/jifen">我的积分</router-link>
-
+    <div class="cleftBox left">
+      <div class="headImg"></div>
+      <div class="title">鸵鸟小助手</div>
+      <router-link to="/my/pcenter" class="navBase" :class="{ active: index == '1' }"><span></span>各人中心</router-link>
+      <router-link to="/my/jifen" class="navBase" :class="{ active: index=='2' }">我的积分</router-link>
+      <router-link to="/my/pcenter" class="navBase" :class="{ active: index=='3' }">我的收藏</router-link>
+      <router-link to="/my/jifen" class="navBase" :class="{ active: index=='4' }">我的关注</router-link>
+      <router-link to="/my/pcenter" class="navBase" :class="{ active: index=='5' }">消息中心</router-link>
+      <router-link to="/my/jifen" class="navBase" :class="{ active: index=='6' }">邀请活动</router-link>
     </div>
-    <div class="cRight">
-       <router-view></router-view>
+    <div class="cRightBox right">
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -17,15 +22,7 @@
   export default {
     data () {
       return {
-        user: '',
-        password: '',
-        userErrMsg: '',
-        pwdErrMsg: '',
-        form: {},
-        rules: {
-          user: [],
-          password: []
-        }
+        index: '1'
       }
     },
     components: {},
@@ -36,7 +33,11 @@
     },
     beforeDestroy () {
     },
-    methods: {},
+    methods: {
+      change: function (index) {
+        this.index = index;
+      }
+    },
     computed: {},
     watch: {}
   }
