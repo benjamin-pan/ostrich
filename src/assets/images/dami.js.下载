@@ -1,0 +1,128 @@
+/*
+            /$$            
+    /$$    /$$$$            
+   | $$   |_  $$    /$$$$$$$
+ /$$$$$$$$  | $$   /$$_____/
+|__  $$__/  | $$  |  $$$$$$ 
+   | $$     | $$   \____  $$
+   |__/    /$$$$$$ /$$$$$$$/
+          |______/|_______/ 
+================================
+        Keep calm and get rich.
+                    Is the best.
+
+  	@Author: Dami
+  	@Date:   2017-10-11 15:42:00
+  	@Last Modified by:   Dami
+  	@Last Modified time: 2017-12-05 21:23:53
+*/
+
+$(document).on('click', '.dami-home-tab li', function(event) {
+	event.preventDefault();
+	var t = $(this);
+
+	if( !t.hasClass('current') ){
+		$('.dami-home-tab li').removeClass('current');
+		t.addClass('current');
+		$('.ajax-load').data({'query': t.data('query'),'paged':'1','page': t.data('page')});
+		$('.'+$('.ajax-load').data('container')).html(' ');
+		ajax_load( $('.ajax-load').data() );
+
+	}
+
+});
+
+$(document).on('click', '.ajax-load', function(event) {
+	event.preventDefault();
+	ajax_load( $(this).data() );
+});
+
+function ajax_load( data ){
+	$('.ajax-load').text('加载中...');
+	$.ajax({
+		url: ajax_url,
+		type: 'POST',
+		dataType: 'html',
+		data: data,
+	})
+	.done(function( response ) {
+		if( response != 0 ){
+			$('.'+data.container).append( response );
+			$('.ajax-load').data('paged', data.paged * 1 + 1);
+			$('.ajax-load').data('page', data.page);
+			$('.ajax-load').text('加载更多');
+		}else{
+			$('.ajax-load').text('没有了！');
+		}
+	})
+	.fail(function() {
+		$('.ajax-load').text('加载更多');
+		alert('网络错误，请刷新页面！');
+	});	
+
+}
+
+function site_popup( src ){
+	var html = '<div class="popup-box"><div class="mask"></div><div class="popup"><a href="javascript:;" class="close-btn">关闭</a><img src="'+src+'"></div></div>';
+	
+	$('body').append(html);
+
+	$(document).on('click touchstart', '.close-btn,.mask', function(event) {
+		event.preventDefault();
+		$(this).parents('.popup-box').remove();
+	});
+
+}
+
+
+$(document).on('click touchend', '.generate-share-image', function(event) {
+	event.preventDefault();
+	event.preventDefault();
+	var t = $(this);
+	var id = t.data('id');
+	var src = t.data('src');
+
+	if( src.length > 0 ){
+		site_popup( src );
+		return false;
+	}
+
+	$.ajax({
+		url: ajax_url,
+		type: 'POST',
+		dataType: 'json',
+		data: {action: 'generate-share-image', id: id },
+	})
+	.done(function( data ) {
+		t.data('src', data.src);
+		site_popup( data.src );
+	})
+	.fail(function() {
+		alert('网络错误，请稍后再试！');
+	});
+});
+
+!function(o){"use strict";o.fn.toTop=function(t){var i=this,e=o(window),s=o("html, body"),n=o.extend({autohide:!0,offset:420,speed:500,position:!0,right:38,bottom:38},t);i.css({cursor:"pointer"}),n.autohide&&i.css("display","none"),n.position&&i.css({position:"fixed",right:n.right,bottom:n.bottom}),i.click(function(){s.animate({scrollTop:0},n.speed)}),e.scroll(function(){var o=e.scrollTop();n.autohide&&(o>n.offset?i.fadeIn(n.speed):i.fadeOut(n.speed))})}}(jQuery);
+    $(function() {
+        $('.to_top').toTop();
+    });
+
+$(function(){
+	$('.contact').attr({
+		style: $('.to_top').attr('style'),
+	}).show();
+});
+
+
+$(document).on('click', '.news-flash ul li img', function(event) {
+	event.preventDefault();
+	$.magnificPopup.open({
+		items: {
+			src: $(this).attr('src')
+		},
+		type: 'image'
+	});
+});
+
+
+

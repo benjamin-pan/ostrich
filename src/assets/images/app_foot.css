@@ -1,0 +1,50 @@
+/*底部提示栏  App下载*/
+.app_foot{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999;
+    height: 64px;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(88,105,120,0.6);
+}
+.foot_app_logo img{
+    float: left;
+    width: 40px; 
+    border-radius: 8px;
+}
+.foot_app_button{
+    float: left;
+    /*width: 80px;*/
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.app_url{
+    background: #238FE2;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 5px;
+    color: #FFF;
+}
+.app_text{
+    float: left;
+    padding: 0 10px 0 10px;
+    width: 55%;
+    text-align: center;
+}
+.cross{
+    line-height: 40px;
+    color: #FFF;
+    margin-left: 10px;
+    font-size: 30px;
+    float: right;
+}
