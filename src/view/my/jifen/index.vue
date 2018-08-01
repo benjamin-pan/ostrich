@@ -91,7 +91,8 @@
             name: '王小虎',
             number: '+1000',
             all:4000
-          }]
+          }],
+          user_id:'10008'
       }
 
     },
@@ -99,17 +100,30 @@
     created () {
     },
     mounted () {
-
+      this.getJifenList();
     },
     beforeDestroy () {
     },
     methods: {
-       handleSizeChange(val) {
+      handleSizeChange(val) {
         console.log(`每页 ${val} 条`);
       },
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
+      },
+      getJifenList(){
+        this.getRequest('https://api.tuoniaox.com/app/app/pointslist', {
+            user_id: this.user_id,
+            page_num: 1,
+            page_size:10
+        }).then(res=> {
+
+            console.log("22");
+        }).catch((err) => {
+          console.log(err, 'err')
+        })
       }
+      
     },
     computed: {},
     watch: {}
