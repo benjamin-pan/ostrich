@@ -16,7 +16,7 @@
 
     </div>
     <div class="cRightBox right">
-       <router-view></router-view>
+      <router-view></router-view>
     </div>
     <div class="clear"></div>
   </div>
@@ -40,8 +40,7 @@
     beforeDestroy () {
     },
     methods: {
-
-      change:function(index){
+      change: function (index) {
         this.index = index;
       }
     },

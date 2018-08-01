@@ -1,9 +1,6 @@
 <template>
   <div class="pcenter-container">
-   <!--  <div class="baseTabBox">
-      <span class="first" v-bind:class="{ active: !isActive }" v-on:click="change(false)">基本信息</span>
-      <span v-bind:class="{ active: isActive }" v-on:click="change(true)">账户安全</span>
-    </div> -->
+   
     <el-tabs v-model="activeName" @tab-click="handleClick" class="baseTabBox">
       <el-tab-pane label="基本信息" name="first">
         <div class="contentBox" >
@@ -73,6 +70,7 @@
     </el-tabs>
    
     
+
   </div>
 </template>
 <style lang="scss" src="./index.scss">
@@ -95,6 +93,7 @@
           desc: '',
           value1:''
         }
+
       }
     },
     components: {},
@@ -106,7 +105,7 @@
     beforeDestroy () {
     },
     methods: {
-      change:function(value){
+      change: function (value) {
         this.isActive = value;
       },
       handleClick(tab, event) {
@@ -121,4 +120,3 @@
     watch: {}
   }
 </script>
-

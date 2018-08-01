@@ -93,6 +93,7 @@
             all:4000
           }]
       }
+
     },
     components: {},
     created () {
@@ -114,4 +115,3 @@
     watch: {}
   }
 </script>
-

@@ -9,7 +9,6 @@
                 <span class="login-title">忘记密码</span>
               </h3>
               <div>
-              
               </div>
               <div class="login_center" v-if="firstStep">
                 <el-form :model="form" :rules="rules" ref="ruleForm">
@@ -134,7 +133,6 @@
             this.verifiationCodeText = '发送验证码'
           }
         }, 1000)
-
       }
     },
     computed: {},

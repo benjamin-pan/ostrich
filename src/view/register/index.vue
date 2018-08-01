@@ -138,7 +138,6 @@
             this.verifiationCodeText = '发送验证码'
           }
         }, 1000)
-
       }
     },
     computed: {},
