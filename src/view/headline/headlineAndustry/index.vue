@@ -265,6 +265,7 @@
                 <div class="con bgc paddingclearfix">
                   <div class="con bgc  clearfix">
                     <ul class="clearfix tuoniao-hot-news">
+                      <li>
                       <a href="https://www.tuoniaox.com/43416.html" target="_blank"
                          title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                         <img class="left" src="../../../assets/images/2018071811084089.jpeg"
@@ -283,8 +284,10 @@
                              class="generate-share-image right">3098</a>
                         </li>
                       </ol>
+                      </li>
                     </ul>
                     <ul class="clearfix tuoniao-hot-news">
+                      <li>
                       <a href="https://www.tuoniaox.com/43416.html" target="_blank"
                          title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                         <img class="left" src="../../../assets/images/2018071811084089.jpeg"
@@ -303,8 +306,10 @@
                              class="generate-share-image right">3098</a>
                         </li>
                       </ol>
+                      </li>
                     </ul>
                     <ul class="clearfix tuoniao-hot-news">
+                      <li>
                       <a href="https://www.tuoniaox.com/43416.html" target="_blank"
                          title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
                         <img class="left" src="../../../assets/images/2018071811084089.jpeg"
@@ -323,6 +328,7 @@
                              class="generate-share-image right">3098</a>
                         </li>
                       </ol>
+                      </li>
                     </ul>
                   </div>
                 </div>
