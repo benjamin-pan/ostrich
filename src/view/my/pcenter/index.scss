@@ -1,0 +1,64 @@
+@import "../../../assets/common/common.scss";
+
+.pcenter-container{
+	.el-tabs__nav-scroll{
+	  height:50px;
+	  line-height:50px;
+	  padding-left: 24px;
+	}
+	.contentBox{
+		padding:60px;
+		.item{
+			margin-bottom:36px;
+			text-align:left;
+			.one{
+				font-size:14px;
+				font-family:PingFangSC-Regular;
+				color:rgba(30,37,47,1);
+				line-height:20px;
+				width:70px;
+				margin-right:16px;
+				display:inline-block;
+			}
+			.two{
+				font-size:14px;
+				font-family:PingFangSC-Regular;
+				color:rgba(102,102,102,1);
+				line-height:20px;
+				width:93px;
+				margin-right:249px;
+				display:inline-block;
+			}
+			.three{
+				font-size:14px;
+				font-family:PingFangSC-Regular;
+				color:rgba(52,157,255,1);
+				line-height:20px;
+			}
+		}
+	}
+	.myInforBox{
+		text-align: left;
+		.el-date-editor .el-input__inner{
+			height:40px;
+		}
+		.el-date-editor .el-input__inner,.el-button--primary,.el-textarea{
+			width:320px;
+		}
+		.changehead{
+			font-size:12px;
+			font-family:PingFangSC-Regular;
+			color:rgba(52,157,255,1);
+			line-height:17px;
+		}
+		.label{
+			font-family:PingFangSC-Regular;
+			color:rgba(30,37,47,1);
+		}
+		.el-form-item__content{
+			font-family:PingFangSC-Regular;
+			color:rgba(102,102,102,1);
+		}
+	}
+
+}

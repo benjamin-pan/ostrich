@@ -1,14 +1,14 @@
 <template>
   <div class="jifen-container">
     <div class="baseTabBox">
-      <span class="first">我的积分</span>
+      <span class="first">我的关注</span>
       
     </div>
-    <div class="inforBox">
+   <!--  <div class="inforBox">
       
       <p class="marginBottom">当前总积分：<span class="jifen">400,000</span></p>
       <p>积分规则：积分商城正在完善中</p>
-    </div>
+    </div> -->
 
     <div class="tabelBox">
       
@@ -17,24 +17,35 @@
 
         style="width: 100%;">
         <el-table-column
-          prop="date"
-          label="更新时间"
-          width="171">
-        </el-table-column>
-        <el-table-column
           prop="name"
-          label="来源渠道"
-          width="250">
+          label="关注对像"
+          width="230px">
         </el-table-column>
         <el-table-column
-          prop="number"
-          label="积分变化数量"
-          width="200">
+          prop="intruce"
+          label="介绍"
+          width="280px">
         </el-table-column>
         <el-table-column
-          prop="all"
-          label="剩余总积分"
-          width=""
+          prop="obj"
+          label="角色"
+          width="69px">
+        </el-table-column>
+        <el-table-column
+          prop="star"
+          label="粉丝"
+          width="95px"
+          style="text-align:right;">
+        </el-table-column>
+        <el-table-column
+          prop="allSee"
+          label="总阅读量"
+          width="96px">
+        </el-table-column>
+        <el-table-column
+          prop="oprate"
+          label="操作"
+          width="78px"
           style="text-align:right;">
         </el-table-column>
       </el-table>
@@ -72,25 +83,28 @@
         currentPage3: 5,
         currentPage4: 4,
         tableData: [{
-            date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
-          }, {
-            date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
-          }, {
-            date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
-          }, {
-            date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
+            name: '鸵鸟区块链的朋友们小虎',
+            intruce:'区块链就像当年互联网刚刚兴起的时候，',
+            obj:'作者',
+            star:'232,467',
+            allSee:'2,823 万',
+            oprate:'取消关注'
+          },
+          {
+            name: '鸵鸟区块链的朋友们小虎',
+            intruce:'区块链就像当年互联网刚刚兴起的时候，',
+            obj:'作者',
+            star:'232,467',
+            allSee:'2,823 万',
+            oprate:'取消关注'
+          },
+          {
+            name: '鸵鸟区块链的朋友们小虎',
+            intruce:'区块链就像当年互联网刚刚兴起的时候，',
+            obj:'作者',
+            star:'232,467',
+            allSee:'2,823 万',
+            oprate:'取消关注'
           }]
       }
     },
