@@ -1,0 +1,51 @@
+@import "../../../assets/common/common.scss";
+.jifen-container{
+	.inforBox{
+		padding:32px 24px;
+		text-align:left;
+		.marginBottom{
+			margin-bottom:12px;
+			display:inline-block;
+			line-height:28px;
+			height:28px;
+		    vertical-align: top;
+		}
+		.jifen{
+			font-size:20px;
+			line-height:28px;
+			margin-left:12px;
+		}
+	}
+	.tabelBox{
+		.cell{
+			
+		}
+		.el-table th{
+			background:rgba(245,245,245,1);
+
+		}
+		.el-table__header-wrapper thead div{
+			background-color:inherit;
+			font-size:14px;
+			font-family:PingFangSC-Regular;
+			color:rgba(77,84,94,1);
+		}
+		text-align:left;
+		thead{
+
+			th{
+			    height: 53px;
+			}
+		}
+		tbody{
+			td{
+			    height: 53px;
+			}
+		}
+		.el-table_1_column_4  {
+			text-align:right;
+			padding-right:24px;
+		}
+	}
+	
+}

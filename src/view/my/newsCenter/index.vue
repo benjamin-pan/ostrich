@@ -1,14 +1,14 @@
 <template>
   <div class="jifen-container">
     <div class="baseTabBox">
-      <span class="first">我的积分</span>
-      
+      <span class="first">我的消息</span>
+      <span class="deleteBtn com-lv">删除</span>
     </div>
-    <div class="inforBox">
+    <!-- <div class="inforBox">
       
       <p class="marginBottom">当前总积分：<span class="jifen">400,000</span></p>
       <p>积分规则：积分商城正在完善中</p>
-    </div>
+    </div> -->
 
     <div class="tabelBox">
       
@@ -17,26 +17,20 @@
 
         style="width: 100%;">
         <el-table-column
+          type="selection"
+          width="54">
+        </el-table-column>
+        <el-table-column
           prop="date"
-          label="更新时间"
-          width="171">
+          label="时间"
+          width="186">
         </el-table-column>
         <el-table-column
-          prop="name"
-          label="来源渠道"
-          width="250">
+          prop="content"
+          label="内容"
+          width="610">
         </el-table-column>
-        <el-table-column
-          prop="number"
-          label="积分变化数量"
-          width="200">
-        </el-table-column>
-        <el-table-column
-          prop="all"
-          label="剩余总积分"
-          width=""
-          style="text-align:right;">
-        </el-table-column>
+        
       </el-table>
       
     
@@ -73,27 +67,15 @@
         currentPage4: 4,
         tableData: [{
             date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
+            content: '王小虎'
           }, {
             date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
-          }, {
+            content: '王小虎'
+          },{
             date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
-          }, {
-            date: '2018-06-26 19:51:32',
-            name: '王小虎',
-            number: '+1000',
-            all:4000
+            content: '王小虎'
           }]
       }
-
     },
     components: {},
     created () {
@@ -115,3 +97,4 @@
     watch: {}
   }
 </script>
+
