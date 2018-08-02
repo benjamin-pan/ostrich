@@ -4,52 +4,47 @@
       <span class="first">我的消息</span>
       <span class="deleteBtn com-lv">删除</span>
     </div>
-    <!-- <div class="inforBox">
-      
-      <p class="marginBottom">当前总积分：<span class="jifen">400,000</span></p>
-      <p>积分规则：积分商城正在完善中</p>
-    </div> -->
 
     <div class="tabelBox">
       
       <el-table
         :data="tableData"
-
+        empty-text="暂无数据"
         style="width: 100%;">
         <el-table-column
           type="selection"
           width="54">
         </el-table-column>
         <el-table-column
-          prop="date"
+          prop="add_time"
           label="时间"
           width="186">
         </el-table-column>
         <el-table-column
-          prop="content"
+          prop="message_title"
           label="内容"
           width="610">
         </el-table-column>
         
       </el-table>
       
-    
-      <div class="paginBox">
+      <div class="paginBox" v-show="isShow">
         <p class="allPage left">共13页/1268条数据</p>
         <div class="blockPage right">
           <el-pagination
-             background
-            layout="prev, pager, next"
+            @current-change="handlePageChange"
+            :current-page.sync="page"
+            background
+            layout="prev, pager, next ,jumper"
             :total="1000">
           </el-pagination>
           <div class="gopageBox">
-          <span>跳至</span><el-input v-model="input"></el-input><span>页</span>
+          <!-- <span>跳至</span><el-input v-model="page" @change='goPage'></el-input><span>页</span> -->
           </div>
         </div>
         <div class="clear"></div>
       </div>
-      
-      
+
     </div>
 
   </div>
@@ -61,37 +56,50 @@
   export default {
     data () {
       return {
-        currentPage1: 5,
-        currentPage2: 5,
-        currentPage3: 5,
-        currentPage4: 4,
+        page:1,
+        isShow:true,
         tableData: [{
-            date: '2018-06-26 19:51:32',
-            content: '王小虎'
+            add_time: '2018-06-26 19:51:32',
+            message_title: '王小虎'
           }, {
-            date: '2018-06-26 19:51:32',
-            content: '王小虎'
+            add_time: '2018-06-26 19:51:32',
+            message_title: '王小虎'
           },{
-            date: '2018-06-26 19:51:32',
-            content: '王小虎'
-          }]
+            add_time: '2018-06-26 19:51:32',
+            message_title: '王小虎'
+          }],
+        user_id:'10008'
       }
     },
     components: {},
     created () {
     },
     mounted () {
-
+      this.getNewsList();
     },
     beforeDestroy () {
     },
     methods: {
-       handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
+      getNewsList(page_num = 1){
+        this.getRequest('https://api.tuoniaox.com/app/app/messagelist', {
+            user_id: this.user_id,
+            page_num,
+            page_size:10
+        }).then(res=> {
+            this.isShow = true;
+            if(res.data.message_list.length>0){
+              this.tableData = res.data.message_list;
+            }else{
+              this.tableData = [];
+            }
+        }).catch((err) => {
+          this.tableData = [];
+          this.isShow = false;
+        })
       },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      }
+      handlePageChange(val){
+        this.getNewsList(val);
+      },
     },
     computed: {},
     watch: {}
