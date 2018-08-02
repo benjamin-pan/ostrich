@@ -132,7 +132,52 @@ span,div,p,input,i,th,td,tr{
     width:inherit;
   }
 }
+.my-dialog{
+  .el-dialog__header{
+    border-bottom:1px solid #F0F0F0;
+  }
+  .el-dialog__body{
+    padding:32px 38px;
+  }
+  .el-dialog{
+    width:460px;
+    border-radius:8px;
+  }
+  .phone{
+    width:128px;
+    margin-right: 9px;
+  }
+  .phoneN{
+    width:240px;
+  }
+  .yanzheng{
+    width:258px;
+    margin-right: 9px;
+  }
+  .btn{
+    width:110px;
+  }
+  .btn2{
+    width:100%;
+  }
+  .el-dialog__footer{
+    padding:0 38px 48px 38px;
+  }
+  span{
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    color:rgba(255,255,255,1);
+  }
+  .el-dialog__title{
+    font-size:16px;
+    font-family:PingFangSC-Medium;
+    color:rgba(30,37,47,1);
+  }
+  .btn1{
+    background:rgba(204,204,204,1);
+  }
 
+}
 
 // @color-fff:#ffffff;
 // @color-lv:#349DFF;

@@ -1,7 +1,7 @@
 <template>
   <div class="shoucang-container">
     <el-tabs v-model="activeName" @tab-click="handleClick" class="baseTabBox">
-      <el-tab-pane label="新闻资讯" name="first">
+      <el-tab-pane label="新闻资讯" name="news" >
         <div class="ziyunBoxOne">
           
           <div class="left cleft">
@@ -118,7 +118,7 @@
 
         </div>
       </el-tab-pane>
-      <el-tab-pane label="活动" name="second">
+      <el-tab-pane label="活动" name="activity">
         <div class="huodongBox">
           <el-row :gutter="24">
             <el-col :span="12">
@@ -215,21 +215,41 @@
   export default {
     data () {
       return {
-        activeName:'first'
+        activeName:'news',
+        user_id:'100008'
       }
     },
     components: {},
     created () {
     },
     mounted () {
-
+      this.getshoucangList(this.page_num,this.activeName);
     },
     beforeDestroy () {
     },
     methods: {
       handleClick(tab, event) {
-       
+        this.getshoucangList(this.page_num ,this.activeName);
       },
+      getshoucangList(page_num = 1,type){
+        this.getRequest('https://api.tuoniaox.com/news/operate/collectionlist', {
+            user_id: this.user_id,
+            type,
+            page_num,
+            page_size:10
+        }).then(res=> {
+            this.isShow = true;
+            if(res.data.message_list.length>0){
+              this.tableData = res.data.message_list;
+            }else{
+              this.tableData = [];
+            }
+        }).catch((err) => {
+          this.tableData = [];
+          this.isShow = false;
+        })
+      },
+
     },
     computed: {},
     watch: {}
