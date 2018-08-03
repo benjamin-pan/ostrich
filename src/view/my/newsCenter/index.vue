@@ -68,7 +68,7 @@
             add_time: '2018-06-26 19:51:32',
             message_title: '王小虎'
           }],
-        user_id:'10008'
+        user_id:'100008'
       }
     },
     components: {},
