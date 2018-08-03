@@ -50,11 +50,40 @@ button {
 .clear{
   clear:both;
 }
-span,div,p,input,i,th,td,tr{
-  font-size:14px;
-  font-family:PingFangSC-Regular;
-  color:rgba(30,37,47,1);
+.my-container{
+  span,div,p,input,i,th,td,tr{
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    //color:rgba(30,37,47,1);
+  }
+  .message-dialog{
+    .el-dialog__header{
+      display:none;
+    }
+    .baseMess{
+      font-size:14px;
+      font-family:PingFangSC-Regular;
+      color:rgba(30,37,47,1);
+      line-height:20px;
+      text-align:center;
+      margin-top:12px;
+    }
+    .iconBox{
+      text-align:center;
+      .icon{
+        font-size:58px;
+      }
+      .error.icon{
+        color:#FF3841;
+      }
+      .success.icon{
+        color:#349DFF;
+      }
+    }
+  }
+  
 }
+
 .com-lv{
   color:rgba(52,157,255,1);
 }
@@ -160,9 +189,13 @@ span,div,p,input,i,th,td,tr{
   .btn2{
     width:100%;
   }
+  .baseBtn{
+    width:100%;
+  }
   .el-dialog__footer{
     padding:0 38px 48px 38px;
   }
+
   span{
     font-size:14px;
     font-family:PingFangSC-Regular;

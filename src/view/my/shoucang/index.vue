@@ -24,7 +24,7 @@
                 <img class="head" src="" alt="">
                 <span class="name">鸵鸟小助手</span>
                 <span class="time">12分钟前</span>
-                <span class="flag"></span>
+                <span class="flag"><i class="icon iconfont icon-shouyexinwen-biaoqianicon"></i></span>
                 <span class="biao">区块链</span>
                 <span class="biao">区块链</span>
                 <span class="biao">区块链</span>
@@ -55,7 +55,7 @@
                 <img class="head" src="" alt="">
                 <span class="name">鸵鸟小助手</span>
                 <span class="time">12分钟前</span>
-                <span class="flag"></span>
+                <span class="flag"><i class="icon iconfont icon-shouyexinwen-biaoqianicon"></i></span>
                 <span class="biao">区块链</span>
                 <span class="biao">区块链</span>
                 <span class="biao">区块链</span>
@@ -105,7 +105,7 @@
                 <img class="head" src="" alt="">
                 <span class="name">鸵鸟小助手</span>
                 <span class="time">12分钟前</span>
-                <span class="flag"></span>
+                <span class="flag"><i class="icon iconfont icon-shouyexinwen-biaoqianicon"></i></span>
                 <span class="biao">区块链</span>
                 <span class="biao">区块链</span>
                 <span class="biao">区块链</span>
@@ -121,88 +121,29 @@
       <el-tab-pane label="活动" name="activity">
         <div class="huodongBox">
           <el-row :gutter="24">
-            <el-col :span="12">
+            <el-col :span="12" v-for="item in news_list">
               <div class="grid-content bg-purple">
                 <div class="infoImgBox">
-                  <img class="infoImg" src="" alt="">
+                  <img class="infoImg" :src="item.single_pic" alt="">
                 </div>
                 
                 <div class="infor">
-                  <p>DAIS&ZG.TOP 2018全球路演暨创新项目交流会·上海站即将开始！</p>
+                  <p>{{item.summary}}</p>
                   <div class="bottomBox">
                     <div class="left">
-                      <span class="location">上海</span>
-                      <span class="time2">2018.07.02-2018.07.03</span>
+                      <span class="location">{{item.source_name}}</span>
+                      <span class="time2">{{item.date}}</span>
                     </div>
-                    <div class="right">取消收藏</div>
+                    <div class="right baseBtn" @click="quxiao(item.id)">取消收藏</div>
                     <div class="clear"></div>
                   </div>
                 </div>
               </div>
             </el-col>
-            <el-col :span="12">
-              <div class="grid-content bg-purple">
-                <div class="infoImgBox">
-                  <img class="infoImg" src="" alt="">
-                </div>
-                
-                <div class="infor">
-                  <p>DAIS&ZG.TOP 2018全球路演暨创新项目交流会·上海站即将开始！</p>
-                  <div class="bottomBox">
-                    <div class="left">
-                      <span class="location">上海</span>
-                      <span class="time2">2018.07.02-2018.07.03</span>
-                    </div>
-                    <div class="right">取消收藏</div>
-                    <div class="clear"></div>
-                  </div>
-                </div>
-              </div>
-            </el-col>
+            
           </el-row>
         </div>
-        <div class="huodongBox">
-          <el-row :gutter="24">
-            <el-col :span="12">
-              <div class="grid-content bg-purple">
-                <div class="infoImgBox">
-                  <img class="infoImg" src="" alt="">
-                </div>
-                
-                <div class="infor">
-                  <p>DAIS&ZG.TOP 2018全球路演暨创新项目交流会·上海站即将开始！</p>
-                  <div class="bottomBox">
-                    <div class="left">
-                      <span class="location">上海</span>
-                      <span class="time2">2018.07.02-2018.07.03</span>
-                    </div>
-                    <div class="right">取消收藏</div>
-                    <div class="clear"></div>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="12">
-              <div class="grid-content bg-purple">
-                <div class="infoImgBox">
-                  <img class="infoImg" src="" alt="">
-                </div>
-                
-                <div class="infor">
-                  <p>DAIS&ZG.TOP 2018全球路演暨创新项目交流会·上海站即将开始！</p>
-                  <div class="bottomBox">
-                    <div class="left">
-                      <span class="location">上海</span>
-                      <span class="time2">2018.07.02-2018.07.03</span>
-                    </div>
-                    <div class="right">取消收藏</div>
-                    <div class="clear"></div>
-                  </div>
-                </div>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
+        
       </el-tab-pane>
     </el-tabs>
 
@@ -216,7 +157,9 @@
     data () {
       return {
         activeName:'news',
-        user_id:'100008'
+        user_id:'100008',
+        news_list:[],
+        activity_list:[]
       }
     },
     components: {},
@@ -239,16 +182,32 @@
             page_size:10
         }).then(res=> {
             this.isShow = true;
-            if(res.data.message_list.length>0){
-              this.tableData = res.data.message_list;
+            if(type == 'news' ){
+                if(res.data.news_list.length>0){
+                this.news_list = res.data.news_list;
+              }else{
+                this.news_list = [];
+              }
             }else{
-              this.tableData = [];
+              if(res.data.news_list.length>0){
+                this.activity_list = res.data.news_list;
+              }else{
+                this.activity_list = [];
+              }
             }
-        }).catch((err) => {
-          this.tableData = [];
-          this.isShow = false;
+            
         })
       },
+      quxiao( content_id ){
+        this.getRequest('https://api.tuoniaox.com/news/operate/cancelcollection', {
+            user_id: this.user_id,
+            content_id
+        }).then(res=> {
+            
+            
+        })
+      },
+     
 
     },
     computed: {},

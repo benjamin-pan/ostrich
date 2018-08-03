@@ -9,11 +9,15 @@
 		width:320px;
 		border:1px solid rgba(240,240,240,1);
 		text-align:center;
+		.iconfont{
+			margin-right:12px;
+		}
 	}
 	.cRightBox{
 		background-color: #fff;
 		width:852px;
 		border:1px solid rgba(240,240,240,1);
+	    min-height: 703px;
 	}
 	.navBase{
 		font-size:16px;

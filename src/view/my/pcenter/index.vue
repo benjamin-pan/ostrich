@@ -7,7 +7,8 @@
           <div class="myInforBox">
               <el-form ref="form" :model="form" label-width="86px" :label-position="labelPosition">
                 <el-form-item label="头像：">
-                  <span class="changehead">更换头像</span>
+                  <img src="" alt="" class="imgHead">
+                  <span class="changehead" @click="dialogHeadVisible = true">更换头像</span>
                 </el-form-item>
                 <el-form-item label="用户名：">
                   <el-input v-model="appuser_list.username"></el-input>
@@ -52,24 +53,55 @@
           <div class="item">
             <span class="one">登录密码：</span>
             <span class="two">******</span>
-            <span class="three">修改</span>
+            <span class="three" @click="dialogPassWordVisible = true">修改</span>
           </div>
           <div class="item">
             <span class="one">邮箱：</span>
-            <span class="two">{{appuser_list.email}}</span>
-            <span class="three">绑定</span>
+            <span class="two">{{appuser_list.email || '暂无' }}</span>
+            <span class="three" @click="dialogEmailVisible = true">{{appuser_list.email ? '修改' : '绑定'}}</span>
           </div>
           <div class="item">
             <span class="one">微信：</span>
             <span class="two">{{appuser_list.wxname}}</span>
-            <span class="three">绑定</span>
+            <span class="three" @click="dialogWinxinVisible = true">{{appuser_list.wxname ? '解除绑定' : '绑定'}}</span>
           </div>
 
         </div>
        
       </el-tab-pane>
     </el-tabs>
-    <!-- diolog -->
+    <!-- diolog 更换头像-->
+    <el-dialog title="修改密码" :visible.sync="dialogHeadVisible" class="my-dialog">
+      <el-form :model="form">
+        <el-form-item>
+          <div class="updateHeadBox">
+            <div class="left bigImg" >
+              <img src="" alt="">
+            </div>
+            <div class="right">
+              <p>预览</p>
+              <img src="" alt="" class="smallImg">
+              <el-button type="primary" plain class="upBtn"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
+            </div>
+            <div class="clear"></div>
+            <p class="notice">注：可上传图片格式：JPG、JPEG、PNG，图片大小不超过5M。</p>
+          </div>
+        </el-form-item>
+      
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-row>
+          <el-col :span="24">
+            <div class="grid-content bg-purple-light">
+              <el-button type="primary" @click="dialogHeadVisible = false" class="baseBtn">确 定</el-button>
+            </div>
+          </el-col>
+        </el-row>
+       
+        
+      </div>
+    </el-dialog>
+    <!-- diolog 修改手机号码 -->
     <el-dialog title="修改手机号码" :visible.sync="dialogFormVisible" class="my-dialog">
       <el-form :model="form">
         <el-form-item>
@@ -85,7 +117,7 @@
         </el-form-item>
         <el-form-item>
           <el-input v-model="input" placeholder="验证码" class="yanzheng"></el-input>
-          <el-button type="primary" class="btn">主要按钮</el-button>
+          <el-button type="primary" class="btn">发送验证码</el-button>
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
@@ -105,6 +137,103 @@
         
       </div>
     </el-dialog>
+    <!-- diolog 修改密码-->
+    <el-dialog title="修改密码" :visible.sync="dialogPassWordVisible" class="my-dialog">
+      <el-form :model="form">
+        <el-form-item>
+          <el-input v-model="input" placeholder="输入新密码" class="baseBtn"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input v-model="input" placeholder="确认新密码" class="baseBtn"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+      <el-row :gutter="24">
+        <el-col :span="12">
+          <div class="grid-content bg-purple">
+            <el-button @click="dialogFormVisible = false" class="btn1 btn2">取 消</el-button>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div class="grid-content bg-purple-light">
+            <el-button type="primary" @click="dialogFormVisible = false" class="btn2">确 定</el-button>
+          </div>
+        </el-col>
+      </el-row>
+       
+        
+      </div>
+    </el-dialog>
+    <!-- diolog 邮箱-->
+    <el-dialog :title="appuser_list.wxname ? '修改邮箱' : '绑定邮箱' " :visible.sync="dialogEmailVisible" class="my-dialog">
+      <el-form :model="form">
+        <el-form-item>
+          <el-input v-model="input" placeholder="请输入邮箱账号" class="baseBtn"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input v-model="input" placeholder="验证码" class="yanzheng"></el-input>
+          <el-button type="primary" class="btn">发送验证码</el-button>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+      <el-row :gutter="24">
+        <el-col :span="12">
+          <div class="grid-content bg-purple">
+            <el-button @click="dialogFormVisible = false" class="btn1 btn2">取 消</el-button>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div class="grid-content bg-purple-light">
+            <el-button type="primary" @click="dialogFormVisible = false" class="btn2">确 定</el-button>
+          </div>
+        </el-col>
+      </el-row>
+       
+        
+      </div>
+    </el-dialog>
+    <!-- diolog 微信-->
+    <el-dialog :title="appuser_list.wxname ? '解绑' : '绑定微信' " :visible.sync="dialogWinxinVisible" class="my-dialog">
+      <el-form :model="form" v-show="appuser_list.wxname">
+        <el-form-item>
+          <el-select v-model="value" placeholder="请选择" class="phone">
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value">
+            </el-option>
+          </el-select>
+          <el-input v-model="input" placeholder="请输入手机号码" class="phoneN"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input v-model="input" placeholder="验证码" class="yanzheng"></el-input>
+          <el-button type="primary" class="btn">主要按钮</el-button>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer" v-show="appuser_list.wxname">
+      <el-row :gutter="24">
+        <el-col :span="12">
+          <div class="grid-content bg-purple">
+            <el-button @click="dialogFormVisible = false" class="btn1 btn2">取 消</el-button>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div class="grid-content bg-purple-light">
+            <el-button type="primary" @click="dialogFormVisible = false" class="btn2">确 定</el-button>
+          </div>
+        </el-col>
+      </el-row>
+      </div>
+      <!-- 绑定微信 -->
+      <div class="weixinCodeBox">
+        <div class="imgBox">
+          <img class="weixinCode" src="" alt="">
+        </div>
+        <p>请使用微信扫描二维码登录</p>
+      </div>
+      
+    </el-dialog>
 
     
 
@@ -118,6 +247,10 @@
     data () {
       return {
         dialogFormVisible: false,
+        dialogPassWordVisible: false,
+        dialogEmailVisible: false,
+        dialogWinxinVisible: false,
+        dialogHeadVisible: false,
         activeName:'first',
         labelPosition:'left',
         appuser_list:{},
@@ -142,6 +275,7 @@
     beforeDestroy () {
     },
     methods: {
+      
       change: function (value) {
         this.isActive = value;
       },
