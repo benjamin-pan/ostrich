@@ -20,3 +20,9 @@
 .capsule + .capsule {
   margin-left: 7px;
 }
+
+.watch-num::before {
+  content: url("./assets/svg/watch.svg");
+  position: relative;
+  left: -6px;
+}

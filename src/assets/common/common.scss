@@ -1,0 +1,138 @@
+html,
+body,
+div,
+ul,
+li,
+span,
+header,
+a,
+i,
+img,
+h1,
+h2,
+h3,
+p,
+button,
+strong {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  display: inline-block;
+}
+button {
+  font-size: 100%;
+}
+:focus {
+  outline: none;
+}
+.flexBox{
+	display:flex;
+}
+.flex{
+  flex:1;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clear{
+  clear:both;
+}
+span,div,p,input,i,th,td,tr{
+  font-size:14px;
+  font-family:PingFangSC-Regular;
+  color:rgba(30,37,47,1);
+}
+.com-lv{
+  color:rgba(52,157,255,1);
+}
+.textLeft{
+  text-align:left;
+}
+.baseTabBox{
+  font-size:16px;
+  font-family:PingFangSC-Regular;
+  color:rgba(30,37,47,1);
+  height:50px;
+  line-height:50px;
+  display:inline-block;
+  border-bottom:1px solid rgba(240,240,240,1);
+  text-align:left;
+  width:100%;
+  position:relative;
+  .active{
+    color:rgba(52,157,255,1);
+    border-bottom:1px solid rgba(52,157,255,1);
+    height:50px;
+    line-height:50px;
+    display:inline-block;
+  }
+  .first{
+    margin-left: 24px;
+    margin-right: 48px;
+  }
+  .el-tabs__nav-wrap::after{
+    display:none;
+  }
+  .deleteBtn{
+    position:absolute;
+    top:0;
+    right:24px;
+  }
+}
+.paginBox{
+  padding:28px 24px;
+  .allPage{
+    display:inline-block;
+    height:28px;
+    line-height:28px;
+  }
+  .blockPage{
+    display:inline-block;
+  }
+  .gopageBox{
+    display:inline-block;
+    vertical-align: bottom;
+    input{
+      width:56px;
+      height:28px;
+      line-height:28px;
+        vertical-align: text-bottom;
+    }
+    span{
+      display:inline-block;
+      height:28px;
+      line-height:28px;
+    }
+  }
+  .el-pagination{
+    display:inline-block;
+  }
+  .el-input{
+    width:56px;
+      vertical-align: bottom;
+      margin-left:5px;
+      margin-right:5px;
+  }
+}
+.my-container{
+  .el-input{
+    width:inherit;
+  }
+}
+
+
+// @color-fff:#ffffff;
+// @color-lv:#349DFF;

@@ -6,9 +6,11 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import Components from './components/index.js';
+import {getRequest} from './assets/common/api.js';
 
 Vue.use(ElementUI)
 Vue.use(Components)
+Vue.prototype.getRequest = getRequest;
 
 Vue.config.productionTip = false
 

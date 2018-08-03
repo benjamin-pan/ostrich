@@ -1,0 +1,47 @@
+.comments-box {
+  margin-top: 50px;
+  .comments-title {
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+  }
+  .one-comments {
+    margin-top: 25px;
+    .user-info {
+      .head-portrait {
+        vertical-align: middle;
+        border-radius: 32px;
+      }
+      .user-name {
+        margin-left: 10px;
+        vertical-align: middle;
+        color: #1E252F;
+        font-size: 14px;
+      }
+    }
+    .content-box {
+      margin: 10px 0 0 45px;
+      font-size: 14px;
+      color: #1E252F;
+      .comment-text {
+        color: #1E252F;
+      }
+      .comment-info {
+        margin-top: 12px;
+        font-size: 12px;
+        .comment-time {
+          color: #9B9B9B;
+        }
+        .feel-good {
+          cursor: pointer;
+          color: #4D545E
+        }
+        .icon-good {
+          position: relative;
+          top: 2px;
+          left: -6px;
+        }
+      }
+    }
+  }
+}

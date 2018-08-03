@@ -1,4 +1,4 @@
-@import "../../assets/common/common.less";
+@import "../../assets/common/common.scss";
 
 .my-container{
 	width:1200px;
@@ -8,11 +8,12 @@
 		background-color: #fff;
 		width:320px;
 		border:1px solid rgba(240,240,240,1);
-
+		text-align:center;
 	}
 	.cRightBox{
 		background-color: #fff;
 		width:852px;
+		border:1px solid rgba(240,240,240,1);
 	}
 	.navBase{
 		font-size:16px;
@@ -25,7 +26,7 @@
 		text-align:center;
 		display:block;
 	}
-	.navBase.active{
+	.router-link-active{
 		color:#349DFF;
 	}
 	.headImg{
@@ -43,6 +44,21 @@
 		line-height:25px;
 		margin:0 auto;
 		margin-bottom: 34px;
+	}
+	.denglubtn{
+		padding:50px 0;
+		.el-button{
+			width:272px;
+			height:42px;
+			
+			background:rgba(52,157,255,1);
+		}
+		span{
+			border-radius:2px;
+			font-size:16px;
+			font-family:PingFangSC-Medium;
+			color:rgba(255,255,255,1);
+		}
 	}
 
 }

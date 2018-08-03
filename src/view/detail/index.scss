@@ -6,7 +6,7 @@
   overflow: hidden;
   text-align: left;
   .article {
-    padding: 40px 40px 56px;
+    padding: 40px 40px 50px;
     float: left;
     width: 820px;
     background-color: $default;
@@ -24,30 +24,58 @@
       .artcle-time {
         margin-left: 40px;
       }
-      .watch-num {
-        float: right;
-      }
-      .watch-num::before {
-        content: url("../../assets/svg/watch.svg");
-        position: relative;
-        left: -6px;
-      }
-      .share-artcle {
-        float: right;
-        margin-left: 35px;
-        cursor: pointer;
-      }
-      .share-artcle::before {
-        content: url("../../assets/svg/share.svg");
-        position: relative;
-        left: -6px;
-      }
     }
   }
   .other {
     float: right;
     width: 352px;
-    background-color: $default;
+    .author-box {
+      padding: 40px 25px 50px;
+      text-align: center;
+      color: #000000;
+      background-color: $default;
+      .author-icon {
+      }
+      .author-name {
+        font-size: 18px;
+      }
+      .author-introduction {
+        margin-top: 15px;
+        font-size: 14px;
+      }
+      .if-like {
+        .like-he {
+          margin-top: 25px;
+          width: 100px;
+        }
+      }
+      .article-info {
+        .info-box {
+          margin-top: 40px;
+          width: 50%;
+          font-weight: bold;
+          .num {
+            font-size: 20px;
+          }
+          .info-title {
+            margin-top: 3px;
+            font-size: 14px;
+          }
+          &.pull-left {
+            border-right: 1px solid #C6C9D1;
+          }
+        }
+      }
+    }
+    .advertising {
+      margin-top: 24px;
+      width: 352px;
+      height: 176px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .abstract-box {
     margin-top: 40px;
@@ -55,10 +83,70 @@
     background-color: #F5F5F5;
     color: #9B9B9B;
     font-size: 16px;
+    .quotes {
+      vertical-align: top;
+      margin-top: 10px;
+      margin-right: 15px;
+    }
+    .abstract {
+      width: 650px;
+      display: inline-block;
+    }
   }
+
   .parting-line {
     margin: 32px 0;
     border-top: 1px solid #F0F0F0;
+  }
+  .paragraph {
+    font-size: 16px;
+    color: #1E252F;
+    line-height: 22px;
+    .mes-source {
+      font-weight: bold;
+    }
+  }
+  .paragraph + .paragraph {
+    margin-top: 25px;
+  }
+  .btn-box {
+    margin-top: 50px;
+    text-align: center;
+    button {
+      width: 160px;
+      height: 42px;
+    }
+    .btn-collection {
+      margin-left: 40px;
+    }
+  }
+  .related-new-box {
+    margin-top: 50px;
+    .new-instructions {
+      color: #000000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .news {
+      .single-new {
+        position: relative;
+        margin-top: 22px;
+        height: 174px;
+        .image {
+          width: 100%;
+          height: 100%;
+          //background-size: cover;
+        }
+        .new-title {
+          text-align: center;
+          font-size: 14px;
+          color: #FFFFFF;
+          position: absolute;
+          bottom: 30px;
+          width: 233px;
+        }
+      }
+    }
   }
 }
 
