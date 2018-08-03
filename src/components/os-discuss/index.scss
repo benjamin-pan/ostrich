@@ -1,0 +1,23 @@
+.discuss-box {
+  .discuss-title {
+    margin: 50px 0 20px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .action {
+    margin-top: 12px;
+    line-height: 32px;
+    .need-login {
+      color: #A7A7A7;
+      font-size: 14px;
+      a {
+        cursor: pointer;
+        color: #349DFF;
+      }
+    }
+    .sent-discuss {
+      width: 100px;
+    }
+  }
+}

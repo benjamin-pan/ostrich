@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="clearfix">
     <ostrich-header></ostrich-header>
     <router-view/>
   </div>
@@ -25,6 +25,6 @@ export default {
   /*margin-top: 60px;*/
   width: 100%;
   height: 100%;
-  background-color: #F5F5F5;
+  /*background-color: #F5F5F5;*/
 }
 </style>

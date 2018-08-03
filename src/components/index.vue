@@ -592,7 +592,7 @@
                         <li>
                           <span class="tuoniao-hot-content">
                             <a href="https://www.tuoniaox.com/43416.html" target="_blank"
-                                        title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
+                               title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
                           </span>
                         </li>
                         <li class="font12 gray8">2018-07-18</li>
@@ -613,7 +613,7 @@
                         <li>
                           <span class="tuoniao-hot-content">
                             <a href="https://www.tuoniaox.com/43416.html" target="_blank"
-                                        title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
+                               title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
                           </span>
                         </li>
                         <li class="font12 gray8">2018-07-18</li>
@@ -634,7 +634,7 @@
                         <li>
                           <span class="tuoniao-hot-content">
                             <a href="https://www.tuoniaox.com/43416.html" target="_blank"
-                                        title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
+                               title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
                           </span>
                         </li>
                         <li class="font12 gray8">2018-07-18</li>
@@ -759,20 +759,25 @@
   #aa::-webkit-input-placeholder {
     color: white;
   }
+  
   #aa:-moz-placeholder {
     /* Firefox 18- */
     color: white;
   }
+  
   #aa::-moz-placeholder {
     /* Firefox 19+ */
     color: white;
   }
+  
   #aa:-ms-input-placeholder {
     color: white;
   }
+  
   .tuoniao-ul {
     margin: 200px 0px 0px 0px;
   }
+  
   .home {
     margin-left: 45px;
   }
