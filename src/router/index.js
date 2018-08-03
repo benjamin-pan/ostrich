@@ -10,6 +10,7 @@ import Andustry from '@/view/headline/headlineAndustry'
 import Encyclopedia from '@/view/headline/headlineEncyclopedia'
 import Flash from '@/view/flash/flash'
 import Flashdetails from '@/view/flash/flashDetails'
+import Home from '@/view/home'
 // import index from '@/components/index'
 
 Vue.use(Router)
@@ -108,6 +109,12 @@ export default new Router({
       path: '/flash/flashDetails',
       name: 'Flashdetails',
       component: Flashdetails
+    }
+    ,
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
     }
   ]
 })
