@@ -6,7 +6,7 @@
       </div>
       <div class="head-link">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-          <el-menu-item index="1">首页</el-menu-item>
+          <el-menu-item index="1" @click="$router.push({path: '/home'})">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">头条</template>
             <el-menu-item index="2-1" @click="$router.push({path: '/headline/headlineViewpoint'})">观点洞察</el-menu-item>
@@ -16,7 +16,7 @@
           </el-submenu>
           <el-menu-item index="3" @click="$router.push({path: '/flash/flash'})">快讯</el-menu-item>
           <el-menu-item index="4">行情</el-menu-item>
-          <el-menu-item index="5">行情</el-menu-item>
+          <el-menu-item index="5">活动</el-menu-item>
         </el-menu>
       </div>
       <div class="head-action">

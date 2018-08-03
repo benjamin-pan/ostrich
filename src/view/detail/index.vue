@@ -49,7 +49,7 @@
   <div class="related-new-box">
     <p class="new-instructions">相关新闻</p>
     <el-row class="news" :gutter="20">
-      <el-col :span="8" v-for="(o, index) in 6" :key="o" class="single-new">
+      <el-col :span="8" v-for="(o) in 6" :key="o" class="single-new">
         <img src="../../assets/images/3-10.jpg" class="image"/>
         <p class="new-title">好吃的汉堡</p>
       </el-col>

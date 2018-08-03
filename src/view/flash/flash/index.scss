@@ -4,22 +4,31 @@
   .content-left {
     width: 820px;
     float: left;
+    margin-top: 15px;
   }
 }
 
 .tuoniao-hot-content {
-  display: inline-block;
-  height: 38px !important;
+  display: inline-flex;
+  height: 45px !important;
   text-overflow: ellipsis;
   overflow: hidden;
+  a {
+    width: 150px;
+    min-height: 45px;
+    display: -webkit-box !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 16px;
+    font-family: PingFang-SC-Medium;
+    color: rgba(30, 37, 47, 1);
+  }
 }
 
 .center {
   text-align: center;
-}
-
-.tuoniao-hot-news {
-  padding: 10px 0 0 9px !important;
 }
 
 .tuoniao-enterprise li {
@@ -82,11 +91,11 @@ a:link {
 }
 
 .margint-20 {
-  margin-top: 20px;
+  margin-top: 4px;
 }
 
 .marginb-30 {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .fontw {
@@ -243,11 +252,7 @@ ul li {
   margin: 0 auto 1rem;
   padding: 21px 0;
   background: #FFF;
-  /*text-align: center;*/
-  /*left: 15px;*/
   font-weight: bold;
-  /*border-top: 2px solid #238FE2;*/
-  /*border-bottom: 1px dashed #e6e8eb;*/
   font-size: 18px;
   text-transform: uppercase;
   padding-bottom: 18px;
@@ -272,13 +277,12 @@ ul li {
 }
 
 .hotnews .con ol {
-  width: 170px;
+  width: 130px;
   height: 72px;
   position: relative;
 }
 
 .hotnews .con li {
-  position: absolute;
   bottom: -4px;
   left: 0;
 }
@@ -293,6 +297,7 @@ ul li {
   padding-top: 20px;
   border-top: 1px dashed #e6e8eb;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footnotes .left,
@@ -449,7 +454,12 @@ li {
 
 .timeline-right {
   margin-top: -20px;
-  margin-left: 605px;
+  margin-left: 635px;
+  span {
+    font-size: 12px;
+    font-family: PingFang-SC-Regular;
+    color: rgba(30, 37, 47, 1);
+  }
 }
 
 .timeline-left {
@@ -458,11 +468,12 @@ li {
 }
 
 .segmenttation {
-  border: 1px solid #F0F0F0;
-  width: 85%;
   position: relative;
-  margin-left: 100px;
   margin-top: 20px;
+  background: #F0F0F0;
+  height: 1px;
+  width: 86%;
+  left: 97px;
 }
 
 .triangle {
@@ -647,12 +658,6 @@ li {
   display: contents !important;
 }
 
-.tuoniao-hot-news a {
-  display: inline-block;
-  position: relative;
-  z-index: 100;
-}
-
 .el-col-13 {
   width: 93%;
 }
@@ -673,6 +678,78 @@ li {
   position: relative;
   left: 455px;
 }
+
 .el-col-23 {
   width: 97%;
+}
+
+.share-popover {
+  padding: 7px 7px 0;
+  text-align: center;
+  .thirdParty {
+    //padding-left: 30px;
+    font-size: 14px;
+    color: #000000;
+    border-bottom: 1px solid #F5F5F5;
+    text-align: left;
+    p {
+      padding-bottom: 16px;
+      padding-left: 25px;
+      cursor: pointer;
+      img {
+        position: relative;
+        left: -11px;
+      }
+    }
+    .QQ {
+      span {
+        margin-left: 7px;
+      }
+    }
+    .weibo {
+      span {
+        margin-left: 3px;
+      }
+    }
+    .chat {
+      span {
+        margin-left: 0px;
+      }
+    }
+  }
+  .QRcode {
+    margin-top: 10px;
+    width: 109px;
+    height: 109px;
+    border: 1px solid #F0F0F0;
+  }
+  .QRcodeInstructions {
+    color: #1E252F;
+    font-size: 12px;
+  }
+}
+
+.comment-cli img {
+  position: relative;
+  top: 4px;
+  right: 5px;
+}
+
+.flash-share {
+  position: relative;
+  top: 4px;
+  right: 4px;
+}
+
+.generate-share-image {
+  font-size: 12px;
+  font-family: PingFang-SC-Regular;
+  color: rgba(155, 155, 155, 1);
+  left: 7px;
+  top: -1px;
+}
+
+.newsTraffic {
+  position: relative;
+  top: -6px;
 }

@@ -100,143 +100,8 @@
         </div>
         <div class="right content-right">
           <div class="news-flash-right right marginb">
-            <div class="ranking marginb-30 margint-20">
-              <div class="tit">
-                <span style="border-radius: 25%;background: #4169E1;height: 20px;width: 20px;margin-left: 15px;">
-                  <img style="margin-top: -3px;margin-left: 2px;" src="../../../assets/images/lightning.png">
-                </span>
-                <span>今日快讯</span>
-              </div>
-              <div class="con bgc line22 clearfix news-flash">
-                <ul>
-                  <li>
-                    <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全
-                    </p>
-                    <p style="color: #000">
-                      【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-                    </p>
-                    <span class="left">10分钟前</span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/up.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/share.png">分享
-                    </span>
-                  </li>
-                  <li>
-                    <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果MonexGroup收购的加密货币交易所Coincheck能够保证安全
-                    </p>
-                    <p style="color: #000">
-                      【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-                    </p>
-                    <span class="left">10分钟前</span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/up.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/share.png">分享
-                    </span>
-                  </li>
-                  <li>
-                    <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全
-                    </p>
-                    <p style="color: #000">
-                      【日本静冈银行或将与Coincheck合作】 鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）
-                    </p>
-                    <span class="left">10分钟前</span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/up.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/share.png">分享
-                    </span>
-                  </li>
-                  <li>
-                    <p class="media-introduce" style="max-height: 110px;">爱思社群完成品牌域名aisi.org的收购冈银行行长柴田久在接受彭博社采访时表示，如果Monex Group 收购的加密货币交易所Coincheck能够保证安全
-                    </p>
-                    <p style="color: #000">日本静冈银行或将与Coincheck合作】鸵鸟区块链7月20日消息，日本静冈银行行长柴田久在接受彭博社采访时表示，如果MonexGroup收购的加密货币交易所Coincheck能够保证安全性并提高社会信任度，将与该交易所进行帐户合作等业务（产经新闻）</p>
-                    <span class="left">10分钟前</span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/down.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/up.png">369
-                    </span>
-                    <span class="left tuoniao-share">
-                      <img style="margin: -6px 10px 0 0;" src="../../../assets/images/share.png">分享
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="ranking marginb-30 margint-20">
-              <div class="hotnews marginb-30">
-                <div class="tit">
-                  <span style="border-radius: 25%; background: #FF4040; height: 20px; width: 20px; margin-left: 15px;">
-                    <img style="margin-top: -3px; margin-left: 2px;" src="../../../assets/images/hot.png">
-                  </span>
-                  <span>24小时新闻</span>
-                </div>
-                <div class="con bgc paddingclearfix">
-                  <div class="con bgc  clearfix">
-                    <ul class="clearfix tuoniao-hot-news">
-                      <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                        <img class="left" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                      </a>
-                      <ol class="right">
-                        <span class="tuoniao-hot-content">
-                          <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
-                        </span>
-                        <li class="font12 gray8">12分钟前</li>
-                        <li class="right">
-                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
-                          <a href="javascript:;" style="margin-left: 12px;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
-                        </li>
-                      </ol>
-                    </ul>
-                    <ul class="clearfix tuoniao-hot-news">
-                      <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                        <img class="left" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                      </a>
-                      <ol class="right">
-                        <span class="tuoniao-hot-content">
-                          <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
-                        </span>
-                        <li class="font12 gray8">12分钟前</li>
-                        <li class="right">
-                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
-                          <a href="javascript:;" style="margin-left: 12px;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
-                        </li>
-                      </ol>
-                    </ul>
-                    <ul class="clearfix tuoniao-hot-news">
-                      <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                        <img class="left" src="../../../assets/images/2018071811084089.jpeg" alt="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">
-                      </a>
-                      <ol class="right">
-                        <span class="tuoniao-hot-content">
-                          <a href="https://www.tuoniaox.com/43416.html" target="_blank" title="加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来">加拿大Rivemont加密货币基金：目前加密货币市场并非牛市，但非常看好比特币的未来</a>
-                        </span>
-                        <li class="font12 gray8">12分钟前</li>
-                        <li class="right">
-                          <img style="height: 20px;width: 15px;margin-left: 100px;" src="../../../assets/images/eye.png">
-                          <a href="javascript:;" style="margin-left: 12px;" data-id="43710" data-src="" class="generate-share-image right">3098</a>
-                        </li>
-                      </ol>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <today-flash></today-flash>
+            <headline-news></headline-news>
           </div>
         </div>
       </div>
@@ -246,3 +111,26 @@
 <style lang="scss" scoped>
   @import './index.scss';
 </style>
+<script>
+  import HeadlineNews from "../../../components/headline-news";
+  import TodayFlash from "../../../components/today-flash";
+  export default {
+    data () {
+      return {
+
+      }
+    },
+    components: {
+      HeadlineNews,
+      TodayFlash
+    },
+    created () {
+    },
+    mounted () {
+    },
+    beforeDestroy () {
+    },
+    computed: {},
+    watch: {}
+  }
+</script>
