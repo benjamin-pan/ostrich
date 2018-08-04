@@ -19,7 +19,12 @@ export default new Router({
   // mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/login',
       name: 'Login',
       component: () => import('@/view/login')
     },
@@ -109,12 +114,6 @@ export default new Router({
       path: '/flash/flashDetails',
       name: 'Flashdetails',
       component: Flashdetails
-    }
-    ,
-    {
-      path: '/home',
-      name: 'Home',
-      component: Home
-    }
+    },
   ]
 })

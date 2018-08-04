@@ -10,7 +10,7 @@
   border: 1px solid #999EA5;
   text-align: center;
   color: #4D545E;
-  &.active{
+  &.active {
     color: $text-white;
     background-color: #349DFF;
     border: 1px solid #349DFF;
@@ -21,8 +21,43 @@
   margin-left: 7px;
 }
 
+.watch-num {
+  color: #9B9B9B;
+}
+
 .watch-num::before {
   content: url("./assets/svg/watch.svg");
   position: relative;
   left: -6px;
+}
+
+.release-time {
+  color: #9B9B9B;
+}
+
+.os-lable::before {
+  content: url("./assets/svg/icon-lable.svg");
+  position: relative;
+  top: 2px;
+}
+
+.os-rising::before {
+  content: url("./assets/svg/icon-rising.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
+
+.os-falling::before {
+  content: url("./assets/svg/icon-falling.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
+
+.os-sharing::before {
+  content: url("./assets/svg/icon-sharing.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
 }

@@ -1,13 +1,13 @@
-//* {
-//  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-//  word-wrap: break-word;
-//  table-layout: fixed;
-//  word-break: break-word;
-//  box-sizing: border-box;
-//  margin: 0px;
-//  /*padding: 0px;*/
-//}
-/* 导航栏 start */
+.view-insight-box {
+  margin: 20px auto;
+  width: 1200px;
+  .content-left {
+    width: 820px;
+  }
+  .content-right {
+    width: 352px;
+  }
+}
 
 .el-button.is-round {
   padding: 4px 12px;
@@ -90,7 +90,7 @@
   margin-left: -42px;
 }
 
-.el-icon-edit-outline:hover+.tuoniao-contributor {
+.el-icon-edit-outline:hover + .tuoniao-contributor {
   animation: fade-in;
   /*动画名称*/
   animation-duration: 0.5s;
@@ -249,15 +249,9 @@ ul li {
   width: 1100px;
 }
 
-.content-left {
-  width: 800px;
-  margin-top: 15px;
-}
 
-.content-right {
-  width: 320px;
-  margin-top: 4px;
-}
+
+
 
 .carousel-indicators {
   bottom: 40px;
@@ -329,7 +323,7 @@ h4.media-heading a {
 
 /*热门新闻*/
 
-.ranking .con ul+ul {
+.ranking .con ul + ul {
   padding-top: 10px;
   border-top: 1px dashed #e6e8eb;
   margin-top: 5px;
@@ -352,19 +346,19 @@ h4.media-heading a {
   margin-top: 10px;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .container {
     width: 750px
   }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .container {
     width: 970px
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .container {
     width: 1170px;
   }

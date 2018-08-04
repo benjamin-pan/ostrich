@@ -31,7 +31,7 @@
   color: $text-light !important;
 }
 
-html,body {
+html, body {
   height: 100%;
 }
 
@@ -89,6 +89,9 @@ li {
   }
   &.gray-light {
     color: $text-light !important;
+  }
+  &.black {
+    color: $text-black !important;;
   }
 }
 
@@ -283,7 +286,11 @@ li {
 }
 
 .ml-30 {
-  margin-left: 30px;
+  margin-left: 30px !important;;
+}
+
+.ml-45 {
+  margin-left: 45px !important;
 }
 
 .mt-30 {
@@ -388,7 +395,11 @@ li {
   color: #324057;
 }
 
-/*font-24*/
+/*font*/
+.font-12 {
+  font-size: 12px !important;
+}
+
 .font-24 {
   font-size: 24px;
 }

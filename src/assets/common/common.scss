@@ -52,8 +52,8 @@ button {
 }
 span,div,p,input,i,th,td,tr{
   font-size:14px;
-  font-family:PingFangSC-Regular;
-  color:rgba(30,37,47,1);
+  //font-family:PingFangSC-Regular;
+  //color:rgba(30,37,47,1);
 }
 .com-lv{
   color:rgba(52,157,255,1);
@@ -61,37 +61,7 @@ span,div,p,input,i,th,td,tr{
 .textLeft{
   text-align:left;
 }
-.baseTabBox{
-  font-size:16px;
-  font-family:PingFangSC-Regular;
-  color:rgba(30,37,47,1);
-  height:50px;
-  line-height:50px;
-  display:inline-block;
-  border-bottom:1px solid rgba(240,240,240,1);
-  text-align:left;
-  width:100%;
-  position:relative;
-  .active{
-    color:rgba(52,157,255,1);
-    border-bottom:1px solid rgba(52,157,255,1);
-    height:50px;
-    line-height:50px;
-    display:inline-block;
-  }
-  .first{
-    margin-left: 24px;
-    margin-right: 48px;
-  }
-  .el-tabs__nav-wrap::after{
-    display:none;
-  }
-  .deleteBtn{
-    position:absolute;
-    top:0;
-    right:24px;
-  }
-}
+
 .paginBox{
   padding:28px 24px;
   .allPage{

@@ -113,7 +113,6 @@
 </style>
 <script>
   import HeadlineNews from "../../../components/headline-news";
-  import TodayFlash from "../../../components/today-flash";
   export default {
     data () {
       return {
@@ -121,8 +120,7 @@
       }
     },
     components: {
-      HeadlineNews,
-      TodayFlash
+      HeadlineNews
     },
     created () {
     },

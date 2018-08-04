@@ -106,7 +106,7 @@
         <div class="right content-right">
           <headline-news></headline-news>
           <div class="content-right right marginb nosee">
-            <headline-column></headline-column>
+            <!--<headline-column></headline-column>-->
             <headline-hot-label></headline-hot-label>
           </div>
         </div>
@@ -120,7 +120,7 @@
 </style>
 <script>
   import HeadlineNews from "../../../components/headline-news";
-  import HeadlineColumn from "../../../components/headline-column";
+//  import HeadlineColumn from "../../../components/headline-column";
   import HeadlineHotLabel from "../../../components/headline-hot-label";
   export default {
     data () {
@@ -130,7 +130,7 @@
     },
     components: {
       HeadlineNews,
-      HeadlineColumn,
+//      HeadlineColumn,
       HeadlineHotLabel
     },
     created () {

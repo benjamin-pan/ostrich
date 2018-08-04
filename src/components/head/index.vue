@@ -40,7 +40,7 @@
     },
     data () {
       return {
-        activeIndex: ''
+        activeIndex: '1'
       }
     },
     components: {},
