@@ -104,10 +104,10 @@
           </div>
         </div>
         <div class="right content-right">
-          <headline-news></headline-news>
+          <!--<headline-news></headline-news>-->
           <div class="content-right right marginb nosee">
             <!--<headline-column></headline-column>-->
-            <headline-hot-label></headline-hot-label>
+            <!--<headline-hot-label></headline-hot-label>-->
           </div>
         </div>
       </div>
@@ -119,9 +119,9 @@
 
 </style>
 <script>
-  import HeadlineNews from "../../../components/headline-news";
+//  import HeadlineNews from "../../../components/headline-news";
 //  import HeadlineColumn from "../../../components/headline-column";
-  import HeadlineHotLabel from "../../../components/headline-hot-label";
+//  import HeadlineHotLabel from "../../../components/headline-hot-label";
   export default {
     data () {
       return {
@@ -129,9 +129,9 @@
       }
     },
     components: {
-      HeadlineNews,
+//      HeadlineNews,
 //      HeadlineColumn,
-      HeadlineHotLabel
+//      HeadlineHotLabel
     },
     created () {
     },

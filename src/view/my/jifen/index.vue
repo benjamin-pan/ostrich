@@ -119,10 +119,6 @@
             }else{
               this.tableData = [];
             }
-        }).catch((err) => {
-          console.log(err, 'err');
-          this.tableData = [];
-          this.isShow = false;
         })
       },
       getStatus(row,column) {

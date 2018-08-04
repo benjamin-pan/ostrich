@@ -18,133 +18,182 @@ strong {
   padding: 0;
   margin: 0;
 }
+
 ul,
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: #333;
 }
+
 img {
   display: inline-block;
 }
+
 button {
   font-size: 100%;
 }
+
 :focus {
   outline: none;
 }
-.flexBox{
-	display:flex;
-}
-.flex{
-  flex:1;
-}
-.left{
-  float: left;
-}
-.right{
-  float: right;
-}
-.clear{
-  clear:both;
-}
-span,div,p,input,i,th,td,tr{
-  font-size:14px;
-  //font-family:PingFangSC-Regular;
-  //color:rgba(30,37,47,1);
-}
-.com-lv{
-  color:rgba(52,157,255,1);
-}
-.textLeft{
-  text-align:left;
+
+.flexBox {
+  display: flex;
 }
 
-.paginBox{
-  padding:28px 24px;
-  .allPage{
-    display:inline-block;
-    height:28px;
-    line-height:28px;
+.flex {
+  flex: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+span, div, p, input, i, th, td, tr {
+  font-size: 14px;
+}
+
+.my-container {
+  span, div, p, input, i, th, td, tr {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
   }
-  .blockPage{
-    display:inline-block;
+  .message-dialog {
+    .el-dialog__header {
+      display: none;
+    }
+    .baseMess {
+      font-size: 14px;
+      font-family: PingFangSC-Regular;
+      color: rgba(30, 37, 47, 1);
+      line-height: 20px;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .iconBox {
+      text-align: center;
+      .icon {
+        font-size: 58px;
+      }
+      .error.icon {
+        color: #FF3841;
+      }
+      .success.icon {
+        color: #349DFF;
+      }
+    }
   }
-  .gopageBox{
-    display:inline-block;
+}
+
+.com-lv {
+  color: rgba(52, 157, 255, 1);
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.paginBox {
+  padding: 28px 24px;
+  .allPage {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+  }
+  .blockPage {
+    display: inline-block;
+  }
+  .gopageBox {
+    display: inline-block;
     vertical-align: bottom;
-    input{
-      width:56px;
-      height:28px;
-      line-height:28px;
-        vertical-align: text-bottom;
+    input {
+      width: 56px;
+      height: 28px;
+      line-height: 28px;
+      vertical-align: text-bottom;
     }
-    span{
-      display:inline-block;
-      height:28px;
-      line-height:28px;
+    span {
+      display: inline-block;
+      height: 28px;
+      line-height: 28px;
     }
   }
-  .el-pagination{
-    display:inline-block;
+  .el-pagination {
+    display: inline-block;
   }
-  .el-input{
-    width:56px;
-      vertical-align: bottom;
-      margin-left:5px;
-      margin-right:5px;
+  .el-input {
+    width: 56px;
+    vertical-align: bottom;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
-.my-container{
-  .el-input{
-    width:inherit;
+
+.my-container {
+  .el-input {
+    width: inherit;
   }
 }
-.my-dialog{
-  .el-dialog__header{
-    border-bottom:1px solid #F0F0F0;
+
+.my-dialog {
+  .el-dialog__header {
+    border-bottom: 1px solid #F0F0F0;
   }
-  .el-dialog__body{
-    padding:32px 38px;
+  .el-dialog__body {
+    padding: 32px 38px;
   }
-  .el-dialog{
-    width:460px;
-    border-radius:8px;
+  .el-dialog {
+    width: 460px;
+    border-radius: 8px;
   }
-  .phone{
-    width:128px;
+  .phone {
+    width: 128px;
     margin-right: 9px;
   }
-  .phoneN{
-    width:240px;
+  .phoneN {
+    width: 240px;
   }
-  .yanzheng{
-    width:258px;
+  .yanzheng {
+    width: 258px;
     margin-right: 9px;
   }
-  .btn{
-    width:110px;
+  .btn {
+    width: 110px;
   }
-  .btn2{
-    width:100%;
+  .btn2 {
+    width: 100%;
   }
-  .el-dialog__footer{
-    padding:0 38px 48px 38px;
+  .baseBtn {
+    width: 100%;
   }
-  span{
-    font-size:14px;
-    font-family:PingFangSC-Regular;
-    color:rgba(255,255,255,1);
+  .el-dialog__footer {
+    padding: 0 38px 48px 38px;
   }
-  .el-dialog__title{
-    font-size:16px;
-    font-family:PingFangSC-Medium;
-    color:rgba(30,37,47,1);
+
+  span {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    color: rgba(255, 255, 255, 1);
   }
-  .btn1{
-    background:rgba(204,204,204,1);
+  .el-dialog__title {
+    font-size: 16px;
+    font-family: PingFangSC-Medium;
+    color: rgba(30, 37, 47, 1);
+  }
+  .btn1 {
+    background: rgba(204, 204, 204, 1);
   }
 
 }
