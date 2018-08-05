@@ -1,0 +1,71 @@
+@import "../../assets/common/common.scss";
+@import "../my/shoucang/index.scss";
+.portal-container{
+	width:100%;
+	.headContainer{
+		width:100%;
+		background-color:#5abaff;
+	}
+	.headBox{
+		
+		height:310px;
+		width:1200px;
+		margin:0 auto;
+		position: relative;
+		color:#fff;
+		.guanzhu{
+			margin:0 auto;
+			margin-top:12px;
+			display: block;
+		}
+		.grid-content{
+			text-align:center;
+		}
+		.infoBox{
+			padding:0 190px;
+			.el-row{
+				padding-top:30px;
+			}
+			.topTitle{
+				margin-top:30px;
+				font-size:16px;
+			}
+		}
+		.shareBox{
+			position:absolute;
+			right:0;
+			top:20px;
+			.weixinImg{
+				img{
+					width:100px;
+					height:100px;
+					display:block;
+				}
+			}
+			
+		}
+		.portalImg{
+			img{
+				display:block;
+				width:100px;
+				height:100px;
+				border:100%;
+				margin:0 auto;
+			}
+		}
+		.nameBox{
+			text-align:center;
+			margin-top:24px;
+			margin-bottom:10px;
+			.name{
+				font-size:22px;
+				display:inline-block;
+			}
+		}
+		.messageBox{
+			text-align:center;
+			margin-bottom:10px;
+		}
+	}
+	
+}

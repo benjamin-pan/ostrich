@@ -56,6 +56,11 @@ export default new Router({
       component: Detail
     },
     {
+      path: '/portal',
+      name: 'Portal',
+      component: () => import('@/view/portal')
+    },
+    {
       path: '/my',
       name: 'My',
       component: () => import('@/view/my'),

@@ -7,7 +7,7 @@
           <div class="myInforBox">
               <el-form ref="form" :model="form" label-width="86px" :label-position="labelPosition">
                 <el-form-item label="头像：">
-                  <img src="" alt="" class="imgHead">
+                  <img :src="appuser_list.head_url" alt="" class="imgHead">
                   <span class="changehead" @click="dialogHeadVisible = true">更换头像</span>
                 </el-form-item>
                 <el-form-item label="用户名：">
@@ -76,12 +76,25 @@
         <el-form-item>
           <div class="updateHeadBox">
             <div class="left bigImg" >
-              <img src="" alt="">
+              <img :src="appuser_list.head_url" alt="">
+              <img :src="upImgUrl" alt="">
             </div>
             <div class="right">
               <p>预览</p>
-              <img src="" alt="" class="smallImg">
-              <el-button type="primary" plain class="upBtn"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
+              <img :src="appuser_list.head_url" alt="" class="smallImg">
+              <el-upload
+                :show-file-list="false"
+                ref="uploadimg"
+                class="upload-demo"
+                action="ttps://jsonplaceholder.typicode.com/posts/"
+                :limit="1"
+                :on-preview="onpreview"
+                :on-change="onchange"
+                :on-progress="onpress"
+                :file-list="fileList">
+                <el-button size="small" type="primary"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
+              </el-upload>
+              <!-- <el-button type="primary" plain class="upBtn"><i class="el-icon-upload el-icon--right"></i>上传</el-button> -->
             </div>
             <div class="clear"></div>
             <p class="notice">注：可上传图片格式：JPG、JPEG、PNG，图片大小不超过5M。</p>
@@ -103,8 +116,8 @@
     </el-dialog>
     <!-- diolog 修改手机号码 -->
     <el-dialog title="修改手机号码" :visible.sync="dialogFormVisible" class="my-dialog">
-      <el-form :model="form">
-        <el-form-item>
+      <el-form :model="ruleFormPhone" :rules="rules" ref="ruleFormPhone" >
+        <el-form-item prop="phone">
           <el-select v-model="value" placeholder="请选择" class="phone">
             <el-option
               v-for="item in options"
@@ -113,29 +126,30 @@
               :value="item.value">
             </el-option>
           </el-select>
-          <el-input v-model="input" placeholder="请输入手机号码" class="phoneN"></el-input>
+          <el-input  v-model="ruleFormPhone.phone" placeholder="请输入手机号码" class="phoneN"></el-input>
+        </el-form-item>
+        <el-form-item prop="captcha">
+          <el-input v-model="ruleFormPhone.captcha" placeholder="验证码" class="yanzheng"></el-input>
+          <el-button type="primary" class="btn" @click="getCode">发送验证码</el-button>
         </el-form-item>
         <el-form-item>
-          <el-input v-model="input" placeholder="验证码" class="yanzheng"></el-input>
-          <el-button type="primary" class="btn">发送验证码</el-button>
+          
+          <el-row :gutter="24">
+            <el-col :span="12">
+              <div class="grid-content bg-purple">
+                <el-button @click="dialogFormVisible = false" class="btn1 btn2">取 消</el-button>
+              </div>
+            </el-col>
+            <el-col :span="12">
+              <div class="grid-content bg-purple-light">
+                <el-button type="primary" @click="changePhone('ruleFormPhone')" class="btn2">确 定</el-button>
+              </div>
+            </el-col>
+          </el-row>  
+          
         </el-form-item>
       </el-form>
-      <div slot="footer" class="dialog-footer">
-      <el-row :gutter="24">
-        <el-col :span="12">
-          <div class="grid-content bg-purple">
-            <el-button @click="dialogFormVisible = false" class="btn1 btn2">取 消</el-button>
-          </div>
-        </el-col>
-        <el-col :span="12">
-          <div class="grid-content bg-purple-light">
-            <el-button type="primary" @click="dialogFormVisible = false" class="btn2">确 定</el-button>
-          </div>
-        </el-col>
-      </el-row>
-       
-        
-      </div>
+      
     </el-dialog>
     <!-- diolog 修改密码-->
     <el-dialog title="修改密码" :visible.sync="dialogPassWordVisible" class="my-dialog">
@@ -243,6 +257,17 @@
 
 </style>
 <script>
+ 
+  import {isvalidPhone} from '../../../assets/common/validate.js';
+  var validPhone=(rule, value,callback)=>{
+    if (!value){
+        callback(new Error('请输入电话号码'))
+    }else  if (!isvalidPhone(value)){
+      callback(new Error('请输入正确的11位手机号码'))
+    }else {
+        callback()
+    }
+  }
   export default {
     data () {
       return {
@@ -262,7 +287,24 @@
           value: '2',
           label: '+00'
         }],
-        value: '1'
+        value: '1',
+        ruleFormPhone: {
+          phone:'',
+          captcha:''
+        },
+        rules: {
+          phone: [
+            { required: true, message: '验证码不能为空'},
+            { trigger: 'blur', validator: validPhone }
+          ],
+          captcha: [
+            { required: true, message: '验证码不能为空'}
+          ]
+
+        },
+        mobile:'18301979839',
+        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
+        upImgUrl:''
 
       }
     },
@@ -318,6 +360,37 @@
             }
         }).catch((err) => {
         })
+      },
+      getCode:function(){
+        this.getRequest('https://api.tuoniaox.com/login/login/sendSMSCode', {
+          mobile:this.mobile
+        }).then(res=> {
+          
+        })
+      },
+      changePhone:function(formName){
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            this.getRequest('https://api.tuoniaox.com/app/app/updateuser', {
+              mobile:this.mobile
+            }).then(res=> {
+              
+            });
+          } else {
+            return false;
+          }
+        });
+      },
+      onpress:function(){
+        console.log("uo propress")
+      },
+      onchange:function(file, fileList){
+        console.log("file",file)
+        console.log("fileList",fileList)
+      },
+      onpreview:function(file){
+        this.upImgUrl = file.url;
+        console.log('this.upImgUrl',this.upImgUrl)
       }
 
     },
