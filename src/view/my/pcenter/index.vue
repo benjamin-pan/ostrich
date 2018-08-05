@@ -77,11 +77,24 @@
           <div class="updateHeadBox">
             <div class="left bigImg" >
               <img :src="appuser_list.head_url" alt="">
+              <img :src="upImgUrl" alt="">
             </div>
             <div class="right">
               <p>预览</p>
               <img :src="appuser_list.head_url" alt="" class="smallImg">
-              <el-button type="primary" plain class="upBtn"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
+              <el-upload
+                :show-file-list="false"
+                ref="uploadimg"
+                class="upload-demo"
+                action="ttps://jsonplaceholder.typicode.com/posts/"
+                :limit="1"
+                :on-preview="onpreview"
+                :on-change="onchange"
+                :on-progress="onpress"
+                :file-list="fileList">
+                <el-button size="small" type="primary"><i class="el-icon-upload el-icon--right"></i>上传</el-button>
+              </el-upload>
+              <!-- <el-button type="primary" plain class="upBtn"><i class="el-icon-upload el-icon--right"></i>上传</el-button> -->
             </div>
             <div class="clear"></div>
             <p class="notice">注：可上传图片格式：JPG、JPEG、PNG，图片大小不超过5M。</p>
@@ -289,7 +302,9 @@
           ]
 
         },
-        mobile:'18301979839'
+        mobile:'18301979839',
+        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
+        upImgUrl:''
 
       }
     },
@@ -365,6 +380,17 @@
             return false;
           }
         });
+      },
+      onpress:function(){
+        console.log("uo propress")
+      },
+      onchange:function(file, fileList){
+        console.log("file",file)
+        console.log("fileList",fileList)
+      },
+      onpreview:function(file){
+        this.upImgUrl = file.url;
+        console.log('this.upImgUrl',this.upImgUrl)
       }
 
     },
