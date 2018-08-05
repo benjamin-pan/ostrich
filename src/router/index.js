@@ -11,6 +11,8 @@ import Encyclopedia from '@/view/headline/headlineEncyclopedia'
 import Flash from '@/view/flash/flash'
 import Flashdetails from '@/view/flash/flashDetails'
 import Home from '@/view/home'
+import Activity from '@/view/activity/index'
+import ActivityDetail from '@/view/activity/detail'
 // import index from '@/components/index'
 
 Vue.use(Router)
@@ -28,11 +30,16 @@ export default new Router({
       name: 'Login',
       component: () => import('@/view/login')
     },
-    // {
-    //   path: '/',
-    //   name: 'index',
-    //   component: index
-    // },
+    {
+      path: '/activity',
+      name: 'Activity',
+      component: Activity
+    },
+    {
+      path: '/activity/detail',
+      name: 'ActivityDetail',
+      component: ActivityDetail
+    },
     {
       path: '/register',
       name: 'Register',

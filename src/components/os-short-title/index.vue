@@ -22,18 +22,24 @@
     },
     data () {
       return {
-        iconImg: require(`../../assets/svg/${this.titleIcon}.svg`)
+        iconImg: ''
       }
     },
     components: {},
     created () {
     },
     mounted () {
+      this.iconImg = this.titleIcon === '' ? '' : require(`../../assets/svg/${this.titleIcon}.svg`)
     },
     beforeDestroy () {
     },
     methods: {},
     computed: {},
-    watch: {}
+    watch: {
+//      titleIcon (imgSrc) {
+//        console.log(234, imgSrc)
+//
+//      }
+    }
   }
 </script>

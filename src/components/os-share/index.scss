@@ -1,0 +1,58 @@
+.share-box {
+  display: inline-block;
+}
+
+.share-popover {
+  padding: 7px 7px 0;
+  text-align: center;
+  .thirdParty {
+    font-size: 14px;
+    color: #000000;
+    border-bottom: 1px solid #F5F5F5;
+    text-align: left;
+    p {
+      padding-bottom: 16px;
+      padding-left: 25px;
+      cursor: pointer;
+      img {
+        position: relative;
+        left: -11px;
+        top: 2px;
+      }
+      &:hover {
+        color: #349DFF;
+      }
+    }
+    .QQ {
+      span {
+        margin-left: 7px;
+      }
+    }
+    .weibo {
+      span {
+        margin-left: 3px;
+      }
+    }
+    .chat {
+      span {
+        margin-left: 0px;
+      }
+    }
+  }
+  .QRcode-box {
+    margin-top: 10px;
+    width: 100%;
+    height: 109px;
+    .QRcode {
+      text-align: center;
+      width: 109px;
+      height: 109px;
+      border: 1px solid #F0F0F0;
+    }
+  }
+  .QRcodeInstructions {
+    margin-top: 10px;
+    color: #1E252F;
+    font-size: 12px;
+  }
+}

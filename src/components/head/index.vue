@@ -16,13 +16,29 @@
           </el-submenu>
           <el-menu-item index="3" @click="$router.push({path: '/flash/flash'})">快讯</el-menu-item>
           <el-menu-item index="4">行情</el-menu-item>
-          <el-menu-item index="5">活动</el-menu-item>
+          <el-menu-item index="5" @click="$router.push({path: '/activity'})">活动</el-menu-item>
         </el-menu>
       </div>
       <div class="head-action">
-        <span class="contribute">投稿</span>
-        <span class="search">搜索</span>
-        <span class="APP">APP</span>
+        <el-popover
+                placement="top-start"
+                title="投稿请联系："
+                trigger="hover"
+                popper-class="head-popover"
+                content="lemon@tuoniao.fm">
+          <span slot="reference" class="width-80 contribute">投稿</span>
+        </el-popover>
+        <span class="width-80 search">搜索</span>
+        <!--<el-input placeholder=""></el-input>-->
+        <el-popover ref="downloadApp" placement="bottom" trigger="click">
+          <div class="download-app">
+            <img class="QRcode" :src="imgSrc" alt="店铺二维码">
+            <p class="QRcodeInstructions">扫描二维码</p>
+            <p class="QRcodeInstructions">下载鸵鸟区块链</p>
+            <p class="QRcodeInstructions">APP</p>
+          </div>
+        </el-popover>
+        <span class="width-80 APP" v-popover:downloadApp>APP</span>
       </div>
       <div class="login-or-register">
         <el-button type="primary">登录/注册</el-button>
@@ -40,7 +56,8 @@
     },
     data () {
       return {
-        activeIndex: '1'
+        activeIndex: '1',
+        imgSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532877920333&di=798ec9728571a37a7790b7d5972b53ed&imgtype=0&src=http%3A%2F%2Fcimage.tianjimedia.com%2FuploadImages%2F2014%2F044%2FV1A74G68V8OT.gif'
       }
     },
     components: {},

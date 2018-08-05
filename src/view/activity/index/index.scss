@@ -1,0 +1,43 @@
+@import "../../../assets/scss/base/config";
+
+.activity-box {
+  width: 1200px;
+  margin: 20px auto;
+  position: relative;
+  .search-more {
+    position: absolute;
+    top: 0;
+    right: 25px;
+  }
+  .selecte-conditions {
+    font-size: 14px;
+    padding: 0 30px 30px;
+    border-bottom: 1px solid #F0F0F0;
+    p {
+      margin-top: 30px;
+      .selecte-title {
+        color: #858585;
+      }
+    }
+  }
+  .card-box {
+    .single-card {
+      height: 310px;
+      .image {
+        display: block;
+        width: 100%;
+        height: 180px;
+      }
+      .content-box {
+        padding: 20px 24px 24px;
+        .title {
+          color: #1E252F;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+

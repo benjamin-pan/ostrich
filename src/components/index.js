@@ -10,6 +10,8 @@ import osEnterpriseColumn from './os-enterprise-column'
 import osShortCard from './os-short-card'
 import osHotLabels from './os-hot-labels'
 import osAdvertising from './os-advertising'
+import osShare from './os-share'
+import osHotActivity from './os-hot-activity'
 
 const components = [
   osHeader,
@@ -23,7 +25,9 @@ const components = [
   osEnterpriseColumn,
   osShortCard,
   osHotLabels,
-  osAdvertising
+  osAdvertising,
+  osShare,
+  osHotActivity
 ]
 
 export default {

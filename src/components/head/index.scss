@@ -29,13 +29,14 @@
       margin-left: 260px;
       height: 100%;
       line-height: 5;
-      span {
+      .width-80 {
         display: inline-block;
         width: 80px;
         font-size: 14px;
         color: $text-dark-gray;
+        cursor: pointer;
       }
-      span::before {
+      .width-80::before {
         position: relative;
         top: 3px;
         left: -10px;

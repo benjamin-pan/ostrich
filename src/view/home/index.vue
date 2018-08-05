@@ -23,13 +23,6 @@
           <el-tab-pane v-for="classify in classifys" :label="classify.name" :name="classify.id">
             <ostrich-short-article :news="news"></ostrich-short-article>
           </el-tab-pane>
-          <!--<el-tab-pane label="推荐" name="first"></el-tab-pane>-->
-          <!--<el-tab-pane label="观点洞察" name="second">-->
-          <!--<ostrich-short-article :news="news"></ostrich-short-article>-->
-          <!--</el-tab-pane>-->
-          <!--<el-tab-pane label="链圈局势" name="third"></el-tab-pane>-->
-          <!--<el-tab-pane label="行业资讯" name="forth"></el-tab-pane>-->
-          <!--<el-tab-pane label="百科" name="fifth"></el-tab-pane>-->
         </el-tabs>
       </div>
     </div>
