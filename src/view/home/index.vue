@@ -19,14 +19,17 @@
       </el-row>
       <!-- 左侧list-->
       <div class="news-list-content mt-25">
-        <el-tabs v-model="activeName" @tab-click="" class="baseTabBox">
-          <el-tab-pane label="推荐" name="first"></el-tab-pane>
-          <el-tab-pane label="观点洞察" name="second">
+        <el-tabs v-model="activeName" @tab-click="getNews(activeName)" class="baseTabBox">
+          <el-tab-pane v-for="classify in classifys" :label="classify.name" :name="classify.id">
             <ostrich-short-article :news="news"></ostrich-short-article>
           </el-tab-pane>
-          <el-tab-pane label="链圈局势" name="third"></el-tab-pane>
-          <el-tab-pane label="行业资讯" name="forth"></el-tab-pane>
-          <el-tab-pane label="百科" name="fifth"></el-tab-pane>
+          <!--<el-tab-pane label="推荐" name="first"></el-tab-pane>-->
+          <!--<el-tab-pane label="观点洞察" name="second">-->
+          <!--<ostrich-short-article :news="news"></ostrich-short-article>-->
+          <!--</el-tab-pane>-->
+          <!--<el-tab-pane label="链圈局势" name="third"></el-tab-pane>-->
+          <!--<el-tab-pane label="行业资讯" name="forth"></el-tab-pane>-->
+          <!--<el-tab-pane label="百科" name="fifth"></el-tab-pane>-->
         </el-tabs>
       </div>
     </div>
@@ -46,7 +49,8 @@
       return {
         activeName: 'second',
         news: [],
-        flashs: []
+        flashs: [],
+        classifys: []
       }
     },
     created () {
@@ -55,6 +59,7 @@
       this.getCarousel()
       this.getNews()
       this.getFlashs()
+      this.getClassify()
     },
     beforeDestroy () {
     },
@@ -65,13 +70,14 @@
         }).catch((err) => {
         })
       },
-      getNews () {
+      getNews (id = '') {
         this.getRequest('https://api.tuoniaox.com/news/news/list', {
-          cat_id: '',
+          cat_id: id,
           page_num: '',
           page_size: ''
         }).then(res => {
           this.news = res.data.news_list || []
+          console.log(this.news)
         }).catch((err) => {
           console.log(err, 'err');
         })
@@ -83,6 +89,15 @@
           page_size: ''
         }).then(res => {
           this.flashs = res.data.post_list || []
+        }).catch((err) => {
+          this.flashs = []
+        })
+      },
+      getClassify () {
+        this.getRequest('https://api.tuoniaox.com/news/news/classify').then(res => {
+          this.classifys = res.data.post_list || []
+          this.activeName = (this.classifys[0] || {}).id
+          console.log(4, res)
         }).catch((err) => {
           this.flashs = []
         })

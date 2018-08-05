@@ -1,27 +1,29 @@
-import ostrichHeader from './head'
-import ostrichComments from './os-comments'
-import ostrichDiscuss from './os-discuss'
-import ostrichHotNews from './os-hot-news'
-import ostrichAuthor from './os-author'
-import ostrichShortArticle from './os-short-article'
-import ostrichShortFlash from './os-short-flash'
-import ostrichShortTitle from './os-short-title'
-import ostrichEnterpriseColumn from './os-enterprise-column'
-import ostrichShortCard from './os-short-card'
-import ostrichHotLabels from './os-hot-labels'
+import osHeader from './head'
+import osComments from './os-comments'
+import osDiscuss from './os-discuss'
+import osHotNews from './os-hot-news'
+import osAuthor from './os-author'
+import osShortArticle from './os-short-article'
+import osShortFlash from './os-short-flash'
+import osShortTitle from './os-short-title'
+import osEnterpriseColumn from './os-enterprise-column'
+import osShortCard from './os-short-card'
+import osHotLabels from './os-hot-labels'
+import osAdvertising from './os-advertising'
 
 const components = [
-  ostrichHeader,
-  ostrichComments,
-  ostrichDiscuss,
-  ostrichHotNews,
-  ostrichAuthor,
-  ostrichShortArticle,
-  ostrichShortFlash,
-  ostrichShortTitle,
-  ostrichEnterpriseColumn,
-  ostrichShortCard,
-  ostrichHotLabels
+  osHeader,
+  osComments,
+  osDiscuss,
+  osHotNews,
+  osAuthor,
+  osShortArticle,
+  osShortFlash,
+  osShortTitle,
+  osEnterpriseColumn,
+  osShortCard,
+  osHotLabels,
+  osAdvertising
 ]
 
 export default {

@@ -1,6 +1,6 @@
 <template>
   <div class="enterprise-column-box bg-color mt-25">
-    <ostrich-short-title title="企业专栏" titleIcon="icom-enterprise-column"></ostrich-short-title>
+    <os-short-title title="企业专栏" titleIcon="icom-enterprise-column"></os-short-title>
     <div class="single-company clearfix">
         <div class="pull-left company-log">
           <img src="../../assets/images/test.png">

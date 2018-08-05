@@ -1,11 +1,11 @@
 <template>
-  <div class="short-article-box clearfix">
-    <div v-for="one in news" @click="goToArticleDetail(one)">
-      <div class="pull-left img-box">
+  <div class="short-article-box">
+    <div class="single-art clearfix" v-for="one in news">
+      <div class="pull-left img-box cursor-pointer" @click="goToArticleDetail(one)">
         <img :src="one.single_pic"/>
       </div>
       <div class="pull-right content-box">
-        <p class="title">{{one.title}}</p>
+        <p class="title cursor-pointer" @click="goToArticleDetail(one)">{{one.title}}</p>
         <div>
           <el-button type="primary" round>{{one.copyright_type === '1' ? '原创' : '转载'}}</el-button>
           <el-button type="primary" round v-if="one.is_top === '1'">置顶</el-button>
@@ -54,12 +54,12 @@
     },
     methods: {
       goToArticleDetail (row) {
-//        this.$router.push({
-//          path: '/member/payback/paybackDetail',
-//          query: {
-//            id: row.id
-//          }
-//        })
+        this.$router.push({
+          path: '/detail',
+          query: {
+            id: row.id
+          }
+        })
       }
     },
     computed: {},

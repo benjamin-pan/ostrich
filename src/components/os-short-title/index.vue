@@ -9,7 +9,7 @@
 </style>
 <script>
   export default {
-    name: 'ostrich-short-title',
+    name: 'os-short-title',
     props: {
       title: {
         type: String,

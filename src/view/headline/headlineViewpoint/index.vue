@@ -1,8 +1,8 @@
 <template>
   <div class="view-insight-box clearfix">
     <div class="content-left pull-left bg-color">
-      <ostrich-short-title title="观点洞察" title-icon="icon-view-insight"></ostrich-short-title>
-      <ostrich-short-article :news="news"></ostrich-short-article>
+      <os-short-title title="观点洞察" title-icon="icon-view-insight"></os-short-title>
+      <!--<ostrich-short-article :news="news"></ostrich-short-article>-->
       <!--<ostrich-short-article :news="news"></ostrich-short-article>-->
       
       <!--<div class="news-list-content">-->
@@ -110,12 +110,12 @@
     </div>
     <div class="pull-right content-right">
       <div class="bg-color">
-        <ostrich-short-title title="24小时新闻" title-icon="icon-24hour"></ostrich-short-title>
+        <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
         <os-short-card></os-short-card>
       </div>
       <os-enterprise-column></os-enterprise-column>
       <div class="mt-25 bg-color">
-        <ostrich-short-title title="热门标签" title-icon="icon-hot-tag"></ostrich-short-title>
+        <os-short-title title="热门标签" title-icon="icon-hot-tag"></os-short-title>
         <os-hot-lables></os-hot-lables>
       </div>
     </div>

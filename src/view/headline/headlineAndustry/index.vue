@@ -131,7 +131,7 @@
     components: {
       HeadlineNews,
 //      HeadlineColumn,
-      HeadlineHotLabel
+//      HeadlineHotLabel
     },
     created () {
     },

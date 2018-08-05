@@ -1,6 +1,6 @@
 <template>
   <div class="hot-news">
-    <ostrich-short-title title="热门新闻" title-icon="icon-hot-news"></ostrich-short-title>
+    <os-short-title title="热门新闻" title-icon="icon-hot-news"></os-short-title>
     <os-short-card></os-short-card>
   </div>
 </template>

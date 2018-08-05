@@ -112,9 +112,18 @@
   .btn-box {
     margin-top: 50px;
     text-align: center;
+    img {
+      position: absolute;
+      left: 51px;
+      top: 11px;
+      color: #FFFFFF;
+    }
     button {
+      padding: 12px 50px;
       width: 160px;
       height: 42px;
+      position: relative;
+      text-align: right;
     }
     .btn-collection {
       margin-left: 40px;
