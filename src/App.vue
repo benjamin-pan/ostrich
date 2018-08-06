@@ -2,6 +2,7 @@
   <div id="app" class="clearfix">
     <ostrich-header></ostrich-header>
     <router-view/>
+    <ostrich-footer></ostrich-footer>
   </div>
 </template>
 

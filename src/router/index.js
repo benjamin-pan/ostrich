@@ -6,11 +6,15 @@ import Detail from '@/view/detail'
 import Viewpoint from '@/view/headline/headlineViewpoint'
 import Situation from '@/view/headline/headlineSituation'
 import Details from '@/view/headline/headlineDetails'
-import Andustry from '@/view/headline/headlineAndustry'
+import Industry from '@/view/headline/headlineIndustry'
 import Encyclopedia from '@/view/headline/headlineEncyclopedia'
 import Flash from '@/view/flash/flash'
 import Flashdetails from '@/view/flash/flashDetails'
 import Home from '@/view/home'
+import Activity from '@/view/activity/index'
+import Detail1 from '@/view/activity/detail'
+import Portal from '@/view/portal'
+import Noticedetails from '@/view/flash/noticedetails'
 // import index from '@/components/index'
 
 Vue.use(Router)
@@ -91,9 +95,9 @@ export default new Router({
       component: Details
     },
     {
-      path: '/headline/headlineAndustry',
-      name: 'Andustry',
-      component: Andustry
+      path: '/headline/headlineIndustry',
+      name: 'Industry',
+      component: Industry
     },
     {
       path: '/headline/headlineEncyclopedia',
@@ -115,6 +119,30 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    }
+    ,
+    {
+      path: '/activity/index',
+      name: 'Activity',
+      component: Activity
+    }
+    ,
+    {
+      path: '/activity/detail',
+      name: 'Detail1',
+      component: Detail1
+    }
+    ,
+    {
+      path: '/portal',
+      name: 'Portal',
+      component: Portal
+    }
+    ,
+    {
+      path: '/flash/noticedetails',
+      name: 'Noticedetails',
+      component: Noticedetails
     }
   ]
 })

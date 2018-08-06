@@ -11,12 +11,12 @@
             <template slot="title">头条</template>
             <el-menu-item index="2-1" @click="$router.push({path: '/headline/headlineViewpoint'})">观点洞察</el-menu-item>
             <el-menu-item index="2-2" @click="$router.push({path: '/headline/headlineSituation'})">链圈局势</el-menu-item>
-            <el-menu-item index="2-3" @click="$router.push({path: '/headline/headlineAndustry'})">行业资讯</el-menu-item>
+            <el-menu-item index="2-3" @click="$router.push({path: '/headline/headlineIndustry'})">行业资讯</el-menu-item>
             <el-menu-item index="2-4" @click="$router.push({path: '/headline/headlineEncyclopedia'})">百科</el-menu-item>
           </el-submenu>
           <el-menu-item index="3" @click="$router.push({path: '/flash/flash'})">快讯</el-menu-item>
           <el-menu-item index="4">行情</el-menu-item>
-          <el-menu-item index="5">活动</el-menu-item>
+          <el-menu-item index="5" @click="$router.push({path: '/activity/detail'})">活动</el-menu-item>
         </el-menu>
       </div>
       <div class="head-action">

@@ -1,96 +1,106 @@
 @import "../../assets/common/common.scss";
 .recommend {
-    background: #FFFFFF;
-    margin-top: 15px;
+  background: #FFFFFF;
+  margin-top: 15px;
+}
+
+.ziyunBoxOne {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #F0F0F0;
+  .cleft {
+    width: 240px;
+    img {
+      display: block;
+      width: 100%;
+      height: 180px;
+    }
   }
-  .ziyunBoxOne{
-    padding-left:24px;
-    padding-right:24px;
-    padding-top:24px;
-    padding-bottom:24px;
-    border-bottom:1px solid #F0F0F0;
-    .cleft{
-      width:240px;
-      img{
-        display:block;
-        width:100%;
-        height:180px;
-      }
+  .cright {
+    width: 508px;
+    height: 180px;
+    .title {
+      font-size: 16px;
+      font-family: PingFangSC-Semibold;
+      color: rgba(30, 37, 47, 1);
+      line-height: 22px;
+      margin-bottom: 12px;
+      font-weight: bold;
     }
-    .cright{
-      width:510px;
-      height:180px;
-      .title{
-        font-size:16px;
-        font-family:PingFangSC-Semibold;
-        color:rgba(30,37,47,1);
-        line-height:22px;
-        margin-bottom:12px;
-        font-weight:bold;
-      }
-      .title1{
-        font-size:14px;
-        font-family:PingFangSC-Regular;
-        color:rgba(30,37,47,1);
-        line-height:20px;
-      }
-      .el-row{
-        line-height:initial;
-        margin-bottom:12px;
-      }
-      .el-button{
-        margin:0;
-        padding:2px 12px;
-        span{
-          font-size:12px;
-          font-family:PingFangSC-Regular;
-          color:rgba(255,255,255,1);
-        }
-      }
+    .title1 {
+      font-size: 14px;
+      font-family: PingFangSC-Regular;
+      color: rgba(30, 37, 47, 1);
+      line-height: 20px;
     }
-    .right:hover{
-      color:rgba(52,157,255,1);
-      cursor:pointer;
+    .el-row {
+      line-height: initial;
+      margin-bottom: 12px;
     }
-    .bottomBox{
-      height:32px;
-      line-height:32px;
-      margin-top:20px;
-      .head{
-        height:32px;
-        width:32px;
-        border-radius:100%;
-        display:inline-block;
-        margin-right:12px;
-      }
-      span{
-        font-size:12px;
-        font-family:PingFangSC-Regular;
-        color:rgba(180,180,180,1);
-          display: inline-block;
-          vertical-align: top;
-      }
-      .name{
-        color:rgba(30,37,47,1);
-        margin-right:12px;
-      }
-      .time{
-        margin-right:32px;
+    .el-button {
+      margin: 0;
+      padding: 2px 12px;
+      span {
+        font-size: 12px;
+        font-family: PingFangSC-Regular;
+        color: rgba(255, 255, 255, 1);
       }
     }
   }
-  .ziyunBoxTwo.ziyunBoxOne{
-    .cright{
-      width:100%;
+  .right:hover {
+    color: rgba(52, 157, 255, 1);
+    cursor: pointer;
+  }
+  .bottomBox {
+    height: 32px;
+    line-height: 32px;
+    margin-top: 20px;
+    .head {
+      height: 32px;
+      width: 32px;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 12px;
     }
-    .imgBox{
-      width:100%;
-      margin-top:12px;
-      margin-bottom:-3px;
-      img{
-        display:block;
-        height:180px;
-        width:100%;
-      }
+    span {
+      font-size: 12px;
+      font-family: PingFangSC-Regular;
+      color: rgba(180, 180, 180, 1);
+      display: inline-block;
+      vertical-align: top;
+    }
+    .name {
+      color: rgba(30, 37, 47, 1);
+      margin-right: 12px;
+    }
+    .time {
+      margin-right: 32px;
     }
   }
+}
+
+.ziyunBoxTwo.ziyunBoxOne {
+  .cright {
+    width: 100%;
+  }
+  .imgBox {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: -3px;
+    img {
+      display: block;
+      height: 180px;
+      width: 100%;
+    }
+  }
+}
+
+.generate-share-image {
+  font-size: 12px;
+  font-family: PingFang-SC-Regular;
+  color: rgba(155, 155, 155, 1);
+  top: 2px;
+  position: relative;
+}

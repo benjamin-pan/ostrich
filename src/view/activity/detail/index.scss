@@ -1,0 +1,60 @@
+@import "../../../assets/scss/base/config";
+
+.activity-detail-box {
+  width: 1200px;
+  margin: 20px auto;
+  .top {
+    height: 410px;
+    .img-box {
+      width: 820px;
+      height: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .activity-info {
+      width: 380px;
+      padding: 25px;
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 28px;
+        color: #1E252F;
+      }
+      .detail-box {
+        margin-top: 40px;
+        color: #1E252F;
+        font-size: 16px;
+        line-height: 22px;
+        p {
+          margin-top: 20px;
+          padding-left: 7px;
+        }
+      }
+      .action-box {
+        margin-top: 76px;
+        height: 42px;
+        line-height: 13px;
+        button {
+          width: 120px;
+          height: 42px;
+        }
+        .el-button + .el-button {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .bottom-left {
+    width: 820px;
+    .content-box {
+      padding: 32px 40px 50px;
+    }
+  }
+  .bottom-right {
+    width: 352px;
+  }
+}
+

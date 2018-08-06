@@ -4,7 +4,7 @@
       <!-- 左侧list-->
       <div class="news-list-left">
         <div class="tuoniao-ency">
-          <img style="margin-left: 3px;" src="../../../assets/svg/icon-flash.svg">
+          <img class="flash-img" src="../../../assets/svg/icon-flash.svg">
           <span>今日快讯</span>
         </div>
         <div class="timeline">
@@ -138,16 +138,14 @@
         <div class="ranking marginb-30 margint-20">
           <div class="ranking marginb-30 margint-20">
             <div class="tit">
-              <span style="border-radius: 25%; background: #FFB90F; height: 20px; width: 20px; margin-left: 15px; text-align: center;">
-                <img style="margin-top: -3px; margin-left: 2px;" src="../../../assets/images/enterprise.png">
-              </span>
-              <span>交易所公告</span>
+              <img class="announcement-img" src="../../../assets/svg/二级页面-交易所icon.svg">
+              <span class="exchange-notice">交易所公告</span>
             </div>
             <div class="con bgc line22 clearfix">
               <el-row :gutter="16" class="notice">
                 <el-col :span="18" class="notice_01">
                   <div class="grid-content bg-purple">
-                    <a class="tuoniao-a">[Fcoin] 关于F码相关事宜的公告</a>
+                    <a class="tuoniao-a" @click="$router.push({path: '/flash/noticedetails'});">[Fcoin] 关于F码相关事宜的公告</a>
                   </div>
                 </el-col>
                 <el-col :span="6" class="notice_o2">
@@ -176,6 +174,7 @@
 </style>
 <script>
   import HeadlineNews from "../../../components/headline-news";
+  
   export default {
     //    name: 'ostrich-flash',
     data() {

@@ -1,0 +1,13 @@
+@import "../../assets/scss/base/config";
+
+.user-info {
+  .head-portrait {
+    vertical-align: middle;
+    border-radius: 32px;
+  }
+  .user-name {
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #1E252F;
+  }
+}

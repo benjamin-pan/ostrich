@@ -91,18 +91,11 @@
                 <a class="details-a">查看更多</a>
               </div>
             </div>
-            <div class="more center line36 marginb-30" data-is-loading="1" style="top: -37px;position: relative;background: ;margin-top: 0;">
-              <span class="marginb-30" style="border: 1px solid #409EFF;border-radius: 4px;display: inline-block;width: 180px;top: 67px;position: relative;">
-                <a href="#" style="color: #409EFF;display: contents;">加载更多</a>
-              </span>
-            </div>
           </div>
         </div>
         <div class="right content-right">
-          <div class="news-flash-right right marginb">
             <today-flash></today-flash>
             <headline-news></headline-news>
-          </div>
         </div>
       </div>
     </section>

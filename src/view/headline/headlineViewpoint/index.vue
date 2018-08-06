@@ -1,7 +1,5 @@
 <template>
-  <div id="headlineViewpoint">
-    <section class="news">
-      <div class="container">
+      <div class="ostrich-viewpoint">
         <div class="content-left left">
           <!-- 左侧list-->
           <div class="news-list-content marginb-30">
@@ -28,8 +26,6 @@
           </div>
         </div>
       </div>
-    </section>
-  </div>
 </template>
 <style lang="scss" scoped>
   @import './index.scss';

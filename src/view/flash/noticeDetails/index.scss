@@ -1,0 +1,139 @@
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content-left {
+  width: 820px;
+}
+
+.content-right {
+  width: 352px;
+}
+
+.news-list-left {
+  padding: 0px 15px;
+  background-color: #fff;
+  margin-top: -10px;
+}
+
+.news {
+  background: #EAEAEA;
+}
+
+.marginb-30 {
+  margin-bottom: 30px;
+}
+
+.tit {
+  padding: 14px 0 14px 24px;
+  border-bottom: 1px solid rgba(240,240,240,1);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.tuoniao-see {
+  margin-left: 12px;
+}
+
+.details-adm {
+  margin-left: 17px;
+}
+
+.details-data {
+  margin-left: 20px;
+}
+
+.details-message {
+  margin-left: 20px;
+}
+
+.details-lf {
+  margin-left: 20px;
+  left: 290px;
+  position: relative;
+}
+
+.details-headline {
+  margin: 1.2% 2.1% 10px 2.1%;
+  font-family: PingFang-SC-Medium;
+  font-size: 26px;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: justify;
+}
+
+.iii {
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  color: #1E252F;
+  letter-spacing: 0;
+  text-align: justify;
+}
+
+.notice-content div p {
+  font-family: PingFang-SC-Regular;
+  font-size: 16px;
+  color: #1E252F;
+  letter-spacing: 0;
+  text-align: justify;
+  margin: 10px 30px 0 20px;
+}
+
+@media (min-width:768px) {
+  .container {
+    width: 750px
+  }
+}
+
+@media (min-width:992px) {
+  .container {
+    width: 970px
+  }
+}
+
+@media (min-width:1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.content-right {
+  background: #fff;
+  width: 352px;
+  overflow: hidden;
+}
+
+.news-flash-right {
+  width: 320px;
+}
+
+.content-right {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.signature {
+  display: -webkit-inline-box;
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: PingFang-SC-Regular;
+  color: rgba(155, 155, 155, 1);
+}
+.announcements {
+    .notice {
+        padding: 14px 24px 14px 24px;
+        border-bottom: 1px solid rgba(240,240,240,1);
+    }
+}

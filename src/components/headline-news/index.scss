@@ -30,7 +30,7 @@
 
 .ranking .con ul+ul {
   padding-top: 10px;
-  border-top: 1px dashed #e6e8eb;
+  border-top: 1px solid #e6e8eb;
   margin-top: 5px;
 }
 
@@ -55,7 +55,7 @@
 
 .hotnews .con ul+ul {
   padding-top: 20px;
-  border-top: 1px dashed #e6e8eb;
+  border-top: 1px solid #e6e8eb;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -68,10 +68,10 @@
   border-bottom: 1px solid rgba(240, 240, 240, 1);
   img {
     position: relative;
-    top: 2px;
+    top: 3px;
   }
   span {
-    left: 10px;
+    left: 7px;
     position: relative;
   }
 }
@@ -162,4 +162,8 @@
 a {
   text-decoration: none;
   color: #9B9B9B;
+}
+.flash-img {
+  position: relative;
+  top: 3px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="ostrich-home">
     <div class="content-left left detail-container">
       <!--幻灯片-->
       <div id="carousel-example-generic" class="carousel slide marginb-30 margint-20" data-ride="carousel">
@@ -36,6 +36,7 @@
       <div class="news-list-content">
         <el-tabs v-model="activeName" @tab-click="handleClick" class="baseTabBox">
           <el-tab-pane label="推荐" name="recommend">
+            <recommend></recommend>
           </el-tab-pane>
           <el-tab-pane label="观点洞察" name="viewpoint">
             <view-insight></view-insight>
@@ -117,6 +118,7 @@
   import Situation from "../../components/situation";
   import Industry from "../../components/industry";
   import Encyclopedia from "../../components/encyclopedia";
+  import Recommend from "../../components/recommend";
   export default {
     data() {
       return {
@@ -133,7 +135,8 @@
       ViewInsight,
       Situation,
       Industry,
-      Encyclopedia
+      Encyclopedia,
+      Recommend
     },
     methods: {
       handleClick(tab, event) {

@@ -13,6 +13,10 @@
   line-height: 0.4;
 }
 
+.tit {
+  padding: 14px 0 14px 24px !important;
+}
+
 .marginb-30 {
   margin-bottom: 30px;
 }
@@ -47,10 +51,11 @@
 }
 
 .news-flash ul li {
-  padding: 27px 15px;
+  padding: 27px 24px 16px 24px;
   position: relative;
   display: block;
   margin-left: 3px;
+  border-bottom: 1px solid rgba(240,240,240,1);
 }
 
 .news-flash-right {
@@ -83,4 +88,11 @@
   margin-left: 6%;
   position: relative;
   left: 36px;
+}
+.flash-base {
+  padding: 16px 0 24px;
+}
+.flash-img {
+  position: relative;
+  top: 3px;
 }

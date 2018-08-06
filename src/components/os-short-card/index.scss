@@ -1,0 +1,28 @@
+.short-card-box {
+  background-color: #FFFFFF;
+  .single-new {
+    padding: 25px;
+    border-bottom: 1px solid #F0F0F0;
+    .img-box {
+      width: 120px;
+      height: 90px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .content-box {
+      width: 172px;
+      height: 90px;
+      .new-title {
+        height: 75px;
+        color: #1E252F;
+        font-size: 16px;
+      }
+      .bottom-info {
+        font-size: 12px;
+        color: #9B9B9B;
+      }
+    }
+  }
+}

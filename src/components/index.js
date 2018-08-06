@@ -2,7 +2,7 @@ import ostrichHeader from './head'
 import ostrichComments from './os-comments'
 import ostrichDiscuss from './os-discuss'
 import ostrichHotNews from './os-hot-news'
-import ostrichBase from './base'
+import ostrichBase from './footer'
 
 const components = [
   ostrichHeader,

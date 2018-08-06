@@ -103,7 +103,7 @@ ul li {
 }
 
 .content-left {
-  width: 800px;
+  width: 820px;
 }
 
 .news-list-left {
@@ -473,6 +473,10 @@ li {
 
 @media (min-width:1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
+}
+.content-right {
+  width: 352px;
+  overflow: hidden;
 }

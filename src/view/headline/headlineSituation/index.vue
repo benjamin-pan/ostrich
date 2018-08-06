@@ -1,14 +1,12 @@
 <template>
-  <div id="headlineViewpoint">
-    <section class="news">
-      <div class="container">
+      <div class="ostrich-situation">
         <div class="content-left left">
           <!-- 左侧list-->
           <div class="news-list-content marginb-30">
             <div class="news-list-left">
               <div class="tuoniao-ency">
                 <img style="margin-left: 3px;margin-top: 10px;" src="../../../assets/svg/二级页-链圈局势icon.svg">
-                <span>观点洞察</span>
+                <span>链圈局势</span>
               </div>
               <situation></situation>
             </div>
@@ -27,8 +25,6 @@
           </div>
         </div>
       </div>
-    </section>
-  </div>
 </template>
 <style lang="scss" scoped>
   @import './index.scss';
