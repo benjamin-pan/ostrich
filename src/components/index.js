@@ -2,12 +2,14 @@ import ostrichHeader from './head'
 import ostrichComments from './os-comments'
 import ostrichDiscuss from './os-discuss'
 import ostrichHotNews from './os-hot-news'
+import ostrichBase from './base'
 
 const components = [
   ostrichHeader,
   ostrichComments,
   ostrichDiscuss,
-  ostrichHotNews
+  ostrichHotNews,
+  ostrichBase
 ]
 
 export default {
