@@ -1,0 +1,81 @@
+.el-col-1 {
+  padding-left: 0 !important;
+  width: 7.167%;
+  color: rgba(227, 227, 227, 1);
+}
+
+.ostrich-footer {
+  margin-top: 60px;
+  .ostrich-with {
+    background: rgba(50, 54, 65, 1);
+    .lx {
+      margin: auto !important;
+      width: 1200px;
+    }
+    .left .el-col {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      font-size: 16px;
+      font-family: PingFang-SC-Medium;
+      color: rgba(227, 227, 227, 1);
+    }
+    .right {
+      .wx {
+        margin-left: 728px;
+        padding: 14px 0 14px 24px !important;
+      }
+      .sj {
+        width: 42px !important;
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+      }
+      span {
+        border-radius: 50%;
+        background: rgba(38, 41, 48, 1);
+        width: 42px;
+        height: 42px;
+        position: relative;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+  }
+  .ostrich-friendship {
+    background: rgba(38, 41, 48, 1);
+    height: 175px;
+    .blogroll {
+      margin: auto !important;
+      width: 1200px;
+      padding-top: 24px;
+      .blogroll-01 {
+        padding-left: 0 !important;
+        width: 1200px;
+        font-size: 16px;
+        font-family: PingFang-SC-Medium;
+        color: rgba(227, 227, 227, 1);
+      }
+      .partner {
+        padding-top: 36px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(146, 149, 157, 1);
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          font-family: PingFang-SC-Regular;
+          color: rgba(167, 167, 167, 1);
+          padding-left: 22px;
+          left: -22px;
+          position: relative;
+        }
+      }
+      .company {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        font-size: 14px;
+        font-family: PingFang-SC-Regular;
+        color: rgba(167, 167, 167, 1);
+      }
+    }
+  }
+}

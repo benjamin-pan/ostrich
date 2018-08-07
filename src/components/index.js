@@ -12,9 +12,11 @@ import osHotLabels from './os-hot-labels'
 import osAdvertising from './os-advertising'
 import osShare from './os-share'
 import osHotActivity from './os-hot-activity'
+import osFooter from './footer'
 
 const components = [
   osHeader,
+  osFooter,
   osComments,
   osDiscuss,
   osHotNews,
