@@ -12,9 +12,13 @@ import Flash from '@/view/flash/flash'
 import Flashdetails from '@/view/flash/flashDetails'
 import Home from '@/view/home'
 import Activity from '@/view/activity/index'
+<<<<<<< HEAD
 import Detail1 from '@/view/activity/detail'
 import Portal from '@/view/portal'
 import Noticedetails from '@/view/flash/noticedetails'
+=======
+import ActivityDetail from '@/view/activity/detail'
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
 // import index from '@/components/index'
 
 Vue.use(Router)
@@ -23,15 +27,25 @@ export default new Router({
   // mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/login',
       name: 'Login',
       component: () => import('@/view/login')
     },
-    // {
-    //   path: '/',
-    //   name: 'index',
-    //   component: index
-    // },
+    {
+      path: '/activity',
+      name: 'Activity',
+      component: Activity
+    },
+    {
+      path: '/activity/detail',
+      name: 'ActivityDetail',
+      component: ActivityDetail
+    },
     {
       path: '/register',
       name: 'Register',
@@ -46,6 +60,11 @@ export default new Router({
       path: '/detail',
       name: 'Detail',
       component: Detail
+    },
+    {
+      path: '/portal',
+      name: 'Portal',
+      component: () => import('@/view/portal')
     },
     {
       path: '/my',
@@ -113,6 +132,7 @@ export default new Router({
       path: '/flash/flashDetails',
       name: 'Flashdetails',
       component: Flashdetails
+<<<<<<< HEAD
     }
     ,
     {
@@ -144,5 +164,8 @@ export default new Router({
       name: 'Noticedetails',
       component: Noticedetails
     }
+=======
+    },
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
   ]
 })

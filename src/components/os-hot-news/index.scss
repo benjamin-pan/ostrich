@@ -1,24 +1,8 @@
 .hot-news {
   background-color: #FFFFFF;
-  .news-head {
-    height: 50px;
-    line-height: 50px;
-    img, span {
-      vertical-align: middle;
-    }
-    img {
-      margin-left: 24px;
-    }
-    span {
-      margin-left: 10px;
-      font-size: 16px;
-      color: #1E252F;
-      font-weight: bold;
-    }
-  }
   .single-new {
     padding: 25px;
-    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
     .img-box {
       width: 120px;
       height: 90px;
@@ -36,6 +20,7 @@
         font-size: 16px;
       }
       .bottom-info {
+        font-size: 12px;
         color: #9B9B9B;
       }
     }

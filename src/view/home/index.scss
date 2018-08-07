@@ -1,4 +1,5 @@
 @import "../../assets/common/common.scss";
+<<<<<<< HEAD
 .container {
   padding-right: 0;
   padding-left: 0;
@@ -331,3 +332,68 @@ a {
 .baseTabBox .el-tabs__header .el-tabs__nav-wrap .el-tabs__nav-scroll {
   padding-left: 24px;
 }
+=======
+
+.home-container {
+  width: 1200px;
+  margin: 20px auto;
+  .content-left {
+    width: 820px;
+    .carousel {
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      p {
+        background-color: #000000;
+        opacity: 0.2;
+        padding: 15px 20px;
+        position: relative;
+        width: 100%;
+        top: -52px;
+        color: #FFFFFF;
+        font-size:16px;
+      }
+    }
+    .infoImgBox {
+      width: 258px;
+      height: 129px;
+      .infoImg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .news-list-content {
+      background: #FFFFFF;
+      .baseTabBox {
+        height: 50px;
+        line-height: 50px;
+        .active {
+          color: rgba(52, 157, 255, 1);
+          border-bottom: 1px solid rgba(52, 157, 255, 1);
+          height: 50px;
+          line-height: 50px;
+          display: inline-block;
+        }
+        .first {
+          margin-left: 24px;
+          margin-right: 48px;
+        }
+        .el-tabs__nav-wrap::after {
+          display: none;
+        }
+        .deleteBtn {
+          position: absolute;
+          top: 0;
+          right: 24px;
+        }
+      }
+    }
+  }
+  .content-right {
+    width: 352px;
+  }
+}
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520

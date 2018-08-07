@@ -94,7 +94,7 @@
             number: '+1000',
             all:4000
           }],
-          user_id:'10008'
+          user_id:'100008'
       }
 
     },
@@ -119,10 +119,6 @@
             }else{
               this.tableData = [];
             }
-        }).catch((err) => {
-          console.log(err, 'err');
-          this.tableData = [];
-          this.isShow = false;
         })
       },
       getStatus(row,column) {

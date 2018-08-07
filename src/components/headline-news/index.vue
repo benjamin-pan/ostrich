@@ -1,7 +1,7 @@
 <template>
       <div class="hotnews marginb-30">
         <div class="tit news24">
-          <img src="../../assets/svg/二级页-24小时新闻icom.svg">
+          <img src="../../assets/svg/icon-24hour.svg">
           <span>24小时新闻</span>
         </div>
         <div class="con bgc paddingclearfix">
@@ -50,5 +50,4 @@
 </template>
 <style lang="scss" scoped>
   @import './index.scss';
-
 </style>

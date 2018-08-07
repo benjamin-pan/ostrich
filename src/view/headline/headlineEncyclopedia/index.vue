@@ -18,10 +18,10 @@
           </div>
         </div>
         <div class="right content-right">
-          <headline-news></headline-news>
+          <!--<headline-news></headline-news>-->
           <div class="content-right right marginb nosee">
-            <headline-column></headline-column>
-            <headline-hot-label></headline-hot-label>
+            <!--<headline-column></headline-column>-->
+            <!--<headline-hot-label></headline-hot-label>-->
           </div>
         </div>
       </div>
@@ -31,10 +31,16 @@
 
 </style>
 <script>
+<<<<<<< HEAD
   import HeadlineNews from "../../../components/headline-news";
   import HeadlineColumn from "../../../components/headline-column";
   import HeadlineHotLabel from "../../../components/headline-hot-label";
   import Encyclopedia from "../../../components/encyclopedia";
+=======
+//  import HeadlineNews from "../../../components/headline-news";
+//  import HeadlineColumn from "../../../components/headline-column";
+//  import HeadlineHotLabel from "../../../components/headline-hot-label";
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
   export default {
     data () {
       return {
@@ -42,10 +48,16 @@
       }
     },
     components: {
+<<<<<<< HEAD
       HeadlineNews,
       HeadlineColumn,
       HeadlineHotLabel,
       Encyclopedia
+=======
+//      HeadlineNews,
+//      HeadlineColumn,
+//      HeadlineHotLabel
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
     },
     created () {
     },

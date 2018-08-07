@@ -1,7 +1,9 @@
 <template>
-  <div class="ostrich-flash">
-    <div class="content-left">
+  <div class="ostrich-flash-box clearfix">
+    <div class="content-left pull-left">
+      <os-short-title class="bg-color" title="今日快讯" titleIcon="icon-flash"></os-short-title>
       <!-- 左侧list-->
+<<<<<<< HEAD
       <div class="news-list-left">
         <div class="tuoniao-ency">
           <img class="flash-img" src="../../../assets/svg/icon-flash.svg">
@@ -61,78 +63,62 @@
                 </li>
                 <span style="display: ;"></span>
                 <span style="display: ;"></span>
+=======
+      <div class="news-list-left bg-color">
+        <div class="time-vertical" v-for="item in flash" :key="item.index">
+          <div class="timer">
+            <div class="flag-timeline clearfix">
+              <div class="point pull-left ml-25">
+                <span class="flag-timeline-time">{{item.date}}</span>
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
               </div>
-              <div class="segmenttation">
+              <div class="article-box pull-right">
+                <p @click="$router.push({path: '/flash/flashDetails'})">{{item.title}}</p>
+                <p class="timeline-content mt-10">{{item.content}}</p>
+                <div class="clearfix mt-20 pb-20">
+                  <span class="pull-left ml-7 os-rising">{{item.bull}}</span>
+                  <span class="pull-left ml-35 os-falling">{{item.bear}}</span>
+                  <os-share :QRSrc="item.qrcode_url"></os-share>
+                  <span class="pull-right ml-25 os-sharing" @click="showComments = !showComments">{{`评论(900)`}}</span>
+                </div>
+                <div v-if="showComments" v-bind:class="{ commentflash: item.isActive }">
+                  <div class="clearfix mt-20">
+                    <div class="portrait-box pull-left">
+                      <img src="../../../assets/svg/icon-default-portrait.svg" alet=""/>
+                    </div>
+                    <div class="sent-comments pull-right">
+                      <p>
+                        <el-input placeholder="发表你的见解"></el-input>
+                      </p>
+                      <div class="btn-box clearfix">
+                        <p class="info pull-left">请发表有价值的信息，友善发言的人运气不会差</p>
+                        <el-button class="pull-right">发表评论</el-button>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="comment-title">
+                      <span class="comment-num">评论(900)</span>
+                      <span class="look-more pull-right">查看更多</span>
+                    </p>
+                    <div class="release-info">
+                      <os-author :name="123" class="pull-left font-14"></os-author>
+                      <span class="release-time font-12 ml-10">2018-06-20 16:39:03</span>
+                      <p class="pl-48 font-12">
+                        狂人也所知甚少，很多币种闻所未闻，所以只能靠大家自己判断了，你买的那些不知名的币种有可能会是未来的黑马，但更大的可能将会成为空气，这就是币圈的现状</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div v-if="show" v-bind:class="{ commentflash: item.isActive }">
-                <el-row :gutter="20" class="timeline-lx">
-                  <el-col :span="1" class="robot">
-                    <div class="grid-content bg-purple">
-                      <img src="../../../assets/images/robot.png" alet="机器人" />
-                    </div>
-                  </el-col>
-                  <el-col :span="13" class="flash-input">
-                    <div class="grid-content bg-purple">
-                      <el-input placeholder="发表你的见解"></el-input>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row :gutter="20" class="timeline-signature">
-                  <el-col :span="15" class="falsh-comment">
-                    <div class="grid-content bg-purple">请发表有价值的信息，友善发言的人运气不会差</div>
-                  </el-col>
-                  <el-col :span="4" :push="4" class="timeline-comment">
-                    <div class="grid-content bg-purple">
-                      <el-button>发表评论</el-button>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row :gutter="20" class="timeline-allcomment">
-                  <el-col :span="2" class="timeline-comment-01">
-                    <div class="grid-content bg-purple">评论1(900)</div>
-                  </el-col>
-                  <el-col :span="2" class="view-more">
-                    <div class="grid-content bg-purple timeline-more">
-                      <a>查看更多</a>
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row :gutter="20" class="timeline-lx">
-                  <el-col :span="1">
-                    <div class="grid-content bg-purple">
-                      <img src="../../../assets/images/robot.png" alet="机器人" />
-                    </div>
-                  </el-col>
-                  <el-col class="robot-01">
-                    <div class="grid-content bg-purple">鸵鸟小助手</div>
-                  </el-col>
-                  <el-col :span="5" class="robot-01-time">
-                    <div class="grid-content bg-purple">2018-06-20 16:39:03</div>
-                  </el-col>
-                </el-row>
-                <el-row class="robot-o1-content">
-                  <el-col :span="13" class="robot-o1-content-lx">
-                    <div class="grid-content bg-purple-dark">
-                      狂人也所知甚少，很多币种闻所未闻，所以只能靠大家自己判断了，你买的那些不知名的币种有可能会是未来的黑马，但更大的可能将会成为空气，这就是币圈的现状
-                    </div>
-                  </el-col>
-                </el-row>
-                <el-row class="robot-o1-cut">
-                  <el-col :span="23">
-                    <div class="grid-content bg-purple-dark"></div>
-                  </el-col>
-                </el-row>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="more center line36 marginb-30" data-is-loading="1" style="padding-bottom: 45px;top: -37px;position: ;background: ;">
-        <span class="marginb-30" style="border: 1px solid #409EFF;border-radius: 4px;display: inline-block;width: 180px;top: 67px;position: relative;">
-          <a href="#" style="color: #409EFF;display: contents;">加载更多</a>
-        </span>
+      <div class="loading-more">
+        <el-button>加载更多</el-button>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="right content-right">
       <div class="news-flash-right right marginb">
         <div class="ranking marginb-30 margint-20">
@@ -163,7 +149,20 @@
             </div>
           </div>
           <headline-news></headline-news>
+=======
+    <div class="pull-right content-right">
+      <div class="bg-color exchange-info">
+        <os-short-title title="交易所公告" titleIcon="icon-exchange"></os-short-title>
+        <div class="clearfix">
+          <p class="pull-left title">[91Fcoin] 关于F码相关事宜的公告</p>
+          <p class="pull-right time">39分钟前</p>
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
         </div>
+      </div>
+      <os-advertising></os-advertising>
+      <div class="bg-color mt-25">
+        <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
+        <os-short-card></os-short-card>
       </div>
     </div>
   </div>
@@ -173,27 +172,36 @@
 
 </style>
 <script>
+<<<<<<< HEAD
   import HeadlineNews from "../../../components/headline-news";
   
+=======
+
+>>>>>>> 0a2ec35576ed792707cda7a90f91083431e11520
   export default {
-    //    name: 'ostrich-flash',
-    data() {
+    data () {
       return {
-        imgSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532877920333&di=798ec9728571a37a7790b7d5972b53ed&imgtype=0&src=http%3A%2F%2Fcimage.tianjimedia.com%2FuploadImages%2F2014%2F044%2FV1A74G68V8OT.gif',
-        classObject: [{
-          isActive: false
-        }],
-        show: false
+        flash: [],
+        showComments: false
       }
     },
-    components: {
-      HeadlineNews
+    components: {},
+    mounted () {
+      this.getFlashList()
     },
     methods: {
-      commentSwitch() {
-        this.classObject.isActive = !this.classObject.isActive;
+      getFlashList () {
+        this.getRequest('https://api.tuoniaox.com/news/newsflash/list', {
+          user_id: '',
+          page_num: '',
+          page_size: ''
+        }).then(res => {
+          this.flash = res.data.post_list || []
+          console.log(1234, this.flash)
+        }).catch((err) => {
+          this.flash = []
+        })
       }
     }
   }
-
 </script>

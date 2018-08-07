@@ -2,7 +2,7 @@
 
 .capsule {
   display: inline-block;
-  margin-top: 20px;
+  margin: 20px 4px;
   padding: 0 20px;
   height: 30px;
   line-height: 30px;
@@ -10,15 +10,20 @@
   border: 1px solid #999EA5;
   text-align: center;
   color: #4D545E;
-  &.active{
+  &.active {
     color: $text-white;
     background-color: #349DFF;
     border: 1px solid #349DFF;
   }
 }
 
-.capsule + .capsule {
-  margin-left: 7px;
+//
+//.capsule + .capsule {
+//  margin-left: 7px;
+//}
+
+.watch-num {
+  color: #9B9B9B;
 }
 
 .watch-num::before {
@@ -26,3 +31,71 @@
   position: relative;
   left: -6px;
 }
+
+.release-time {
+  color: #9B9B9B;
+}
+
+.os-lable::before {
+  content: url("./assets/svg/icon-lable.svg");
+  position: relative;
+  top: 2px;
+}
+
+.os-rising::before {
+  content: url("./assets/svg/icon-rising.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
+
+.os-falling::before {
+  content: url("./assets/svg/icon-falling.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
+
+.os-sharing,
+.os-falling,
+.os-rising {
+  cursor: pointer;
+}
+
+.os-sharing::before {
+  content: url("./assets/svg/icon-sharing.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
+
+.os-location::before {
+  content: url("./assets/svg/icon-location.svg");
+  position: relative;
+  left: -6px;
+  top: 3px;
+}
+
+.os-clock::before {
+  content: url("./assets/svg/icon-clock.svg");
+  position: relative;
+  left: -6px;
+  top: 1px;
+}
+
+.os-organizers::before {
+  content: url("./assets/svg/icon-organizers.svg");
+  position: relative;
+  left: -6px;
+  top: 5px;
+}
+
+.os-guest::before {
+  content: url("./assets/svg/icon-guest.svg");
+  position: relative;
+  left: -6px;
+  top: 3px;
+}
+
+
+

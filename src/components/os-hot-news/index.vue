@@ -1,21 +1,7 @@
 <template>
   <div class="hot-news">
-    <p class="news-head">
-      <img src="../../assets/svg/icon-hot-news.svg" alt="">
-      <span>热门新闻</span>
-    </p>
-    <div class="single-new clearfix">
-      <div class="img-box pull-left">
-        <img src="../../assets/images/201807201153049.jpg" height="480" width="585"/>
-      </div>
-      <div class="content-box pull-right">
-        <p class="new-title">俄国家杜马官员：三项加密货币相关法案在…</p>
-        <p class="bottom-info">
-          <span>22小时前</span>
-          <span class="watch-num pull-right">3098</span>
-        </p>
-      </div>
-    </div>
+    <os-short-title title="热门新闻" title-icon="icon-hot-news"></os-short-title>
+    <os-short-card></os-short-card>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -31,10 +17,22 @@
     created () {
     },
     mounted () {
+      this.getHotNews()
     },
     beforeDestroy () {
     },
-    methods: {},
+    methods: {
+      getHotNews () {
+        this.getRequest('https://api.tuoniaox.com/news/news/hot', {
+          limit: ''
+        }).then(res => {
+          this.hotNews = res.data.post_list || []
+          console.log('1', res)
+        }).catch((err) => {
+          this.hotNews = []
+        })
+      },
+    },
     computed: {},
     watch: {}
   }
