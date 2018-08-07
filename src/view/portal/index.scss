@@ -1,7 +1,50 @@
 @import "../../assets/common/common.scss";
 @import "../my/shoucang/index.scss";
+.el-popover.shareBox-pop{
+	padding:0;
+}
+.shareBox-pop{
+	.icon-QQ{
+		color:#349dff;
+		margin-right:10px;
+	}
+	.icon-weibo{
+		color:#ff3a43;
+		margin-right:10px;
+	}
+	.icon-wechat{
+		color:#88dd4b;
+		margin-right:10px;
+	}
+	
+	.popContent{
+		margin-bottom:10px;
+		padding-top:15px;
+		.shareb{
+			padding-left:55px;
+		}
+		.weixinImg{
+			padding-top:12px;
+			border-top:1px solid silver;
+			margin-bottom:10px;
+			margin-top:10px;
+			img{
+				width:100px;
+				height:100px;
+				display:block;
+				margin:0 auto;
+			}
+		}
+		.mm{
+			text-align:center;
+		}
+	}
+}
 .portal-container{
 	width:100%;
+	.icon-kuaixun-fenxiangicon{
+		margin-right:6px;
+	}
 	.headContainer{
 		width:100%;
 		background-color:#5abaff;
@@ -35,13 +78,8 @@
 			position:absolute;
 			right:0;
 			top:20px;
-			.weixinImg{
-				img{
-					width:100px;
-					height:100px;
-					display:block;
-				}
-			}
+			text-align:center;
+			
 			
 		}
 		.portalImg{
@@ -66,6 +104,10 @@
 			text-align:center;
 			margin-bottom:10px;
 		}
+	}
+	.icon-wenzhangxiangqing-yueduliangicon{
+		font-size:12px;
+		margin-right:10px;
 	}
 	
 }

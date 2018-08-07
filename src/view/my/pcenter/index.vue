@@ -14,24 +14,24 @@
                   <el-input v-model="appuser_list.username"></el-input>
                 </el-form-item>
                 <el-form-item label="性别：">
-                  <el-radio-group v-model="appuser_list.resource">
-                    <el-radio label="保密"></el-radio>
-                    <el-radio label="男"></el-radio>
-                    <el-radio label="女"></el-radio>
+                  <el-radio-group v-model="appuser_list.sex">
+                    <el-radio v-model="radio" label="0">保密</el-radio>
+                    <el-radio v-model="radio" label="1">男</el-radio>
+                    <el-radio v-model="radio" label="2">女</el-radio>
                   </el-radio-group>
                   
                 </el-form-item>
                 <el-form-item label="生日：">
                   <el-col>
                     <el-date-picker
-                      v-model="appuser_list.resource"
+                      v-model="appuser_list.birthday"
                       type="datetime"
                       placeholder="选择出生日期">
                     </el-date-picker>
                   </el-col>
                 </el-form-item>
                 <el-form-item label="个人简介：">
-                   <el-input type="textarea" v-model="appuser_list.desc" placeholder="限50个字以内"></el-input>
+                   <el-input type="textarea" v-model="appuser_list.bio" placeholder="限50个字以内"></el-input>
                 </el-form-item>
                 
                 <el-form-item>
@@ -71,13 +71,12 @@
       </el-tab-pane>
     </el-tabs>
     <!-- diolog 更换头像-->
-    <el-dialog title="修改密码" :visible.sync="dialogHeadVisible" class="my-dialog">
+    <el-dialog title="更换头像" :visible.sync="dialogHeadVisible" class="my-dialog">
       <el-form :model="form">
         <el-form-item>
           <div class="updateHeadBox">
             <div class="left bigImg" >
               <img :src="appuser_list.head_url" alt="">
-              <img :src="upImgUrl" alt="">
             </div>
             <div class="right">
               <p>预览</p>
@@ -278,7 +277,7 @@
         dialogHeadVisible: false,
         activeName:'first',
         labelPosition:'left',
-        appuser_list:{},
+        appuser_list:{ username:'' },
         form:{},
         options: [{
           value: '1',
@@ -330,6 +329,7 @@
       },
       onSubmit:function() {
         console.log('submit!');
+        this.updateUseInfo();
       },
       getUseInfo:function(user_id = 100006){
         this.getRequest('https://api.tuoniaox.com/app/app/getuserinfo', {
@@ -345,10 +345,19 @@
         }).catch((err) => {
         })
       },
-      updateUseInfo:function(user_id = 100006){
-        this.getRequest('https://api.tuoniaox.com/app/app/updateuser', {
+      updateUseInfo(user_id = 100006) {
+        
+          const _this = this;
+          const { appuser_list: { username = '', sex = '', birthday = '', bio = '' } } = _this;
+          _this.getRequest('https://api.tuoniaox.com/app/app/updateuser', {
             user_id,
-            user_info:[{head_url:''},{nickname:''}]
+            user_info: {
+              'head_url':'',
+              'nickname': username,
+              'sex':sex,
+              'birthday':birthday,
+              'bio': bio,
+            },
 
         }).then(res=> {
           console.log('res.appuser_list1',res.data.appuser_list)
@@ -359,6 +368,7 @@
               
             }
         }).catch((err) => {
+
         })
       },
       getCode:function(){
