@@ -60,7 +60,7 @@
             <div class="content-box">
               <p class="title" @click="goToActivityDetail(list.id)">{{list.title}}</p>
               <p class="clearfix mt-25">
-                <span class="pull-left ml-5 os-location">{{list.id}}</span>
+                <span class="pull-left ml-5 os-location">{{list.address}}</span>
                 <span class="pull-right os-clock">{{list.date}}</span>
               </p>
             </div>

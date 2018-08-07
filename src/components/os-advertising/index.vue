@@ -1,6 +1,6 @@
 <template>
   <div class="advertising-box">
-    <img src="../../assets/images/2018070916041582.jpeg"/>
+    <img :src="item.single_pic" class="cursor-pointer" @click="openAdvertising(item.link_url)" v-for="item in items"/>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -10,6 +10,12 @@
   export default {
     name: 'os-advertising',
     props: {
+      items: {
+        type: Array,
+        default () {
+          return []
+        }
+      }
     },
     data () {
       return {}
@@ -21,7 +27,11 @@
     },
     beforeDestroy () {
     },
-    methods: {},
+    methods: {
+      openAdvertising (url) {
+        window.open(url)
+      }
+    },
     computed: {},
     watch: {}
   }

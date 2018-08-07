@@ -113,7 +113,8 @@
         <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
         <os-short-card></os-short-card>
       </div>
-      <os-enterprise-column></os-enterprise-column>
+      <!--企业专栏暂时不上-->
+      <!--<os-enterprise-column></os-enterprise-column>-->
       <div class="mt-25 bg-color">
         <os-short-title title="热门标签" title-icon="icon-hot-tag"></os-short-title>
         <os-hot-lables></os-hot-lables>
@@ -125,18 +126,12 @@
   @import './index.scss';
 </style>
 <script>
-  //  import HeadlineNews from "../../../components/headline-news";
-  //  import HeadlineColumn from "../../../components/headline-column";
-  //  import HeadlineHotLabel from "../../../components/headline-hot-label";
-
-  import OstrichShortArticle from "../../../components/os-short-article/index.vue";
 
   export default {
     data () {
       return {}
     },
     components: {
-      OstrichShortArticle
     },
     created () {
     },

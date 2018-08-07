@@ -5,18 +5,6 @@
       <p class="information">
         <span class="small-title">{{article.publish_user}}</span>
         <span class="artcle-time">{{article.date}}</span>
-        <!--<el-popover ref="share" placement="bottom" trigger="click">-->
-        <!--<div class="share-popover">-->
-        <!--<div class="thirdParty">-->
-        <!--<p class="QQ"><img src="../../assets/svg/QQ.svg" alt=""><span>腾讯QQ</span></p>-->
-        <!--<p class="weibo"><img src="../../assets/svg/weibo.svg" alt=""><span>新浪微博</span></p>-->
-        <!--<p class="chat"><img src="../../assets/svg/weChatSmall.svg" alt=""><span>微信</span></p>-->
-        <!--</div>-->
-        <!--<img class="QRcode" :src="imgSrc" alt="店铺二维码">-->
-        <!--<p class="QRcodeInstructions">微信扫一扫，即刻分享</p>-->
-        <!--</div>-->
-        <!--</el-popover>-->
-        <!--<span class="pull-right os-sharing ml-25" v-popover:share>分享</span>-->
         <os-share></os-share>
         <span class="watch-num pull-right">{{article.views}}</span>
       </p>
@@ -36,7 +24,7 @@
         <span class="mes-source">来源：{{article.source_name}}，{{article.publish_user}}编译整理</span>
       </p>
       <div class="capsules">
-        <span class="capsule" v-for="tag in article.tags.split(',')">{{tag}}</span>
+        <span class="capsule" v-for="tag in (article.tags||'').split(',')">{{tag}}</span>
       </div>
       <div class="btn-box">
         <el-button type="primary" class="btn-like"><img src="../../assets/svg/icon-good-white.svg" alt="">点赞</el-button>
@@ -79,7 +67,7 @@
       <div class="advertising">
         <img src="../../assets/images/20180113143552.jpg"/>
       </div>
-      <os-hot-news></os-hot-news>
+      <os-hot-news class="mt-25"></os-hot-news>
     </div>
   </div>
 </template>
@@ -113,19 +101,12 @@
           content_id: this.$route.query.id
         }).then(res => {
           this.article = res.data.post_data || {}
-          console.log(4, this.article)
-//          this.isShow = true;
-//          if (res.data.points_list.length > 0) {
-//            this.tableData = res.data.points_list;
-//          } else {
-//            this.tableData = [];
-//          }
         }).catch((err) => {
           console.log(err, 'err');
           this.tableData = [];
           this.isShow = false;
         })
-      },
+      }
     },
     computed: {},
     watch: {}

@@ -1,7 +1,7 @@
 <template>
   <div class="hot-news">
     <os-short-title title="热门新闻" title-icon="icon-hot-news"></os-short-title>
-    <os-short-card></os-short-card>
+    <os-short-card :items="hotNews"></os-short-card>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -10,8 +10,11 @@
 <script>
   export default {
     name: 'os-hot-news',
+    props: {},
     data () {
-      return {}
+      return {
+        hotNews: []
+      }
     },
     components: {},
     created () {
@@ -27,11 +30,11 @@
           limit: ''
         }).then(res => {
           this.hotNews = res.data.post_list || []
-          console.log('1', res)
+          console.log(12, this.hotNews)
         }).catch((err) => {
           this.hotNews = []
         })
-      },
+      }
     },
     computed: {},
     watch: {}

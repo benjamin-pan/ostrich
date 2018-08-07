@@ -67,14 +67,13 @@
       <os-advertising></os-advertising>
       <div class="bg-color mt-25">
         <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
-        <os-short-card></os-short-card>
+        <os-short-card :items="hotNews"></os-short-card>
       </div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
   @import './index.scss';
-
 </style>
 <script>
 
@@ -82,12 +81,14 @@
     data () {
       return {
         flash: [],
-        showComments: false
+        showComments: false,
+        hotNews: []
       }
     },
     components: {},
     mounted () {
       this.getFlashList()
+      this.getHotNews()
     },
     methods: {
       getFlashList () {
@@ -100,6 +101,16 @@
           console.log(1234, this.flash)
         }).catch((err) => {
           this.flash = []
+        })
+      },
+      getHotNews () {
+        this.getRequest('https://api.tuoniaox.com/news/news/hot', {
+          limit: ''
+        }).then(res => {
+          this.hotNews = res.data.post_list || []
+          console.log(this.hotNews)
+        }).catch((err) => {
+          this.hotNews = []
         })
       }
     }
