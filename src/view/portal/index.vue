@@ -6,18 +6,20 @@
           <el-popover
             placement="bottom"
             width="200"
+
+            popper-class="shareBox-pop"
             trigger="hover">
             <div class="popContent">
-              <p>腾讯QQ</p>
-              <p>新浪微博</p>
-              <p>微信</p>
+              <p class="shareb"><i class="icon iconfont icon-QQ"></i>腾讯QQ</p>
+              <p class="shareb"><i class="icon iconfont icon-weibo"></i>新浪微博</p>
+              <p class="shareb"><i class="icon iconfont icon-wechat"></i>微信</p>
               <p class="weixinImg">
                 <img src="" alt="">
               </p>
-              <p>微信扫一扫,即刻分享</p>
+              <p class="mm">微信扫一扫,即刻分享</p>
             </div>
-            <span slot="reference">分享</span>
-            <!-- <sapn slot="reference">分享</sapn> -->
+            <span slot="reference"><i class="icon iconfont icon-kuaixun-fenxiangicon"></i>分享</span>
+            <!-- <el-button slot="reference">hover 激活</el-button> -->
           </el-popover>
         </div>
       
@@ -26,14 +28,14 @@
           <el-row>
             <el-col :span="5">
               <div class="grid-content">
-                <p class="topTitle">1233</p>
+                <p class="topTitle">1233篇</p>
                 <p class="bottomTitle">文章</p>
               </div>
             </el-col>
             <el-col :span="5">
               <div class="grid-content">
-                <p class="topTitle">1233</p>
-                <p class="bottomTitle">文章</p>
+                <p class="topTitle">1233万</p>
+                <p class="bottomTitle">总阅读量</p>
               </div>
             </el-col>
             <el-col :span="4">
@@ -44,13 +46,13 @@
             <el-col :span="5">
               <div class="grid-content">
                 <p class="topTitle">1233</p>
-                <p class="bottomTitle">文章</p>
+                <p class="bottomTitle">粉丝</p>
               </div>
             </el-col>
             <el-col :span="5">
               <div class="grid-content">
-                <p class="topTitle">1233</p>
-                <p class="bottomTitle">文章</p>
+                <p class="topTitle">1233万</p>
+                <p class="bottomTitle">收藏</p>
               </div>
             </el-col>
           </el-row>
@@ -92,7 +94,7 @@
               <span class="biao">区块链</span>
               <span class="biao">区块链</span>
             </div>
-            <div class="right">取消收藏</div>
+            <div class="right"><i class="icon iconfont icon-wenzhangxiangqing-yueduliangicon"></i>2000</div>
             <div class="clear"></div>
           </div>
         </div>
@@ -142,7 +144,7 @@
               <span class="biao">区块链</span>
               <span class="biao">区块链</span>
             </div>
-            <div class="right">取消收藏</div>
+            <div class="right"><i class="icon iconfont icon-wenzhangxiangqing-yueduliangicon"></i>2000</div>
             <div class="clear"></div>
           </div>
         </div>
@@ -160,7 +162,7 @@
   export default {
     data () {
       return {
-       
+       poptrue:true,
         user_id:'100008'
       }
 
