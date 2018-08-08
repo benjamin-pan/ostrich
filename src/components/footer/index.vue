@@ -19,14 +19,28 @@
         <div class="right">
           <el-col :span="1" class="wx">
             <div class="grid-content bg-purple">
-              <span>
+              <el-popover ref="weChat" placement="top" trigger="hover" id="a" popper-class="a">
+                <div class="download-app">
+                  <img class="QRcode" :src="imgSrc" alt="微信二维码">
+                  <p class="QRcodeInstructions">扫描二维码</p>
+                  <p class="QRcodeInstructions">关注鸵鸟微信公众号</p>
+                </div>
+              </el-popover>
+              <span slot="reference" class="weChat" @mouseenter="isActive = !isActive" @mouseleave="isActive = !isActive" v-bind:class="{ wechatBg: isActive }" v-popover:weChat>
                 <img src="../../assets/svg/页脚-微信-选中.svg" alt="微信">
               </span>
             </div>
           </el-col>
           <el-col :span="1" class="sj">
             <div class="grid-content bg-purple">
-              <span>
+              <el-popover ref="mobile" placement="top" trigger="hover">
+                <div class="download-app">
+                  <img class="QRcode" :src="imgSrc" alt="微信二维码">
+                  <p class="QRcodeInstructions">扫描二维码</p>
+                  <p class="QRcodeInstructions">下载鸵鸟区块链APP</p>
+                </div>
+              </el-popover>
+              <span class="mobile" @mouseenter="isActive1 = !isActive1" @mouseleave="isActive1 = !isActive1" v-bind:class="{ mobileBg: isActive1 }" v-popover:mobile>
                 <img src="../../assets/svg/页脚-手机APP-选中.svg" alt="手机">
               </span>
             </div>
@@ -64,18 +78,22 @@
       </div>
     </div>
   </div>
-
 </template>
 <style lang="scss" scoped>
   @import "./index.scss";
-
+  .a {
+  transform: translateY(-16px);
+}
 </style>
 <script>
   export default {
     name: 'ostrich-footer',
     props: {},
     data() {
-      return {}
+      return {
+        isActive: false,
+        isActive1: false
+      }
     },
     components: {},
     created() {},

@@ -1,5 +1,5 @@
 <template>
-  <div id="flashDetails">
+  <div id="flashDetails" class="clearfix">
     <section class="news">
       <div class="container">
         <div class="content-left left">

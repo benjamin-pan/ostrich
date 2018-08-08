@@ -29,7 +29,7 @@
         padding-top: 14px !important;
         padding-bottom: 14px !important;
       }
-      span {
+      .weChat,.mobile {
         border-radius: 50%;
         background: rgba(38, 41, 48, 1);
         width: 42px;
@@ -78,4 +78,13 @@
       }
     }
   }
+}
+.wechatBg {
+  background: rgba(89,185,17,1) !important;
+}
+.mobileBg {
+  background: rgba(52,157,255,1) !important;
+}
+.a {
+  margin-top: -10px !important;
 }

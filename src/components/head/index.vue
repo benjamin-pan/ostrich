@@ -2,7 +2,7 @@
   <div class="ostrich-head">
     <div class="container">
       <div class="logo">
-        <img src="../../assets/svg/logo.svg" alt="">
+        <img src="../../assets/svg/logo.svg" alt="logo">
       </div>
       <div class="head-link">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">

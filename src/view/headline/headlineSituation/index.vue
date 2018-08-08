@@ -1,5 +1,5 @@
 <template>
-  <div id="headlineViewpoint">
+  <div id="headlineViewpoint" class="clearfix">
     <section class="news">
       <div class="container">
         <div class="content-left left">

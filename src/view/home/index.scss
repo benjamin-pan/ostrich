@@ -1,5 +1,4 @@
 @import "../../assets/common/common.scss";
-
 .home-container {
   width: 1200px;
   margin: 20px auto;
@@ -19,7 +18,7 @@
         width: 100%;
         top: -52px;
         color: #FFFFFF;
-        font-size:16px;
+        font-size: 16px;
       }
     }
     .infoImgBox {
@@ -60,4 +59,10 @@
   .content-right {
     width: 352px;
   }
+}
+
+.baseTabBox div {
+  font-size: 16px !important;
+  font-family: PingFang-SC-Medium;
+  color: rgba(30, 37, 47, 1);
 }
