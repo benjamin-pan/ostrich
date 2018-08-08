@@ -1,0 +1,14 @@
+@import "../../assets/scss/base/config";
+
+.loading-more-box{
+  margin-top: 40px;
+  .loading-more {
+    text-align: center;
+    button {
+      width: 180px;
+      height: 40px;
+      border-color: #349DFF;
+      color: #349DFF;
+    }
+  }
+}

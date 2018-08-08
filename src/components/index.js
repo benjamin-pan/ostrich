@@ -13,6 +13,7 @@ import osAdvertising from './os-advertising'
 import osShare from './os-share'
 import osHotActivity from './os-hot-activity'
 import osFooter from './footer'
+import osLoadMore from './os-load-more'
 
 const components = [
   osHeader,
@@ -29,7 +30,8 @@ const components = [
   osHotLabels,
   osAdvertising,
   osShare,
-  osHotActivity
+  osHotActivity,
+  osLoadMore
 ]
 
 export default {

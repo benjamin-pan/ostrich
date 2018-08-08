@@ -19,9 +19,10 @@
       </el-row>
       <!-- 左侧list-->
       <div class="news-list-content mt-25">
-        <el-tabs v-model="activeName" @tab-click="getNews(activeName)" class="baseTabBox">
+        <el-tabs v-model="activeName" @tab-click="getNews()" class="baseTabBox">
           <el-tab-pane v-for="classify in classifys" :label="classify.name" :name="classify.id">
             <ostrich-short-article :news="news"></ostrich-short-article>
+            <os-load-more @loadNextPage="loadNextPage"></os-load-more>
           </el-tab-pane>
         </el-tabs>
       </div>
@@ -40,12 +41,16 @@
 </style>
 <script>
   import OsAdvertising from "../../components/os-advertising/index.vue";
+  import OsLoadMore from "../../components/os-load-more/index.vue";
 
   export default {
-    components: {OsAdvertising},
+    components: {
+      OsLoadMore,
+      OsAdvertising
+    },
     data () {
       return {
-        activeName: 'second',
+        activeName: '',
         news: [],
         flashs: [],
         classifys: [],
@@ -74,10 +79,10 @@
           this.slideshow = []
         })
       },
-      getNews (id = '') {
+      getNews (pageNum = '') {
         this.getRequest('https://api.tuoniaox.com/news/news/list', {
-          cat_id: id,
-          page_num: '',
+          cat_id: this.activeName,
+          page_num: pageNum,
           page_size: ''
         }).then(res => {
           this.news = res.data.news_list || []
@@ -121,6 +126,9 @@
       },
       openOutLink (url) {
         window.open(url)
+      },
+      loadNextPage (val) {
+        this.getNews(val)
       }
     }
   }

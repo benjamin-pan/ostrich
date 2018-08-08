@@ -52,9 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="loading-more">
-        <el-button>加载更多</el-button>
-      </div>
+
     </div>
     <div class="pull-right content-right">
       <div class="bg-color exchange-info">
@@ -65,7 +63,7 @@
         </div>
       </div>
       <os-advertising></os-advertising>
-      <div class="bg-color mt-25">
+      <div class="bg-color mt-25" v-if="hotNews.length>0">
         <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
         <os-short-card :items="hotNews"></os-short-card>
       </div>

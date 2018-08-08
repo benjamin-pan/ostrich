@@ -1,5 +1,5 @@
 <template>
-  <div class="hot-news">
+  <div class="hot-news" v-if="hotNews.length>0">
     <os-short-title title="热门新闻" title-icon="icon-hot-news"></os-short-title>
     <os-short-card :items="hotNews"></os-short-card>
   </div>
@@ -30,7 +30,6 @@
           limit: ''
         }).then(res => {
           this.hotNews = res.data.post_list || []
-          console.log(12, this.hotNews)
         }).catch((err) => {
           this.hotNews = []
         })
