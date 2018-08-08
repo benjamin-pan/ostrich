@@ -125,6 +125,7 @@
     created () {
     },
     mounted () {
+      this.$emit('changeActiveIndex', '5')
     },
     beforeDestroy () {
     },

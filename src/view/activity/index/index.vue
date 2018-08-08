@@ -92,7 +92,7 @@
     created () {
     },
     mounted () {
-//      this.$emit('changeActiveIndex', '5')
+      this.$emit('changeActiveIndex', '5')
       this.getActivityList()
     },
     beforeDestroy () {

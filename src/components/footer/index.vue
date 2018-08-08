@@ -21,7 +21,7 @@
             <div class="grid-content bg-purple">
               <el-popover ref="weChat" placement="top" trigger="hover" id="a" popper-class="a">
                 <div class="download-app">
-                  <img class="QRcode" :src="imgSrc" alt="微信二维码">
+                  <img class="QRcode" src="" alt="微信二维码">
                   <p class="QRcodeInstructions">扫描二维码</p>
                   <p class="QRcodeInstructions">关注鸵鸟微信公众号</p>
                 </div>
@@ -35,7 +35,7 @@
             <div class="grid-content bg-purple">
               <el-popover ref="mobile" placement="top" trigger="hover">
                 <div class="download-app">
-                  <img class="QRcode" :src="imgSrc" alt="微信二维码">
+                  <img class="QRcode" src="" alt="微信二维码">
                   <p class="QRcodeInstructions">扫描二维码</p>
                   <p class="QRcodeInstructions">下载鸵鸟区块链APP</p>
                 </div>

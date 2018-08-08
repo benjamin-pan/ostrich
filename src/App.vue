@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="clearfix">
-    <ostrich-header></ostrich-header><!-- :activeIndex="activeIndex"-->
-    <router-view></router-view><!-- @changeActiveIndex="changeActiveIndex"-->
+    <ostrich-header :activeIndex="activeIndex"></ostrich-header>
+    <router-view @changeActiveIndex="changeActiveIndex"></router-view>
     <ostrich-footer></ostrich-footer>
   </div>
 </template>
@@ -11,7 +11,7 @@
     name: 'App',
     data () {
       return {
-        activeIndex: '1'
+        activeIndex: ''
       }
     },
     components: {},

@@ -85,6 +85,7 @@
     },
     components: {},
     mounted () {
+      this.$emit('changeActiveIndex', '5')
       this.getFlashList()
       this.getHotNews()
     },
