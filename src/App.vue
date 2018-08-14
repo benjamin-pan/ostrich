@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="clearfix">
-    <ostrich-header :activeIndex="activeIndex"></ostrich-header>
-    <router-view @changeActiveIndex="changeActiveIndex"></router-view>
+    <ostrich-header :activeIndex="activeIndex" :classifys="classifys"></ostrich-header>
+    <router-view @changeActiveIndex="changeActiveIndex"></router-view><!-- @postClassifys="getClassifys"-->
     <ostrich-footer></ostrich-footer>
   </div>
 </template>
@@ -11,7 +11,8 @@
     name: 'App',
     data () {
       return {
-        activeIndex: ''
+        activeIndex: '',
+        classifys: null
       }
     },
     components: {},
@@ -24,6 +25,9 @@
     methods: {
       changeActiveIndex (val) {
         this.activeIndex = val
+      },
+      getClassifys (val) {
+        this.classifys = val
       }
     },
     computed: {},

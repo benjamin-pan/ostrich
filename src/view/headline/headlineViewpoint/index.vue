@@ -1,7 +1,10 @@
 <template>
   <div class="view-insight-box clearfix">
     <div class="content-left pull-left bg-color">
-      <os-short-title title="观点洞察" title-icon="icon-view-insight"></os-short-title>
+      <os-short-title :title="$route.query.name" title-icon="icon-view-insight"></os-short-title>
+      
+      <ostrich-short-article :news="news"></ostrich-short-article>
+      <os-load-more @loadNextPage="loadNextPage" v-show="totalNews>news.length"></os-load-more>
       <!--<ostrich-short-article :news="news"></ostrich-short-article>-->
       <!--<ostrich-short-article :news="news"></ostrich-short-article>-->
       
@@ -111,7 +114,7 @@
     <div class="pull-right content-right">
       <div class="bg-color">
         <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
-        <os-short-card></os-short-card>
+        <os-short-card :items="news"></os-short-card>
       </div>
       <!--企业专栏暂时不上-->
       <!--<os-enterprise-column></os-enterprise-column>-->
@@ -129,14 +132,39 @@
 
   export default {
     data () {
-      return {}
+      return {
+        cat_id: null,
+        news: [],
+        totalNews: 0
+      }
     },
-    components: {
-    },
+    components: {},
     created () {
     },
     mounted () {
-      this.$emit('changeActiveIndex', '5')
+      this.cat_id = this.$route.query.id
+      this.$emit('changeActiveIndex', this.cat_id)
+      this.getNews()
+    },
+    methods: {
+      getNews (pageNum = '') {
+        this.getRequest('https://api.tuoniaox.com/news/news/list', {
+          cat_id: this.cat_id,
+          page_num: pageNum,
+          page_size: ''
+        }).then(res => {
+          let data = res.data
+          if (pageNum !== '') this.news.push(...data.news_list)
+          else this.news = data.news_list || []
+          this.totalNews = data.total
+        }).catch((err) => {
+          this.news = []
+          this.totalNews = 0
+        })
+      },
+      loadNextPage (val) {
+        this.getNews(val)
+      }
     },
     beforeDestroy () {
     },

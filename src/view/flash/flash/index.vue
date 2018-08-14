@@ -17,7 +17,7 @@
                   <span class="pull-left ml-7 os-rising">{{item.bull}}</span>
                   <span class="pull-left ml-35 os-falling">{{item.bear}}</span>
                   <os-share :QRSrc="item.qrcode_url"></os-share>
-                  <span class="pull-right ml-25 os-sharing" @click="showComments = !showComments">{{`评论(900)`}}</span>
+                  <span class="pull-right ml-25 os-sharing">{{`评论(900)`}}</span><!-- @click="showComments = !showComments"-->
                 </div>
                 <div v-if="showComments" v-bind:class="{ commentflash: item.isActive }">
                   <div class="clearfix mt-20">
@@ -52,18 +52,19 @@
           </div>
         </div>
       </div>
-
     </div>
     <div class="pull-right content-right">
-      <div class="bg-color exchange-info">
-        <os-short-title title="交易所公告" titleIcon="icon-exchange"></os-short-title>
-        <div class="clearfix">
-          <p class="pull-left title">[91Fcoin] 关于F码相关事宜的公告</p>
-          <p class="pull-right time">39分钟前</p>
-        </div>
-      </div>
-      <os-advertising></os-advertising>
-      <div class="bg-color mt-25" v-if="hotNews.length>0">
+      <!--交易所公告暂时不做-->
+      <!--<div class="bg-color exchange-info">-->
+        <!--<os-short-title title="交易所公告" titleIcon="icon-exchange"></os-short-title>-->
+        <!--<div class="clearfix">-->
+          <!--<p class="pull-left title">[91Fcoin] 关于F码相关事宜的公告</p>-->
+          <!--<p class="pull-right time">39分钟前</p>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--广告没有数据-->
+      <!--<os-advertising></os-advertising>-->
+      <div class="bg-color" v-if="hotNews.length>0">
         <os-short-title title="24小时新闻" title-icon="icon-24hour"></os-short-title>
         <os-short-card :items="hotNews"></os-short-card>
       </div>
@@ -79,13 +80,13 @@
     data () {
       return {
         flash: [],
-        showComments: false,
+//        showComments: false,
         hotNews: []
       }
     },
     components: {},
     mounted () {
-      this.$emit('changeActiveIndex', '5')
+      this.$emit('changeActiveIndex', '3')
       this.getFlashList()
       this.getHotNews()
     },

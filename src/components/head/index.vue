@@ -9,10 +9,10 @@
           <el-menu-item index="1" @click="$router.push({path: '/home'})">首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title">头条</template>
-            <el-menu-item index="2-1" @click="$router.push({path: '/headline/headlineViewpoint'})">观点洞察</el-menu-item>
-            <el-menu-item index="2-2" @click="$router.push({path: '/headline/headlineViewpoint'})">链圈局势</el-menu-item>
-            <el-menu-item index="2-3" @click="$router.push({path: '/headline/headlineViewpoint'})">行业资讯</el-menu-item>
-            <el-menu-item index="2-4" @click="$router.push({path: '/headline/headlineViewpoint'})">百科</el-menu-item>
+            <el-menu-item v-for="classify in classifys" :index="classify.id"
+                          @click="$router.push({path: '/headline/headlineViewpoint', query: {id: classify.id, name: classify.name}})">
+              {{classify.name}}
+            </el-menu-item>
           </el-submenu>
           <el-menu-item index="3" @click="$router.push({path: '/flash/flash'})">快讯</el-menu-item>
           <el-menu-item index="4">行情</el-menu-item>
@@ -57,20 +57,42 @@
         type: String,
         default: '1'
       }
+//      ,
+//      classifys: {
+//        type: Array,
+//        default () {
+//          return []
+//        }
+//      }
     },
     data () {
       return {
-        imgSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532877920333&di=798ec9728571a37a7790b7d5972b53ed&imgtype=0&src=http%3A%2F%2Fcimage.tianjimedia.com%2FuploadImages%2F2014%2F044%2FV1A74G68V8OT.gif'
+        imgSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532877920333&di=798ec9728571a37a7790b7d5972b53ed&imgtype=0&src=http%3A%2F%2Fcimage.tianjimedia.com%2FuploadImages%2F2014%2F044%2FV1A74G68V8OT.gif',
+        classifys: [],
+        activeName: ''
       }
     },
     components: {},
     created () {
     },
     mounted () {
+      this.getClassify()
     },
     beforeDestroy () {
     },
-    methods: {},
+    methods: {
+      getClassify () {
+        this.getRequest('https://api.tuoniaox.com/news/news/classify').then(res => {
+          this.classifys = res.data.post_list || []
+//          this.$emit('postClassifys', this.classifys)
+          this.activeName = (this.classifys[0] || {}).id
+//          this.getNews()
+        }).catch((err) => {
+          this.classifys = []
+          this.activeName = ''
+        })
+      }
+    },
     computed: {},
     watch: {}
   }

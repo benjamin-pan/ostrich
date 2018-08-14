@@ -2,13 +2,8 @@
   <div class="activity-box bg-color">
     <div>
       <el-tabs v-model="activeName" @tab-click="">
-        <el-tab-pane label="全部" name="first"></el-tab-pane>
-        <el-tab-pane label="系列活动" name="second"></el-tab-pane>
-        <el-tab-pane label="大型峰会" name="third"></el-tab-pane>
-        <el-tab-pane label="沙龙/培训" name="fourth"></el-tab-pane>
-        <el-tab-pane label="线上活动" name="fifth"></el-tab-pane>
-        <el-tab-pane label="培训" name="sixth"></el-tab-pane>
-        <el-tab-pane label="其他" name="seventh"></el-tab-pane>
+        <el-tab-pane label="全部" name="0"></el-tab-pane>
+        <el-tab-pane :label="classify.name" :name="classify.id" v-for="classify in classifys"></el-tab-pane>
       </el-tabs>
       <el-button type="text" class="search-more" @click="ifShowSelecte=!ifShowSelecte">{{ifSpread}}</el-button>
     </div>
@@ -16,12 +11,12 @@
       <p>
         <span class="selecte-title">时间：</span>
         <el-radio v-model="timeSelect" label="1">全部</el-radio>
-        <el-radio v-model="timeSelect" label="2">今天</el-radio>
-        <el-radio v-model="timeSelect" label="3">明天</el-radio>
-        <el-radio v-model="timeSelect" label="4">后天</el-radio>
-        <el-radio v-model="timeSelect" label="5">本周</el-radio>
-        <el-radio v-model="timeSelect" label="6">本月</el-radio>
-        <el-radio v-model="timeSelect" label="7">本季度</el-radio>
+        <el-radio v-model="timeSelect" label="today">今天</el-radio>
+        <el-radio v-model="timeSelect" label="tomorrow明天">明天</el-radio>
+        <el-radio v-model="timeSelect" label="today_2">后天</el-radio>
+        <el-radio v-model="timeSelect" label="week">本周</el-radio>
+        <el-radio v-model="timeSelect" label="month">本月</el-radio>
+        <el-radio v-model="timeSelect" label="quarter">本季度</el-radio>
         <el-radio v-model="timeSelect" label="8">
           <el-date-picker
                   v-model="selectDate"
@@ -46,10 +41,10 @@
       </p>
       <p>
         <span class="selecte-title">状态：</span>
-        <el-radio v-model="stateSelect" label="1">全部</el-radio>
-        <el-radio v-model="stateSelect" label="2">报名中</el-radio>
-        <el-radio v-model="stateSelect" label="3">活动中</el-radio>
-        <el-radio v-model="stateSelect" label="4">已结束</el-radio>
+        <el-radio v-model="stateSelect" label="0">全部</el-radio>
+        <el-radio v-model="stateSelect" label="starting">报名中</el-radio>
+        <el-radio v-model="stateSelect" label="started">活动中</el-radio>
+        <el-radio v-model="stateSelect" label="end">已结束</el-radio>
       </p>
     </div>
     <div class="pl-30 pr-30 card-box">
@@ -80,24 +75,39 @@
       return {
         ifSpread: '展开筛选',
         ifShowSelecte: false,
-        activeName: 'first',
+        activeName: '全部',
         timeSelect: '',
         selectDate: '',
         addressSelect: '',
         stateSelect: '',
-        activityList: []
+        activityList: [],
+        classifys: []
       }
     },
     components: {},
     created () {
     },
     mounted () {
-      this.$emit('changeActiveIndex', '5')
+      this.$emit('changeActiveIndex', '4')
       this.getActivityList()
+      this.getClassifys()
     },
     beforeDestroy () {
     },
     methods: {
+//      getActivityList () {
+//        this.getRequest('https://api.tuoniaox.com/app/app/activitysearch', {
+//          query: this.activeName,
+//          date: this.timeSelect,
+//          place: this.addressSelect,
+//          status: this.stateSelect,
+//          page_num: 1
+//        }).then(res => {
+//          this.activityList = res.data.news_list || []
+//        }).catch((err) => {
+//          this.activityList = []
+//        })
+//      },
       getActivityList () {
         this.getRequest('https://api.tuoniaox.com/homepage/homepage/activitylist', {
           page_num: '',
@@ -114,6 +124,13 @@
           query: {
             id
           }
+        })
+      },
+      getClassifys () {
+        this.getRequest('https://api.tuoniaox.com/news/activity/classify').then(res => {
+          this.classifys = res.data.post_list || []
+        }).catch((err) => {
+          this.classifys = []
         })
       }
     },

@@ -56,21 +56,21 @@
           </el-col>
         </div>
         <div class="partner">
-          <a href="">鸵鸟创投媒体</a>
-          <a href="">哈鲁资本</a>
-          <a href="">LBANK</a>
-          <a href="">AICoin</a>
-          <a href="">原本</a>
-          <a href="">比特币之家</a>
-          <a href="">陀螺财经</a>
-          <a href="">火球财经</a>
-          <a href="">比特之窗</a>
-          <a href="">核财经</a>
-          <a href="">链世界</a>
-          <a href="">区块链导航</a>
-          <a href="">币空投</a>
-          <a href="">币猫商城</a>
-          <a href="">CES ASIA</a>
+          <a href="http://tuoniao.fm">鸵鸟创投媒体</a>
+          <a href="http://hellocapital.net/">哈鲁资本</a>
+          <a href="http://lbank.info/">LBANK</a>
+          <a href="https://www.aicoin.net.cn/">AICoin</a>
+          <a href="http://yuanben.io">原本</a>
+          <a href="http://www.btc798.com/">比特币之家</a>
+          <a href="https://www.tuoluocaijing.cn">陀螺财经</a>
+          <a href="http://www.ihuoqiu.com">火球财经</a>
+          <a href="http://www.btc789.com/">比特之窗</a>
+          <a href="https://www.hecaijing.com">核财经</a>
+          <a href="https://www.7234.cn/">链世界</a>
+          <a href="http://www.block123.com">区块链导航</a>
+          <a href="http://Tokenairdrop.org">币空投</a>
+          <a href="http://www.8btm.com">币猫商城</a>
+          <a href="http://www.cesasia.cn">CES ASIA</a>
         </div>
         <div class="company">
           Copyright © 2018 上海以北科技有限公司 沪ICP备15014516号-2

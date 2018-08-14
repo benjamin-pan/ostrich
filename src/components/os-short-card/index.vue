@@ -8,7 +8,7 @@
         <p class="new-title">{{item.title}}</p>
         <p class="bottom-info">
           <span>{{item.date}}</span>
-          <span class="watch-num pull-right">{{123456}}</span>
+          <span class="watch-num pull-right">{{item.views}}</span>
         </p>
       </div>
     </div>

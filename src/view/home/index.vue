@@ -22,7 +22,7 @@
         <el-tabs v-model="activeName" @tab-click="getNews()" class="baseTabBox">
           <el-tab-pane v-for="classify in classifys" :label="classify.name" :name="classify.id">
             <ostrich-short-article :news="news"></ostrich-short-article>
-            <os-load-more @loadNextPage="loadNextPage"></os-load-more>
+            <os-load-more @loadNextPage="loadNextPage" v-show="totalNews>news.length"></os-load-more>
           </el-tab-pane>
         </el-tabs>
       </div>
@@ -32,7 +32,7 @@
       <!--企业专栏暂时不上-->
       <!--<os-enterprise-column></os-enterprise-column>-->
       <os-advertising :items="rightads"></os-advertising>
-      <os-hot-news class="mt-25"></os-hot-news>
+      <os-hot-news></os-hot-news>
     </div>
   </div>
 </template>
@@ -40,18 +40,13 @@
   @import "./index.scss";
 </style>
 <script>
-  import OsAdvertising from "../../components/os-advertising/index.vue";
-  import OsLoadMore from "../../components/os-load-more/index.vue";
-
   export default {
-    components: {
-      OsLoadMore,
-      OsAdvertising
-    },
+
     data () {
       return {
         activeName: '',
         news: [],
+        totalNews: 0,
         flashs: [],
         classifys: [],
         slideshow: [],
@@ -62,8 +57,8 @@
     created () {
     },
     mounted () {
+      this.$emit('changeActiveIndex', '1')
       this.getCarousel()
-      this.getNews()
       this.getFlashs()
       this.getClassify()
       this.getbBannerads()
@@ -85,9 +80,13 @@
           page_num: pageNum,
           page_size: ''
         }).then(res => {
-          this.news = res.data.news_list || []
+          let data = res.data
+          if (pageNum !== '') this.news.push(...data.news_list)
+          else this.news = data.news_list || []
+          this.totalNews = data.total
         }).catch((err) => {
           this.news = []
+          this.totalNews = 0
         })
       },
       getFlashs () {
@@ -104,7 +103,9 @@
       getClassify () {
         this.getRequest('https://api.tuoniaox.com/news/news/classify').then(res => {
           this.classifys = res.data.post_list || []
+//          this.$emit('postClassifys', this.classifys)
           this.activeName = (this.classifys[0] || {}).id
+          this.getNews()
         }).catch((err) => {
           this.classifys = []
           this.activeName = ''
